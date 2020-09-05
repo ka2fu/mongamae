@@ -23,8 +23,6 @@ $(function(){
   })
 
   // button in modal
-  $('.minus').hide();
-  $('.modal-link-contents').hide();
   $('.plus').click(function(){
     let link = $(this).parent().parent();
     $(this).hide();
