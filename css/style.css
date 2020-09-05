@@ -1,0 +1,273 @@
+
+.container-sm {
+  min-height: 90vh;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+  word-wrap: break-word;
+}
+
+.disable {
+  pointer-events: none;
+}
+
+.a-style  {
+  text-decoration: none!important;
+  color: inherit!important;
+}
+
+.a-style:hover {
+  color: inherit!important;
+}
+
+.grid {
+  display: grid;
+}
+
+.mon-color {
+  color: rgb(194, 0, 0)!important;
+}
+h1 > span {
+  color: white;
+}
+
+#header-nav {
+  height: 15vh;
+}
+
+#header-nav img {
+  width: 6rem;
+  height: 6rem;
+}
+
+#header-nav > span {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-right: 5rem;
+}
+
+.header-img {
+  height: 75vh;
+  width: 100vw;
+  margin-top: 15vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#header1 {
+  background-image: url('../img/toriharu-head.jpg');
+}
+
+#header2 {
+  background-image: url('../img/pizza.jpg');
+}
+
+#header3 {
+  background-image: url('../img/haru-semi.jpg');
+}
+
+#header4 {
+  background-image: url('../img/tori-surprise.jpg');
+}
+
+.carousel-caption h3 {
+  color: rgba(213, 213, 213, 0.91);
+}
+
+#spy-nav {
+  height: 10vh;
+  z-index: 10;
+}
+
+#spy-nav.fixed {
+  position: sticky;
+  width: 100vw;
+}
+
+#spy-nav li:hover {
+  font-weight: bold;
+}
+
+#spy-nav li.spy-active {
+  background-color: #c20000;
+  font-weight: bold;
+}
+
+#spy-nav a {
+  font-size: 1.5rem;
+}
+
+.spy-target > h1 {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  font-weight: bold;
+  text-shadow:
+     #c20000 1px 1px 0px,
+     #c20000 -1px 1px 0px,
+     #c20000 1px -1px 0px,
+     #c20000 -1px -1px 0px;
+  border-bottom: 1px solid #c20000;
+}
+
+.works-list {
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+
+.works-item {
+  width: 90%;
+  height: 30rem;
+  /* z-index: -10; */
+}
+
+.works-item:hover {
+  opacity: 0.7;
+}
+
+.works-bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width: 100%;
+  height: 80%;
+  border-radius: 5px;
+}
+
+#iwake {
+  background-image: url("../img/haru-back.jpg");
+}
+
+#notyet {
+  background-image: url('../img/notyet.jpg');
+}
+
+#about-bg > img {
+  max-height: 60vh;
+}
+
+.message-inner {
+  margin-top: 4rem;
+}
+
+.message-inner > h2 {
+  margin-bottom: 2rem;
+}
+
+.deck {
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  grid-row-gap: 2rem;
+}
+
+.pro-card {
+  width: 90%;
+  height: 55vh;
+  z-index: -10;
+  /* border: 1px solid lightgray; */
+  border-radius: 5px;
+}
+
+.pro-card.dark{
+  filter: brightness(0.7);
+}
+
+.card-img {
+  width: 100%;
+  height: 40vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#tori {
+  background-image: url('../img/tori-kimo.jpg');
+}
+
+#haru {
+  background-image: url('../img/haru-face.jpg');
+}
+
+#katsu {
+  background-image: url('../img/katsu-girl.jpg');
+}
+
+#saya {
+  background-image: url('../img/saya-pink.jpg');
+}
+
+#hira {
+  background-image: url('../img/hira-asleep.jpg');
+}
+
+#same {
+  background-image: url('../img/same.jpg');
+}
+
+.pro-card p {
+  /* font-size: 0.8rem; */
+  font-weight: lighter;
+}
+
+.pro-card h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #696969;
+  width: 100vw;
+  height: 10vh;
+  margin-top: 8rem;
+  justify-content: center;
+  align-content: center;
+}
+
+footer > p {
+  color: white;
+  margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  #header-nav {
+    height: 13vh;
+  }
+
+  #header-nav img {
+    margin-left: -3rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .header-img {
+    height: 75vh;
+    width: 100vw;
+    margin-top: 13vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #spy-nav {
+    display: none;
+  }
+
+  .works-list {
+    grid-template-columns: 1fr;
+    grid-row-gap: 3rem;
+  }
+
+  .works-item:active {
+    opacity: 0.7;
+  }
+
+  .deck {
+    grid-template-columns: 1fr;
+    grid-row-gap: 3rem;
+  }
+}

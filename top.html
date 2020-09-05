@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>home (proto2) | 門 <モンガマエ></title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/mon.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body data-spy="scroll" data-target="#spy-nav">
+  <header>
+    <nav id="header-nav" class="navbar navbar-expand bg-light navbar-light fixed-top justify-content-between">
+      <a href="top.html" class="navbar-brand ml-5"><img src="img/logo.png" alt="logo image"></a>
+      <li id="open" class="fas fa-bars"></li>
+      <li class="tori-url">
+        <a href="https://note.com/" class="tori"><img src="img/tori-url-face.jpg" alt=""></a>
+        <a href="https://www.youtube.com/" class="tori"><img src="img/tori-url-face.jpg" alt=""></a>
+        <a href="https://www.instagram.com/mongamae_official/?hl=ja" class="tori"><img src="img/tori-url-face.jpg" alt=""></a>
+      </li>
+    </nav>
+
+    <div id="header-images" class="carousel slide carousel-fade" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#header-images" data-slide-to="0" class="active"></li>
+        <li data-target="#header-images" data-slide-to="1"></li>
+        <li data-target="#header-images" data-slide-to="2"></li>
+        <li data-target="#header-images" data-slide-to="3"></li>
+      </ul>
+
+      <div class="carousel-inner">
+        <div class="carousel-item header-img active" id="header1">
+          <div class="carousel-caption">
+            <h3>プリンとキューティクル</h3>
+            <p></p>
+          </div>
+        </div>
+        <div class="carousel-item header-img" id="header2">
+          <div class="carousel-caption">
+            <h3>ピザパ by the see</h3>
+            <p></p>
+          </div>
+        </div>
+        <div class="carousel-item header-img" id="header3">
+          <div class="carousel-caption">
+            <h3>セミが大好物♡</h3>
+            <p></p>
+          </div>
+        </div>
+        <div class="carousel-item header-img" id="header4">
+          <div class="carousel-caption">
+            <h3>主宰びっくり</h3>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#header-images" data-slide="prev" class="carousel-control-prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a href="#header-images" class="carousel-control-next" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </header>
+
+  <nav id="spy-nav" class="navbar navbar-expand bg-light py-4">
+    <ul class="navbar-nav w-100 nav-justified">
+      <li class="nav-item"><a href="#about" class="nav-link mon-color">about</a></li>
+      <li class="nav-item"><a href="#works" class="nav-link mon-color">works</a></li>
+      <li class="nav-item"><a href="#members" class="nav-link mon-color">members</a></li>
+      <li class="nav-item"><a href="#contact" class="nav-link mon-color">contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="modal" class="grid bg-light">
+    <ul class="">
+      <li class="grid modal-link">
+        <a href="#about" class="nav-link">about</a>
+        <!-- <div class="li-btn">
+          <span class="fas fa-plus"></span><span class="fas fa-minus"></span>
+        </div> -->
+      </li>
+      <li class="grid modal-link">
+        <a href="#works" class="nav-link">works</a>
+        <div class="li-btn">
+          <span class="fas fa-plus plus"></span><span class="fas fa-minus minus"></span>
+        </div>
+        <div class="modal-link-contents">
+          <ul>
+            <li><a href="iwake.html" class="modal-child-link">言い訳</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="grid modal-link">
+        <a href="#members" class="nav-link">members</a>
+        <!-- <div class="li-btn">
+          <span class="fas fa-plus"></span><span class="fas fa-minus"></span>
+        </div> -->
+      </li>
+      <li class="grid modal-link">
+        <a href="#contact" class="nav-link">contact</a>
+        <!-- <div class="li-btn">
+          <span class="fas fa-plus"></span><span class="fas fa-minus"></span>
+        </div> -->
+      </li>
+      <li class="tori-url grid">
+        <a href="https://note.com/" class="tori"><img src="img/tori-url-face.jpg" alt=""></a>
+        <a href="https://www.youtube.com/" class="tori"><img src="img/tori-url-face.jpg" alt=""></a>
+        <a href="https://www.instagram.com/mongamae_official/?hl=ja" class="tori"><img src="img/tori-url-face.jpg" alt=""></a>
+      </li>
+    </ul>
+    <i id="close" class="fas fa-angle-up"></i>
+  </div>
+
+  <div class="container-sm spy-target" id="about">
+    <h1 class="display-3"><strong class="mon-color">A</strong><span>bout</span></h1>
+    <div id="about-bg" class="container d-flex justify-content-center">
+      <img src="img/haru-birthday.jpg" alt="" class="img-thumbnail">
+    </div>
+    <div class="container d-flex justify-content-center">
+      <div class="message-inner">
+        <h2>門 <モンガマエ> とは</h2>
+        <p>主宰・鳥居巧が酔った勢いで立ち上げた、映画制作？演劇？団体。</p>
+        <p>正直最近彼が酒を控えていることには驚きを隠せない。</p>
+        <p>打ち上げと称して2泊3日のキャンプにいくなんて正気の沙汰ではない。</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-sm spy-target" id="works">
+    <h1 class="display-3"><strong class="mon-color">W</strong><span>orks</span></h1>
+    <div class="works-list grid">
+      <a href="iwake.html" class="works-item a-style">
+        <div class="works-bg" id="iwake"></div>
+        <p>デビューシングル</p>
+        <h3>言い訳</h3>
+      </a>
+
+      <a href="#" class="works-item a-style disable">
+        <div class="works-bg" id="notyet"></div>
+        <p>未定</p>
+        <h3>もうちょっと待って</h3>
+      </a>
+    </div>
+  </div>
+
+  <div class="container-sm spy-target" id="members">
+    <h1 class="display-3"><strong class="mon-color">M</strong><span>embers</span></h1>
+    <div class="deck grid container">
+      <div class="pro-card">
+        <div class="card-img" id="tori"></div>
+        <div class="card-body">
+          <p>鼻の穴がでかい/主宰/偉そうにする人</p>
+          <h3>鳥居 巧 (とりい たくみ)</h3>
+        </div>
+      </div>
+
+      <div class="pro-card">
+        <!-- <img id="haru" src="img/haru-face.jpg" alt="" class="card-img-top"> -->
+        <div class="card-img" id="haru"></div>
+        <div class="card-body">
+          <p>アメフト/広報/インダスグラマー</p>
+          <h3>春田 空良 (はるた そら)</h3>
+          <a href="#" class="stretched-link"></a>
+        </div>
+      </div>
+
+      <div class="pro-card">
+        <div class="card-img" id="katsu"></div>
+        <!-- <img src="img/katsu-girl.jpg" alt="" class="card-img-top"> -->
+        <div class="card-body">
+          <p>金髪/web開発/パソコンいじる人</p>
+          <h3>福島 勝広 (ふくしま かつひろ)</h3>
+          <a href="#" class="stretched-link"></a>
+        </div>
+      </div>
+
+      <div class="pro-card">
+        <div class="card-img" id="saya"></div>
+        <!-- <img src="img/saya-pink.jpg" alt="" class="card-img-top"> -->
+        <div class="card-body">
+          <p>おんな</p>
+          <h3>中島 彩 (なかしま さやか)</h3>
+          <a href="#" class="stretched-link"></a>
+        </div>
+      </div>
+
+      <div class="pro-card">
+        <div class="card-img" id="hira"></div>
+        <!-- <img src="img/hira-asleep.jpg" alt="" class="card-img-top"> -->
+        <div class="card-body">
+          <p>もじゃもじゃ/デザイン/お絵かきの人</p>
+          <h3>平田 匠 (ひらた たくみ)</h3>
+          <a href="#" class="stretched-link"></a>
+        </div>
+      </div>
+
+      <div class="pro-card">
+        <div class="card-img" id="same"></div>
+        <!-- <img src="img/same.jpg" alt="" class="card-img-top"> -->
+        <div class="card-body">
+          <p>可哀想なサメ</p>
+          <h3>フカヒレ</h3>
+          <a href="#" class="stretched-link"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-sm spy-target" id="contact">
+    <h1 class="display-3"><strong class="mon-color">C</strong><span>ontact</span></h1>
+    <p>〒143-0014</p>
+    <p>東京都大田区大森中1-18-20 エンゼルハイム梅屋敷第二 403号室</p>
+  </div>
+
+  <footer class="grid">
+    <p>copyright © mongamae</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
