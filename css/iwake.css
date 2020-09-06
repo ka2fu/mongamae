@@ -1,0 +1,96 @@
+p, h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word; }
+
+#spy-nav {
+  margin-top: 15vh; }
+
+.intro-container {
+  padding: 0 3rem;
+  margin: 8rem auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content;
+  grid-column-gap: 4rem; }
+  .intro-container.img-right .carousel {
+    grid-column: 2;
+    grid-row: 1; }
+  .intro-container.img-right .text-inner {
+    grid-column: 1;
+    grid-row: 1; }
+  .intro-container .intro-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 100%; }
+  .intro-container .text-inner {
+    padding: 0 2rem; }
+
+#suimon1 {
+  background-image: url("../img-iwake/suimon-1.jpg"); }
+
+#suimon2 {
+  background-image: url("../img-iwake/suimon-2.jpg"); }
+
+#suimon3 {
+  background-image: url("../img-iwake/suimon-3.jpg"); }
+
+#suimon4 {
+  background-image: url("../img-iwake/suimon-4.jpg"); }
+
+#senroku1 {
+  background-image: url("../img-iwake/senroku-1.jpg"); }
+
+#senroku2 {
+  background-image: url("../img-iwake/senroku-2.jpg"); }
+
+#senroku3 {
+  background-image: url("../img-iwake/senroku-3.jpg"); }
+
+#senroku4 {
+  background-image: url("../img-iwake/senroku-4.jpg"); }
+
+#engyo1 {
+  background-image: url("../img-iwake/engyo-1.jpg"); }
+
+#engyo2 {
+  background-image: url("../img-iwake/engyo-2.jpg"); }
+
+#engyo3 {
+  background-image: url("../img-iwake/engyo-3.jpg"); }
+
+#haru1 {
+  background-image: url("../img-iwake/haru-1.jpg"); }
+
+#haru2 {
+  background-image: url("../img-iwake/haru-2.jpg"); }
+
+#haru3 {
+  background-image: url("../img-iwake/haru-3.jpg"); }
+
+#haru4 {
+  background-image: url("../img-iwake/haru-4.jpg"); }
+
+.iwake-link {
+  text-align: center; }
+  .iwake-link a {
+    font-size: 5rem;
+    font-weight: bolder;
+    color: #0a0b8e; }
+
+@media only screen and (max-width: 600px) {
+  .intro-container {
+    padding: 0 15px;
+    margin: 17vh auto;
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 2rem; }
+    .intro-container.img-right .carousel {
+      grid-column: 1;
+      grid-row: 1; }
+    .intro-container.img-right .text-inner {
+      grid-column: 1;
+      grid-row: 2; }
+    .intro-container .intro-img {
+      height: 25vh; } }
+
+/*# sourceMappingURL=iwake.css.map */
