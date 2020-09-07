@@ -2,6 +2,9 @@
 
 $mon-red: #c20000;
 
+* {
+  font-family: 'TsukuBRdGothic-Regular','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6, p, li {
   word-wrap: break-word;
@@ -237,7 +240,7 @@ h1 > span {
 }
 
 #same {
-  background-image: url('../img/same.jpg');
+  background-image: url('../img/same-real.jpg');
 }
 
 .pro-card p {
@@ -395,5 +398,9 @@ footer > p {
   .deck {
     grid-template-columns: 1fr;
     grid-row-gap: 3rem;
+  }
+
+  footer {
+    margin-top: 5rem;
   }
 }
