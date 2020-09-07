@@ -66,6 +66,7 @@ p, h1, h2, h3, h4, h5, h6 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-z-index: 50;
     height: 50vh;
     width: 100%;
     border: white 5px double;
