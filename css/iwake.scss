@@ -11,10 +11,23 @@ p, h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 }
 
+#spy-nav {
+  margin-top: 15vh;
+  display: none;
+}
+
+#wrapper {
+  overflow: hidden;
+
+  p, h1, h2 {
+    z-index: 10;
+  }
+}
+
 .title-inner {
   justify-content: center;
   align-content: center;
-  background-color: $mon-red;
+  background-color: $mon-blue;
 
   .title {
     display: inline-block;
@@ -25,6 +38,7 @@ p, h1, h2, h3, h4, h5, h6 {
     // color: #609f5c;
     // color: #f1c36f;
     color: white;
+    z-index: 10;
 
     p {
       padding-left: 2.5rem;
@@ -37,15 +51,6 @@ p, h1, h2, h3, h4, h5, h6 {
       font-weight: bold;
     }
   }
-}
-
-#spy-nav {
-  margin-top: 15vh;
-  display: none;
-}
-
-#contents {
-  overflow: hidden;
 }
 
 .intro-container {
@@ -107,10 +112,12 @@ p, h1, h2, h3, h4, h5, h6 {
       size: cover;
       position: center;
       repeat: no-repeat;
-      z-index: 50;
+      color: white;
     }
+    z-index: 50;
     height: 50vh;
     width: 100%;
+    // border: white 5px dashed;
     border: white 5px double;
     border-radius: 5px;
   }

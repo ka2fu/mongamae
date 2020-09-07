@@ -37,7 +37,8 @@ h1 > span {
   color: white; }
 
 #header-nav {
-  height: 15vh; }
+  height: 15vh;
+  background-color: #a7a7a7; }
   #header-nav .fas {
     color: #c20000;
     display: none; }
@@ -164,19 +165,19 @@ h1 > span {
   background-size: cover; }
 
 #tori {
-  background-image: url("../img/tori-kimo.jpg"); }
+  background-image: url("../img/tori-suna.jpg"); }
 
 #haru {
-  background-image: url("../img/haru-face.jpg"); }
+  background-image: url("../img/haru-bussa.jpg"); }
 
 #katsu {
-  background-image: url("../img/katsu-girl.jpg"); }
+  background-image: url("../img/katsu-ra.jpg"); }
 
 #saya {
   background-image: url("../img/saya-pink.jpg"); }
 
 #hira {
-  background-image: url("../img/hira-asleep.jpg"); }
+  background-image: url("../img/hira-ero.jpg"); }
 
 #same {
   background-image: url("../img/same-real.jpg"); }
@@ -188,6 +189,28 @@ h1 > span {
 .pro-card h3 {
   font-size: 1rem;
   font-weight: bold; }
+
+#contact .mail {
+  font-size: 1.5rem;
+  margin-left: 9vw; }
+#contact .sns-link {
+  margin-top: 3rem;
+  grid-row-gap: 2rem; }
+  #contact .sns-link .sns-item {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center; }
+    #contact .sns-link .sns-item p {
+      justify-self: start;
+      margin-left: 9vw;
+      margin-bottom: 0;
+      font-size: 2rem; }
+    #contact .sns-link .sns-item i {
+      font-size: 3.5rem;
+      color: #3c3c3c; }
+    #contact .sns-link .sns-item .sns-img {
+      height: 6rem;
+      width: 6rem; }
 
 footer {
   background-color: #696969;

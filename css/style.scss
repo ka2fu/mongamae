@@ -52,6 +52,7 @@ h1 > span {
 
 #header-nav {
   height: 15vh;
+  background-color: #a7a7a7;
 
   .fas {
     color: $mon-red;
@@ -220,15 +221,15 @@ h1 > span {
 }
 
 #tori {
-  background-image: url('../img/tori-kimo.jpg');
+  background-image: url('../img/tori-suna.jpg');
 }
 
 #haru {
-  background-image: url('../img/haru-face.jpg');
+  background-image: url('../img/haru-bussa.jpg');
 }
 
 #katsu {
-  background-image: url('../img/katsu-girl.jpg');
+  background-image: url('../img/katsu-ra.jpg');
 }
 
 #saya {
@@ -236,7 +237,7 @@ h1 > span {
 }
 
 #hira {
-  background-image: url('../img/hira-asleep.jpg');
+  background-image: url('../img/hira-ero.jpg');
 }
 
 #same {
@@ -251,6 +252,42 @@ h1 > span {
 .pro-card h3 {
   font-size: 1rem;
   font-weight: bold;
+}
+
+#contact {
+
+  .mail {
+    font-size: 1.5rem;
+    margin-left: 9vw;
+  }
+
+  .sns-link {
+    margin-top: 3rem;
+    grid-row-gap: 2rem;
+
+    .sns-item {
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      justify-items: center;
+
+      p {
+        justify-self: start;
+        margin-left: 9vw;
+        margin-bottom: 0;
+        font-size: 2rem;
+      }
+
+      i {
+        font-size: 3.5rem;
+        color: #3c3c3c;
+      }
+
+      .sns-img {
+        height: 6rem;
+        width: 6rem;
+      }
+    }
+  }
 }
 
 footer {
