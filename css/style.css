@@ -2,6 +2,9 @@
 * {
   font-family: 'TsukuBRdGothic-Regular','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif; }
 
+body {
+  background-color: #cccccc; }
+
 h1, h2, h3, h4, h5, h6, p, li {
   word-wrap: break-word; }
 
@@ -38,7 +41,9 @@ h1 > span {
 
 #header-nav {
   height: 15vh;
-  background-color: #a7a7a7; }
+  background-color: #cccccc; }
+  #header-nav #logo-icon {
+    background-color: white; }
   #header-nav .fas {
     color: #c20000;
     display: none; }
@@ -200,6 +205,8 @@ h1 > span {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center; }
+    #contact .sns-link .sns-item.s1 a {
+      grid-column: 3; }
     #contact .sns-link .sns-item p {
       justify-self: start;
       margin-left: 9vw;

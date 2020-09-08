@@ -201,15 +201,15 @@ p, h1, h2, h3, h4, h5, h6 {
   text-align: center;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background-color: $mon-blue;
+  background-color: $mon-red;
 
   a {
     font-size: 5rem;
     font-weight: bolder;
-    color: $mon-red;
+    color: white;
 
     &:hover {
-      color: $mon-red!important;
+      color: white!important;
       opacity: .7!important;
     }
   }

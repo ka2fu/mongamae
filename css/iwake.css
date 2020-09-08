@@ -132,13 +132,13 @@ p, h1, h2, h3, h4, h5, h6 {
   text-align: center;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background-color: #0a0b8e; }
+  background-color: #c20000; }
   .iwake-link a {
     font-size: 5rem;
     font-weight: bolder;
-    color: #c20000; }
+    color: white; }
     .iwake-link a:hover {
-      color: #c20000 !important;
+      color: white !important;
       opacity: 0.7 !important; }
 
 footer {
