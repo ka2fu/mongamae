@@ -18,37 +18,49 @@ $(function(){
   });
 
   // tori変化
+  let insta_url = 'img/tori-insta.png';
+  let tube_url = 'img/tori-tube.png';
+  let note_url = 'img/tori-note.png';
+  let moto_url = 'img/tori-moto.png';
+  // insta
   $('.insta').hover(
     function(){
-      $(this).find('img').attr({
-        src: 'img/tori-insta.png'
-        // width: 4.5rem,
-        // height: 4.5rem
-      });
+      let img = $(this).find('img');
+      $(img).attr('src', moto_url);
+      // $(img).addClass('moto');
     },
     function(){
-      $(this).find('img').attr({
-        src: 'img/tori-moto.png'
-        // width: 3.5rem,
-        // height: 3.5rem
-      });
+      let img = $(this).find('img');
+      $(img).attr('src', insta_url);
+      // $(img).removeClass('moto');
     }
   );
 
+  // youtube
   $('.tube').hover(
     function(){
-      $(this).find('img').attr({
-        src: 'img/tori-moto.png'
-        // width: 4.5rem,
-        // height: 4.5rem
-      });
+      let img = $(this).find('img');
+      $(img).attr('src', moto_url);
+      // $(img).addClass('moto');
     },
     function(){
-      $(this).find('img').attr({
-        src: 'img/tori-tube.png'
-        // width: 3.5rem,
-        // height: 3.5rem
-      });
+      let img = $(this).find('img');
+      $(img).attr('src', tube_url);
+      // $(img).removeClass('moto');
+    }
+  );
+
+  // note
+  $('.note').hover(
+    function(){
+      let img = $(this).find('img');
+      $(img).attr('src', moto_url);
+      // $(img).addClass('moto');
+    },
+    function(){
+      let img = $(this).find('img');
+      $(img).attr('src', note_url);
+      // $(img).removeClass('moto');
     }
   );
 

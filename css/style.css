@@ -1,6 +1,6 @@
 @charset "UTF-8";
 * {
-  font-family: 'TsukuBRdGothic-Regular','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif; }
+  font-family: 'Sawarabi Mincho', 'TsukuBRdGothic-Regular','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif; }
 
 body {
   background-color: #cccccc; }
@@ -53,6 +53,9 @@ h1 > span {
       height: 3.5rem;
       width: 3.5rem;
       margin-left: 3rem; }
+      #header-nav .tori-url img.moto {
+        height: 4rem;
+        width: 4rem; }
 
 #header-nav img {
   width: 6rem;
@@ -205,11 +208,7 @@ h1 > span {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center; }
-    #contact .sns-link .sns-item.s1 a {
-      grid-column: 3; }
     #contact .sns-link .sns-item p {
-      justify-self: start;
-      margin-left: 9vw;
       margin-bottom: 0;
       font-size: 2rem; }
     #contact .sns-link .sns-item i {
@@ -218,6 +217,9 @@ h1 > span {
     #contact .sns-link .sns-item .sns-img {
       height: 6rem;
       width: 6rem; }
+      #contact .sns-link .sns-item .sns-img.moto {
+        height: 6.5rem;
+        width: 6.5rem; }
 
 footer {
   background-color: #696969;

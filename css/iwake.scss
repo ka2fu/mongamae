@@ -36,6 +36,19 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-content: center;
   background-color: $toka-blue;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10rem;
+    border-top: 5rem solid $toka-blue;
+    border-left: 50vw solid $toka-blue;
+    border-right: 50vw solid transparent;
+    border-bottom: 5rem solid transparent;
+  }
 
   .title {
     display: inline-block;
@@ -61,8 +74,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .intro-container {
-  padding: 4rem 3rem;
-  margin: 0 auto;
+  padding: 2rem 3rem;
+  margin: 10rem auto;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: min-content;
   grid-column-gap: 4rem;
@@ -76,6 +89,30 @@ p, h1, h2, h3, h4, h5, h6 {
   &.img-right {
     background-color: $toka-blue;
     position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -10rem;
+      border-top: 5rem solid transparent;
+      border-left: 50vw solid $toka-blue;
+      border-right: 50vw solid transparent;
+      border-bottom: 5rem solid $toka-blue;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -10rem;
+      border-top: 5rem solid $toka-blue;
+      border-left: 50vw solid $toka-blue;
+      border-right: 50vw solid transparent;
+      border-bottom: 5rem solid transparent;
+    }
 
     .carousel {
       grid-column: 2; grid-row: 1;
@@ -108,11 +145,11 @@ p, h1, h2, h3, h4, h5, h6 {
       display: block;
       position: absolute;
       left: 0;
-      bottom: 0;
-      border-top: 5rem solid transparent;
+      bottom: -10rem;
+      border-top: 5rem solid $toka-red;
       border-left: 50vw solid transparent;
-      border-right: 50vw solid $toka-blue;
-      border-bottom: 5rem solid $toka-blue;
+      border-right: 50vw solid $toka-red;
+      border-bottom: 5rem solid transparent;
     }
 
     .text-inner {
@@ -210,10 +247,22 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .iwake-link {
   text-align: center;
-  padding-top: 7.5rem;
+  padding-top: 2rem;
   padding-bottom: 12rem;
   background-color: $toka-red;
   position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -10rem;
+    border-top: 5rem solid transparent;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid $toka-red;
+    border-bottom: 5rem solid $toka-red;
+  }
 
   h1 {
     font-size: 5rem;
