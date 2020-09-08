@@ -9,6 +9,49 @@ var monColor = 'rgb(194, 0, 0)';
 
 $(function(){
 
+  // linkいたずら
+  let vanish = $('.vanish');
+  $(vanish).click(() => {
+    $(vanish).fadeOut(() => {
+      $('.thx').fadeIn();
+    });
+  });
+
+  // tori変化
+  $('.insta').hover(
+    function(){
+      $(this).find('img').attr({
+        src: 'img/tori-insta.png'
+        // width: 4.5rem,
+        // height: 4.5rem
+      });
+    },
+    function(){
+      $(this).find('img').attr({
+        src: 'img/tori-moto.png'
+        // width: 3.5rem,
+        // height: 3.5rem
+      });
+    }
+  );
+
+  $('.tube').hover(
+    function(){
+      $(this).find('img').attr({
+        src: 'img/tori-moto.png'
+        // width: 4.5rem,
+        // height: 4.5rem
+      });
+    },
+    function(){
+      $(this).find('img').attr({
+        src: 'img/tori-tube.png'
+        // width: 3.5rem,
+        // height: 3.5rem
+      });
+    }
+  );
+
   // modal
   $('#modal').hide();
   $('nav').on('click', '#open', function (){

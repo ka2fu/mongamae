@@ -48,11 +48,11 @@ h1 > span {
     color: #c20000;
     display: none; }
   #header-nav .tori-url {
-    margin-right: 3rem; }
+    margin-right: 5rem; }
     #header-nav .tori-url img {
       height: 3.5rem;
       width: 3.5rem;
-      margin-left: 1rem; }
+      margin-left: 3rem; }
 
 #header-nav img {
   width: 6rem;

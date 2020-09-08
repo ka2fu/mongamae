@@ -1,6 +1,9 @@
 
 $mon-red: #c20000;
 $mon-blue: #0a0b8e;
+$toka-red: rgba(#9c0000, 0.8);
+// $toka-red: rgba(#c20000, 0.75);
+$toka-blue: rgba(#0a0b8e, 0.7);
 $bg-url: '../img-iwake/';
 
 @mixin bg-img($url){
@@ -18,6 +21,11 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #wrapper {
   overflow: hidden;
+  // background {
+  //   image: $bg-url("yajirushi");
+  // }
+  @include bg-img('yajirushi');
+  // opacity: .5;
 
   p, h1, h2 {
     z-index: 10;
@@ -27,7 +35,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .title-inner {
   justify-content: center;
   align-content: center;
-  background-color: $mon-blue;
+  background-color: $toka-blue;
 
   .title {
     display: inline-block;
@@ -43,7 +51,6 @@ p, h1, h2, h3, h4, h5, h6 {
     p {
       padding-left: 2.5rem;
       font-size: 1.5rem;
-      opacity: 0.7;
     }
 
     h1 {
@@ -60,8 +67,14 @@ p, h1, h2, h3, h4, h5, h6 {
   grid-template-rows: min-content;
   grid-column-gap: 4rem;
 
+  .carousel {
+    border: white 5px double;
+    border-radius: 5px;
+    z-index: 10;
+  }
+
   &.img-right {
-    background-color: $mon-blue;
+    background-color: $toka-blue;
     position: relative;
 
     .carousel {
@@ -75,7 +88,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 
   &.img-left {
-    background-color: $mon-red;
+    background-color: $toka-red;
     position: relative;
 
     &::before {
@@ -86,8 +99,8 @@ p, h1, h2, h3, h4, h5, h6 {
       top: -10rem;
       border-top: 5rem solid transparent;
       border-left: 50vw solid transparent;
-      border-right: 50vw solid $mon-red;
-      border-bottom: 5rem solid $mon-red;
+      border-right: 50vw solid $toka-red;
+      border-bottom: 5rem solid $toka-red;
     }
 
     &::after {
@@ -98,8 +111,8 @@ p, h1, h2, h3, h4, h5, h6 {
       bottom: 0;
       border-top: 5rem solid transparent;
       border-left: 50vw solid transparent;
-      border-right: 50vw solid $mon-blue;
-      border-bottom: 5rem solid $mon-blue;
+      border-right: 50vw solid $toka-blue;
+      border-bottom: 5rem solid $toka-blue;
     }
 
     .text-inner {
@@ -112,14 +125,12 @@ p, h1, h2, h3, h4, h5, h6 {
       size: cover;
       position: center;
       repeat: no-repeat;
-      color: white;
+      // color: white;
     }
     z-index: 50;
     height: 50vh;
     width: 100%;
     // border: white 5px dashed;
-    border: white 5px double;
-    border-radius: 5px;
   }
 
   .text-inner {
@@ -131,8 +142,8 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 
     p {
-      // opacity: .7;
-      filter: brightness(0.7);
+      font-size: 1.1rem;
+      letter-spacing: 1px;
     }
   }
 }
@@ -199,18 +210,74 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .iwake-link {
   text-align: center;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  background-color: $mon-red;
+  padding-top: 7.5rem;
+  padding-bottom: 12rem;
+  background-color: $toka-red;
+  position: relative;
 
-  a {
+  h1 {
     font-size: 5rem;
     font-weight: bolder;
     color: white;
+  }
+
+  .iwake-link-list {
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    justify-items: center;
+    margin: 4rem 5vw 0;
+
+    .link-item {
+      height: 25vh;
+      width: 90%;
+
+      a {
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        background: {
+          position: center;
+          size: cover;
+          repeat: no-repeat;
+          image: url("../img/haru-back.jpg");
+        }
+        border: 5px double white;
+        border-radius: 5px;
+
+        &:hover {
+          filter: brightness(.7);
+        }
+      }
+
+      &.vanish-inner{
+        position: relative;
+
+        .thx {
+          position: absolute;
+          display: none;
+          height: 20vh;
+          width: 80%;
+          top: 2.5rem;
+          left: -0.5rem;
+        }
+      }
+    }
+  }
+
+  .katsu-back {
+    position: absolute;
+    bottom: 0;
+    right: 3vw;
+    width: 8.5rem;
+    height: 14.5rem;
 
     &:hover {
-      color: white!important;
-      opacity: .7!important;
+      filter: brightness(.8);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
     }
   }
 }
@@ -246,7 +313,7 @@ footer {
   .iwake-link {
     margin-top: 5rem;
 
-    a {
+    h1 {
       font-size: 15vw;
     }
   }

@@ -6,14 +6,15 @@ p, h1, h2, h3, h4, h5, h6 {
   display: none; }
 
 #wrapper {
-  overflow: hidden; }
+  overflow: hidden;
+  background-image: url("../img-iwake/yajirushi.jpg"); }
   #wrapper p, #wrapper h1, #wrapper h2 {
     z-index: 10; }
 
 .title-inner {
   justify-content: center;
   align-content: center;
-  background-color: #0a0b8e; }
+  background-color: rgba(10, 11, 142, 0.7); }
   .title-inner .title {
     display: inline-block;
     margin: 10rem auto 2rem auto;
@@ -21,8 +22,7 @@ p, h1, h2, h3, h4, h5, h6 {
     z-index: 10; }
     .title-inner .title p {
       padding-left: 2.5rem;
-      font-size: 1.5rem;
-      opacity: 0.7; }
+      font-size: 1.5rem; }
     .title-inner .title h1 {
       font-size: 4rem;
       font-weight: bold; }
@@ -33,8 +33,12 @@ p, h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: min-content;
   grid-column-gap: 4rem; }
+  .intro-container .carousel {
+    border: white 5px double;
+    border-radius: 5px;
+    z-index: 10; }
   .intro-container.img-right {
-    background-color: #0a0b8e;
+    background-color: rgba(10, 11, 142, 0.7);
     position: relative; }
     .intro-container.img-right .carousel {
       grid-column: 2;
@@ -43,7 +47,7 @@ p, h1, h2, h3, h4, h5, h6 {
       grid-column: 1;
       grid-row: 1; }
   .intro-container.img-left {
-    background-color: #c20000;
+    background-color: rgba(156, 0, 0, 0.8);
     position: relative; }
     .intro-container.img-left::before {
       content: "";
@@ -53,8 +57,8 @@ p, h1, h2, h3, h4, h5, h6 {
       top: -10rem;
       border-top: 5rem solid transparent;
       border-left: 50vw solid transparent;
-      border-right: 50vw solid #c20000;
-      border-bottom: 5rem solid #c20000; }
+      border-right: 50vw solid rgba(156, 0, 0, 0.8);
+      border-bottom: 5rem solid rgba(156, 0, 0, 0.8); }
     .intro-container.img-left::after {
       content: "";
       display: block;
@@ -63,25 +67,23 @@ p, h1, h2, h3, h4, h5, h6 {
       bottom: 0;
       border-top: 5rem solid transparent;
       border-left: 50vw solid transparent;
-      border-right: 50vw solid #0a0b8e;
-      border-bottom: 5rem solid #0a0b8e; }
+      border-right: 50vw solid rgba(10, 11, 142, 0.7);
+      border-bottom: 5rem solid rgba(10, 11, 142, 0.7); }
   .intro-container .intro-img {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: white;
     z-index: 50;
     height: 50vh;
-    width: 100%;
-    border: white 5px double;
-    border-radius: 5px; }
+    width: 100%; }
   .intro-container .text-inner {
     padding: 0 2rem;
     color: white; }
     .intro-container .text-inner h2 {
       padding-left: 1.5rem; }
     .intro-container .text-inner p {
-      filter: brightness(0.7); }
+      font-size: 1.1rem;
+      letter-spacing: 1px; }
 
 #suimon1 {
   background-image: url("../img-iwake/suimon-1.jpg"); }
@@ -130,16 +132,54 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .iwake-link {
   text-align: center;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  background-color: #c20000; }
-  .iwake-link a {
+  padding-top: 7.5rem;
+  padding-bottom: 12rem;
+  background-color: rgba(156, 0, 0, 0.8);
+  position: relative; }
+  .iwake-link h1 {
     font-size: 5rem;
     font-weight: bolder;
     color: white; }
-    .iwake-link a:hover {
-      color: white !important;
-      opacity: 0.7 !important; }
+  .iwake-link .iwake-link-list {
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    justify-items: center;
+    margin: 4rem 5vw 0; }
+    .iwake-link .iwake-link-list .link-item {
+      height: 25vh;
+      width: 90%; }
+      .iwake-link .iwake-link-list .link-item a {
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../img/haru-back.jpg");
+        border: 5px double white;
+        border-radius: 5px; }
+        .iwake-link .iwake-link-list .link-item a:hover {
+          filter: brightness(0.7); }
+      .iwake-link .iwake-link-list .link-item.vanish-inner {
+        position: relative; }
+        .iwake-link .iwake-link-list .link-item.vanish-inner .thx {
+          position: absolute;
+          display: none;
+          height: 20vh;
+          width: 80%;
+          top: 2.5rem;
+          left: -0.5rem; }
+  .iwake-link .katsu-back {
+    position: absolute;
+    bottom: 0;
+    right: 3vw;
+    width: 8.5rem;
+    height: 14.5rem; }
+    .iwake-link .katsu-back:hover {
+      filter: brightness(0.8); }
+    .iwake-link .katsu-back img {
+      height: 100%;
+      width: 100%; }
 
 footer {
   margin-top: 0; }
@@ -161,7 +201,7 @@ footer {
 
   .iwake-link {
     margin-top: 5rem; }
-    .iwake-link a {
+    .iwake-link h1 {
       font-size: 15vw; } }
 
 /*# sourceMappingURL=iwake.css.map */
