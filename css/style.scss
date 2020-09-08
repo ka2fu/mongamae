@@ -105,7 +105,7 @@ h1 > span {
 }
 
 #header2 {
-  background-image: url('../img/pizza.jpg');
+  background-image: url('../img/harutori-mei.jpg');
 }
 
 #header3 {
@@ -123,6 +123,7 @@ h1 > span {
 #spy-nav {
   height: 10vh;
   z-index: 10;
+  background-color: $bg-gray;
 }
 
 #spy-nav.fixed {

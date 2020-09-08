@@ -76,7 +76,7 @@ h1 > span {
   background-image: url("../img/toriharu-head.jpg"); }
 
 #header2 {
-  background-image: url("../img/pizza.jpg"); }
+  background-image: url("../img/harutori-mei.jpg"); }
 
 #header3 {
   background-image: url("../img/haru-semi.jpg"); }
@@ -89,7 +89,8 @@ h1 > span {
 
 #spy-nav {
   height: 10vh;
-  z-index: 10; }
+  z-index: 10;
+  background-color: #ccc; }
 
 #spy-nav.fixed {
   position: sticky;
