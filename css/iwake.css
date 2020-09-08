@@ -226,23 +226,70 @@ footer {
   margin-top: 0; }
 
 @media only screen and (max-width: 600px) {
+  .title-inner::after {
+    bottom: -6rem;
+    border-top: 3rem solid rgba(10, 11, 142, 0.7);
+    border-left: 50vw solid rgba(10, 11, 142, 0.7);
+    border-right: 50vw solid transparent;
+    border-bottom: 3rem solid transparent; }
+  .title-inner .title h1 {
+    font-size: 3.5rem; }
+
   .intro-container {
     padding: 5rem 15px;
+    margin: 6rem auto;
     grid-template-columns: 1fr;
     grid-column-gap: 0;
-    grid-row-gap: 2rem; }
+    grid-row-gap: 4rem; }
+    .intro-container.img-right::before {
+      top: -6rem;
+      border-top: 3rem solid transparent;
+      border-left: 50vw solid rgba(10, 11, 142, 0.7);
+      border-right: 50vw solid transparent;
+      border-bottom: 3rem solid rgba(10, 11, 142, 0.7); }
+    .intro-container.img-right::after {
+      bottom: -6rem;
+      border-top: 3rem solid rgba(10, 11, 142, 0.7);
+      border-left: 50vw solid rgba(10, 11, 142, 0.7);
+      border-right: 50vw solid transparent;
+      border-bottom: 3rem solid transparent; }
     .intro-container.img-right .carousel {
       grid-column: 1;
       grid-row: 1; }
     .intro-container.img-right .text-inner {
       grid-column: 1;
-      grid-row: 2; }
+      grid-row: 2;
+      padding: 0 0.7rem; }
+      .intro-container.img-right .text-inner h2 {
+        padding-left: 0.5rem; }
+      .intro-container.img-right .text-inner p {
+        font-size: 1rem;
+        letter-spacing: .8px; }
+    .intro-container.img-left::before {
+      top: -6rem;
+      border-top: 3rem solid transparent;
+      border-left: 50vw solid transparent;
+      border-right: 50vw solid rgba(156, 0, 0, 0.8);
+      border-bottom: 3rem solid rgba(156, 0, 0, 0.8); }
+    .intro-container.img-left::after {
+      bottom: -6rem;
+      border-top: 3rem solid rgba(156, 0, 0, 0.8);
+      border-left: 50vw solid transparent;
+      border-right: 50vw solid rgba(156, 0, 0, 0.8);
+      border-bottom: 3rem solid transparent; }
     .intro-container .intro-img {
-      height: 25vh; }
+      height: 30vh; }
 
-  .iwake-link {
-    margin-top: 5rem; }
-    .iwake-link h1 {
-      font-size: 15vw; } }
+  .iwake-link::before {
+    top: -6rem;
+    border-top: 3rem solid transparent;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid rgba(156, 0, 0, 0.8);
+    border-bottom: 3rem solid rgba(156, 0, 0, 0.8); }
+  .iwake-link h1 {
+    font-size: 15vw; }
+  .iwake-link .iwake-link-list {
+    grid-template-columns: 1fr;
+    grid-row-gap: 3rem; } }
 
 /*# sourceMappingURL=iwake.css.map */

@@ -1,6 +1,7 @@
 
 
 $mon-red: #c20000;
+$bg-gray: #ccc;
 
 * {
   font-family: 'Sawarabi Mincho', 'TsukuBRdGothic-Regular','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
@@ -56,13 +57,7 @@ h1 > span {
 
 #header-nav {
   height: 15vh;
-  // background-color: #a7a7a7;
-  background-color: #cccccc;
-  // background-color: white;
-
-  #logo-icon {
-    background-color: white;
-  }
+  background-color: $bg-gray;
 
   .fas {
     color: $mon-red;
@@ -196,7 +191,7 @@ h1 > span {
 }
 
 #about-bg > img {
-  max-height: 60vh;
+  height: 60vh;
 }
 
 .message-inner {
@@ -340,6 +335,10 @@ footer > p {
 }
 
 @media only screen and (max-width: 600px) {
+  .container-title {
+    font-size: 4rem!important;
+  }
+
   #header-nav {
     height: 13vh;
 
@@ -381,6 +380,7 @@ footer > p {
     // font-size: 2rem;
     grid-template-columns: 1fr;
     color: $mon-red;
+    background-color: $bg-gray;
 
     ul {
       // margin-bottom: 0;
@@ -463,6 +463,12 @@ footer > p {
     display: none;
   }
 
+  #about-bg {
+    img {
+      height: 30vh;
+    }
+  }
+
   .works-list {
     grid-template-columns: 1fr;
     grid-row-gap: 3rem;
@@ -475,6 +481,39 @@ footer > p {
   .deck {
     grid-template-columns: 1fr;
     grid-row-gap: 3rem;
+  }
+
+  #contact {
+
+    .mail {
+      margin-left: 5vw;
+      // margin: 0 auto;
+      // display: inline-block;
+    }
+
+    .sns-link {
+      .sns-item {
+        p {
+          margin-bottom: 0;
+          font-size: 1.5rem;
+        }
+
+        i {
+          font-size: 2rem;
+          color: #3c3c3c;
+        }
+
+        .sns-img {
+          height: 3.5rem;
+          width: 3.5rem;
+
+          &.moto {
+            height: 3.5rem;
+            width: 3.5rem;
+          }
+        }
+      }
+    }
   }
 
   footer {

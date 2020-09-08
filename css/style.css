@@ -41,9 +41,7 @@ h1 > span {
 
 #header-nav {
   height: 15vh;
-  background-color: #cccccc; }
-  #header-nav #logo-icon {
-    background-color: white; }
+  background-color: #ccc; }
   #header-nav .fas {
     color: #c20000;
     display: none; }
@@ -140,7 +138,7 @@ h1 > span {
   background-image: url("../img/notyet.jpg"); }
 
 #about-bg > img {
-  max-height: 60vh; }
+  height: 60vh; }
 
 .message-inner {
   margin-top: 4rem; }
@@ -234,6 +232,9 @@ footer > p {
   margin: 0; }
 
 @media only screen and (max-width: 600px) {
+  .container-title {
+    font-size: 4rem !important; }
+
   #header-nav {
     height: 13vh; }
     #header-nav #open {
@@ -266,7 +267,8 @@ footer > p {
     justify-content: center;
     justify-items: center;
     grid-template-columns: 1fr;
-    color: #c20000; }
+    color: #c20000;
+    background-color: #ccc; }
     #modal ul {
       margin: 0 auto;
       width: 85%; }
@@ -314,6 +316,9 @@ footer > p {
   #spy-nav {
     display: none; }
 
+  #about-bg img {
+    height: 30vh; }
+
   .works-list {
     grid-template-columns: 1fr;
     grid-row-gap: 3rem; }
@@ -324,6 +329,21 @@ footer > p {
   .deck {
     grid-template-columns: 1fr;
     grid-row-gap: 3rem; }
+
+  #contact .mail {
+    margin-left: 5vw; }
+  #contact .sns-link .sns-item p {
+    margin-bottom: 0;
+    font-size: 1.5rem; }
+  #contact .sns-link .sns-item i {
+    font-size: 2rem;
+    color: #3c3c3c; }
+  #contact .sns-link .sns-item .sns-img {
+    height: 3.5rem;
+    width: 3.5rem; }
+    #contact .sns-link .sns-item .sns-img.moto {
+      height: 3.5rem;
+      width: 3.5rem; }
 
   footer {
     margin-top: 5rem; } }

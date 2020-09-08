@@ -2,8 +2,8 @@
 $mon-red: #c20000;
 $mon-blue: #0a0b8e;
 $toka-red: rgba(#9c0000, 0.8);
-// $toka-red: rgba(#c20000, 0.75);
 $toka-blue: rgba(#0a0b8e, 0.7);
+$bg-gray: #ccc;
 $bg-url: '../img-iwake/';
 
 @mixin bg-img($url){
@@ -336,14 +336,49 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+
+  .title-inner {
+
+    &::after {
+      bottom: -6rem;
+      border-top: 3rem solid $toka-blue;
+      border-left: 50vw solid $toka-blue;
+      border-right: 50vw solid transparent;
+      border-bottom: 3rem solid transparent;
+    }
+
+    .title {
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
   .intro-container {
     padding: 5rem 15px;
-    // margin: 17vh auto;
+    margin: 6rem auto;
     grid-template-columns: 1fr;
     grid-column-gap: 0;
-    grid-row-gap: 2rem;
+    grid-row-gap: 4rem;
 
     &.img-right {
+
+      &::before {
+        top: -6rem;
+        border-top: 3rem solid transparent;
+        border-left: 50vw solid $toka-blue;
+        border-right: 50vw solid transparent;
+        border-bottom: 3rem solid $toka-blue;
+      }
+
+      &::after {
+        bottom: -6rem;
+        border-top: 3rem solid $toka-blue;
+        border-left: 50vw solid $toka-blue;
+        border-right: 50vw solid transparent;
+        border-bottom: 3rem solid transparent;
+      }
+
 
       .carousel {
         grid-column: 1; grid-row: 1;
@@ -351,23 +386,60 @@ footer {
 
       .text-inner {
         grid-column: 1; grid-row: 2;
+        padding: 0 0.7rem;
+
+        h2 {
+          padding-left: 0.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+          letter-spacing: .8px;
+        }
+      }
+    }
+
+    &.img-left {
+
+      &::before {
+        top: -6rem;
+        border-top: 3rem solid transparent;
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid $toka-red;
+        border-bottom: 3rem solid $toka-red;
+      }
+
+      &::after {
+        bottom: -6rem;
+        border-top: 3rem solid $toka-red;
+        border-left: 50vw solid transparent;
+        border-right: 50vw solid $toka-red;
+        border-bottom: 3rem solid transparent;
       }
     }
 
     .intro-img {
-      height: 25vh;
+      height: 30vh;
     }
   }
 
   .iwake-link {
-    margin-top: 5rem;
+
+    &::before {
+      top: -6rem;
+      border-top: 3rem solid transparent;
+      border-left: 50vw solid transparent;
+      border-right: 50vw solid $toka-red;
+      border-bottom: 3rem solid $toka-red;
+    }
 
     h1 {
       font-size: 15vw;
     }
-  }
 
-  footer {
-    // margin-top: 5rem;
+    .iwake-link-list {
+      grid-template-columns: 1fr;
+      grid-row-gap: 3rem;
+    }
   }
 }
