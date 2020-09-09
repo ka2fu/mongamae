@@ -41,7 +41,7 @@ h1 > span {
 
 #header-nav {
   height: 15vh;
-  background-color: #ccc; }
+  background-color: #eef0df; }
   #header-nav .fas {
     color: #c20000;
     display: none; }
@@ -90,7 +90,7 @@ h1 > span {
 #spy-nav {
   height: 10vh;
   z-index: 10;
-  background-color: #ccc; }
+  background-color: #eef0df; }
 
 #spy-nav.fixed {
   position: sticky;
@@ -269,7 +269,7 @@ footer > p {
     justify-items: center;
     grid-template-columns: 1fr;
     color: #c20000;
-    background-color: #ccc; }
+    background-color: #eef0df; }
     #modal ul {
       margin: 0 auto;
       width: 85%; }
