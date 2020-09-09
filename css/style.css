@@ -6,7 +6,7 @@ body {
   background-color: #cccccc; }
 
 h1, h2, h3, h4, h5, h6, p, li {
-  word-wrap: break-word; }
+  word-wrap: normal; }
 
 .disable {
   pointer-events: none; }
@@ -41,7 +41,7 @@ h1 > span {
 
 #header-nav {
   height: 15vh;
-  background-color: #eef0df; }
+  background-color: #f0e6ce; }
   #header-nav .fas {
     color: #c20000;
     display: none; }
@@ -90,7 +90,7 @@ h1 > span {
 #spy-nav {
   height: 10vh;
   z-index: 10;
-  background-color: #eef0df; }
+  background-color: #f0e6ce; }
 
 #spy-nav.fixed {
   position: sticky;
@@ -269,7 +269,7 @@ footer > p {
     justify-items: center;
     grid-template-columns: 1fr;
     color: #c20000;
-    background-color: #eef0df; }
+    background-color: #f0e6ce; }
     #modal ul {
       margin: 0 auto;
       width: 85%; }

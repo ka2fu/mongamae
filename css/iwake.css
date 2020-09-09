@@ -47,7 +47,10 @@ p, h1, h2, h3, h4, h5, h6 {
   .intro-container .carousel {
     border: white 5px double;
     border-radius: 5px;
-    z-index: 10; }
+    z-index: 10;
+    height: 50vh; }
+    .intro-container .carousel .carousel-inner {
+      height: 100%; }
   .intro-container.img-right {
     background-color: rgba(10, 11, 142, 0.7);
     position: relative; }
@@ -105,13 +108,22 @@ p, h1, h2, h3, h4, h5, h6 {
     background-position: center;
     background-repeat: no-repeat;
     z-index: 50;
-    height: 50vh;
+    height: 100%;
     width: 100%; }
   .intro-container .text-inner {
     padding: 0 2rem;
     color: white; }
+    .intro-container .text-inner.credit {
+      word-break: keep-all; }
+    .intro-container .text-inner.message .message-br {
+      display: none; }
+    .intro-container .text-inner.message h3 {
+      font-size: 1.3rem; }
+    .intro-container .text-inner.message p {
+      margin-left: .8rem; }
     .intro-container .text-inner h2 {
-      padding-left: 1.5rem; }
+      padding-left: 1.2rem;
+      margin-bottom: 1.5rem; }
     .intro-container .text-inner p {
       font-size: 1.1rem;
       letter-spacing: 1px; }
@@ -241,6 +253,8 @@ footer {
     grid-template-columns: 1fr;
     grid-column-gap: 0;
     grid-row-gap: 4rem; }
+    .intro-container .text-inner .message-br {
+      display: block !important; }
     .intro-container.img-right::before {
       top: -6rem;
       border-top: 3rem solid transparent;
@@ -255,7 +269,11 @@ footer {
       border-bottom: 3rem solid transparent; }
     .intro-container.img-right .carousel {
       grid-column: 1;
-      grid-row: 1; }
+      grid-row: 1;
+      height: 30vh;
+      height: 30vh; }
+      .intro-container.img-right .carousel .carousel-inner {
+        height: 100%; }
     .intro-container.img-right .text-inner {
       grid-column: 1;
       grid-row: 2;
@@ -278,7 +296,7 @@ footer {
       border-right: 50vw solid rgba(156, 0, 0, 0.8);
       border-bottom: 3rem solid transparent; }
     .intro-container .intro-img {
-      height: 30vh; }
+      height: 100%; }
 
   .iwake-link::before {
     top: -6rem;
@@ -290,6 +308,8 @@ footer {
     font-size: 15vw; }
   .iwake-link .iwake-link-list {
     grid-template-columns: 1fr;
-    grid-row-gap: 3rem; } }
+    grid-row-gap: 3rem; }
+    .iwake-link .iwake-link-list .no-sp {
+      display: none; } }
 
 /*# sourceMappingURL=iwake.css.map */

@@ -1,10 +1,10 @@
 
 
 $mon-red: #c20000;
-$bg-gray: #eef0df; // bit green
+// $bg-gray: #eef0df; // bit green
 // $bg-gray: #eee; // lighter gray
 // $bg-gray: #e0e0e0; // ligjt gray
-// $bg-gray: #f0e6ce; // bit yellow
+$bg-gray: #f0e6ce; // bit yellowno
 // $bg-gray: #ccc;
 
 * {
@@ -16,7 +16,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p, li {
-  word-wrap: break-word;
+  word-wrap: normal;
 }
 
 .disable {
