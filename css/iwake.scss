@@ -295,6 +295,11 @@ p, h1, h2, h3, h4, h5, h6 {
     color: white;
   }
 
+  p {
+    color: white;
+    font-size: 2rem;
+  }
+
   .iwake-link-list {
     grid-template-columns: repeat(4, 1fr);
     align-content: center;
@@ -472,6 +477,10 @@ footer {
 
     h1 {
       font-size: 15vw;
+    }
+
+    p {
+      font-size: 1.5rem;
     }
 
     .iwake-link-list {

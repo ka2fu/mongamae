@@ -196,6 +196,9 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 5rem;
     font-weight: bolder;
     color: white; }
+  .iwake-link p {
+    color: white;
+    font-size: 2rem; }
   .iwake-link .iwake-link-list {
     grid-template-columns: repeat(4, 1fr);
     align-content: center;
@@ -309,6 +312,8 @@ footer {
     border-bottom: 3rem solid rgba(156, 0, 0, 0.8); }
   .iwake-link h1 {
     font-size: 15vw; }
+  .iwake-link p {
+    font-size: 1.5rem; }
   .iwake-link .iwake-link-list {
     grid-template-columns: 1fr;
     grid-row-gap: 3rem; }
