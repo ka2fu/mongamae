@@ -397,7 +397,32 @@ footer {
       }
     }
 
+    .carousel {
+      height: 30vh;
+      grid-column: 1; grid-row: 1;
+
+      .carousel-inner {
+        height: 100%;
+
+        .intro-img {
+          height: 100%;
+        }
+
+        h2 {
+          padding-left: 0.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+          letter-spacing: .8px;
+        }
+      }
+    }
+
     &.img-right {
+      .carousel {
+        grid-column: 1; grid-row: 1;
+      }
 
       &::before {
         top: -6rem;
@@ -415,29 +440,9 @@ footer {
         border-bottom: 3rem solid transparent;
       }
 
-
-      .carousel {
-        grid-column: 1; grid-row: 1;
-        height: 30vh;
-        height: 30vh;
-
-        .carousel-inner {
-          height: 100%;
-        }
-      }
-
       .text-inner {
         grid-column: 1; grid-row: 2;
         padding: 0 0.7rem;
-
-        h2 {
-          padding-left: 0.5rem;
-        }
-
-        p {
-          font-size: 1rem;
-          letter-spacing: .8px;
-        }
       }
     }
 
@@ -458,10 +463,6 @@ footer {
         border-right: 50vw solid $toka-red;
         border-bottom: 3rem solid transparent;
       }
-    }
-
-    .intro-img {
-      height: 100%;
     }
   }
 
