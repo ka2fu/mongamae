@@ -318,6 +318,9 @@ footer {
       margin: 1rem auto;
       padding: 0.5rem; }
 
+  #spy-nav {
+    display: none; }
+
   #about-bg img {
     height: 30vh; }
 
