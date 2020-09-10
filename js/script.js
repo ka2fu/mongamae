@@ -22,6 +22,7 @@ $(function(){
   let tube_url = 'img/tori-tube.png';
   let note_url = 'img/tori-note.png';
   let moto_url = 'img/tori-moto.png';
+  let kane_url = 'img/tori-kane.png';
   // insta
   $('.insta').hover(
     function(){
@@ -60,6 +61,20 @@ $(function(){
     function(){
       let img = $(this).find('img');
       $(img).attr('src', note_url);
+      // $(img).removeClass('moto');
+    }
+  );
+
+  // pring
+  $('.pring').hover(
+    function(){
+      let img = $(this).find('img');
+      $(img).attr('src', moto_url);
+      // $(img).addClass('moto');
+    },
+    function(){
+      let img = $(this).find('img');
+      $(img).attr('src', kane_url);
       // $(img).removeClass('moto');
     }
   );
