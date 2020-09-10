@@ -21,63 +21,30 @@ $(function(){
   let insta_url = 'img/tori-insta.png';
   let tube_url = 'img/tori-tube.png';
   let note_url = 'img/tori-note.png';
-  let moto_url = 'img/tori-moto.png';
   let kane_url = 'img/tori-kane.png';
-  // insta
-  $('.insta').hover(
-    function(){
-      let img = $(this).find('img');
-      $(img).attr('src', moto_url);
-      // $(img).addClass('moto');
+  let moto_url = 'img/tori-moto.png';
+  $('.tori').on({
+    'touchstart' : function(){
+      $(this).off('mouseover mouseout');
     },
-    function(){
-      let img = $(this).find('img');
-      $(img).attr('src', insta_url);
-      // $(img).removeClass('moto');
-    }
-  );
-
-  // youtube
-  $('.tube').hover(
-    function(){
-      let img = $(this).find('img');
-      $(img).attr('src', moto_url);
-      // $(img).addClass('moto');
+    'touchstart mouseover' : function(){
+      $(this).find('img').attr('src', moto_url);
     },
-    function(){
-      let img = $(this).find('img');
-      $(img).attr('src', tube_url);
-      // $(img).removeClass('moto');
+    'touchend mouseout' : function(){
+      if($(this).hasClass('insta')){
+        $(this).find('img').attr('src', insta_url);
+      }
+      else if($(this).hasClass('tube')){
+        $(this).find('img').attr('src', tube_url);
+      }
+      else if($(this).hasClass('note')){
+        $(this).find('img').attr('src', note_url);
+      }
+      else if($(this).hasClass('pring')){
+        $(this).find('img').attr('src', kane_url);
+      }
     }
-  );
-
-  // note
-  $('.note').hover(
-    function(){
-      let img = $(this).find('img');
-      $(img).attr('src', moto_url);
-      // $(img).addClass('moto');
-    },
-    function(){
-      let img = $(this).find('img');
-      $(img).attr('src', note_url);
-      // $(img).removeClass('moto');
-    }
-  );
-
-  // pring
-  $('.pring').hover(
-    function(){
-      let img = $(this).find('img');
-      $(img).attr('src', moto_url);
-      // $(img).addClass('moto');
-    },
-    function(){
-      let img = $(this).find('img');
-      $(img).attr('src', kane_url);
-      // $(img).removeClass('moto');
-    }
-  );
+  });
 
   // modal
   $('#modal').hide();
