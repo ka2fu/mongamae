@@ -75,6 +75,13 @@ p, h1, h2, h3, h4, h5, h6 {
   grid-template-rows: min-content;
   grid-column-gap: 4rem;
 
+  .outline {
+    p:last-child {
+      font-size: .9rem;
+      filter: brightness(.8);
+    }
+  }
+
   .carousel {
     border: white 5px double;
     border-radius: 5px;
