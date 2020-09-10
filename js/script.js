@@ -122,13 +122,14 @@ $(function(){
     distance = $(this).scrollTop() + headerNavHeight;
 
     // fix navbar
-    if(spyStart <= distance){
-      $('#spy-nav').addClass('fixed').css('top', headerNavHeight);
+    if(spyStart <= distance){ // under position
+      $('#spy-nav').addClass('fixed fixed-spy').css('top', headerNavHeight);
       $('body').attr('data-offset', headerNavHeight+spyNavHeight);
     }
-    else if(spyStart >= distance){
-      $('#spy-nav').removeClass('fixed').css('top', '0');
+    else if(spyStart >= distance){ // over position
+      $('#spy-nav').removeClass('fixed fixed-spy').css('top', '0');
       $('body').attr('data-offset', distance+spyNavHeight);
+      // $('#header-nav').removeClass('opa');
     }
 
     // hover
@@ -137,7 +138,7 @@ $(function(){
         if($(this).hasClass('spy-active')){
           $(this).css('filter', 'brightness(1.0)');
         } else {
-          $(this).css('filter', 'brightness(0.9)');
+          $(this).css('filter', 'brightness(0.75)');
         }
       },
       function (){
