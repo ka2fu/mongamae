@@ -1,11 +1,9 @@
 
 
 $mon-red: #c20000;
-// $bg-gray: #eef0df; // bit green
-// $bg-gray: #eee; // lighter gray
-// $bg-gray: #e0e0e0; // ligjt gray
 $bg-gray: #f0e6ce; // bit yellowno
-// $bg-gray: #ccc;
+$footer: #d7b214;
+// $footer: #696969;
 
 * {
   font-family: 'Sawarabi Mincho', 'TsukuBRdGothic-Regular','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
@@ -326,18 +324,19 @@ h1 > span {
 }
 
 footer {
-  background-color: #696969;
+  background-color: $footer;
   width: 100vw;
   height: 10vh;
   margin-top: 8rem;
   justify-content: center;
   align-content: center;
+
+  p {
+    color: white;
+    margin: 0;
+  }
 }
 
-footer > p {
-  color: white;
-  margin: 0;
-}
 
 @media only screen and (max-width: 600px) {
   .container-title {
