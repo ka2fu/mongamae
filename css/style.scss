@@ -73,14 +73,14 @@ h1 > span {
   .tori-url {
     margin-right: 5rem;
 
-    img {
-      height: 3.5rem;
-      width: 3.5rem;
-      margin-left: 3rem;
+    .tori {
+      height: 0;
+      width: 0;
 
-      &.moto {
-        height: 4rem;
-        width: 4rem;
+      img {
+        height: 3.5rem;
+        width: 3.5rem;
+        margin-left: 3rem;
       }
     }
   }

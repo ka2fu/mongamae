@@ -50,13 +50,13 @@ h1 > span {
     display: none; }
   #header-nav .tori-url {
     margin-right: 5rem; }
-    #header-nav .tori-url img {
-      height: 3.5rem;
-      width: 3.5rem;
-      margin-left: 3rem; }
-      #header-nav .tori-url img.moto {
-        height: 4rem;
-        width: 4rem; }
+    #header-nav .tori-url .tori {
+      height: 0;
+      width: 0; }
+      #header-nav .tori-url .tori img {
+        height: 3.5rem;
+        width: 3.5rem;
+        margin-left: 3rem; }
 
 #header-nav img {
   width: 6rem;
