@@ -21,6 +21,7 @@ $(function(){
   let insta_url = 'img/tori-insta.png';
   let tube_url = 'img/tori-tube.png';
   let note_url = 'img/tori-note.png';
+  let twi_url = 'img/twi-logo.png';
   let kane_url = 'img/tori-kane.png';
   let moto_url = 'img/tori-moto.png';
   $('.tori').on({
@@ -39,6 +40,9 @@ $(function(){
       }
       else if($(this).hasClass('note')){
         $(this).find('img').attr('src', note_url);
+      }
+      else if($(this).hasClass('twi')){
+        $(this).find('img').attr('src', twi_url);
       }
       else if($(this).hasClass('pring')){
         $(this).find('img').attr('src', kane_url);
