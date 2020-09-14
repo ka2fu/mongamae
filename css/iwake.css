@@ -44,9 +44,6 @@ p, h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: min-content;
   grid-column-gap: 4rem; }
-  .intro-container .outline p:last-child {
-    font-size: .9rem;
-    filter: brightness(0.8); }
   .intro-container .carousel {
     border: white 5px double;
     border-radius: 5px;

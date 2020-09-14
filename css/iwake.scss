@@ -76,10 +76,10 @@ p, h1, h2, h3, h4, h5, h6 {
   grid-column-gap: 4rem;
 
   .outline {
-    p:last-child {
-      font-size: .9rem;
-      filter: brightness(.8);
-    }
+    // p:last-child {
+    //   font-size: .9rem;
+    //   filter: brightness(.8);
+    // }
   }
 
   .carousel {
