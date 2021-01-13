@@ -1,8 +1,10 @@
 
 
 $mon-red: #c20000;
-$bg-gray: #f0e6ce; // bit yellowno
+$bg-gray: #fbedbb; // bit yellowno
+$spy-color: #f0e6ce; // bit yellowno
 $footer: #d7b214;
+$spy-red: rgb(194, 0, 0);
 // $footer: #696969;
 
 * {
@@ -65,6 +67,10 @@ h1 > span {
   height: 15vh;
   background-color: $bg-gray;
 
+  #spy-nav-top {
+    display: none;
+  }
+
   .fas {
     color: $mon-red;
     display: none;
@@ -126,32 +132,32 @@ h1 > span {
   color: rgba(213, 213, 213, 0.91);
 }
 
-#spy-nav {
+.spy-nav {
   height: 10vh;
   z-index: 10;
   background-color: $bg-gray;
 
-  &.fixed-spy {
-    height: 1.6rem;
+  // 使わない
+  // &.fixed-spy {
+  //   height: 1.6rem;
+  // }
+  //
+  // &.fixed {
+  //   position: sticky;
+  //   width: 100vw;
+  // }
+  // 使わない
+
+  a {
+    font-size: 1.5rem;
+    width: min-content;
+    align-self: center;
+    justify-self: center;
+
+    &:hover {
+      font-weight: bold;
+    }
   }
-}
-
-#spy-nav.fixed {
-  position: sticky;
-  width: 100vw;
-}
-
-#spy-nav li:hover {
-  font-weight: bold;
-}
-
-// #spy-nav li.spy-active {
-//   background-color: #c20000;
-//   font-weight: bold;
-// }
-
-#spy-nav a {
-  font-size: 1.5rem;
 }
 
 .spy-target > h1 {
@@ -454,7 +460,7 @@ footer {
     }
   }
 
-  #spy-nav {
+  .spy-nav {
     display: none;
   }
 

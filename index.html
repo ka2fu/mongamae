@@ -13,10 +13,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body data-spy="scroll" data-target="#spy-nav">
+<body data-spy="scroll" data-target=".spy-nav">
   <header>
     <nav id="header-nav" class="navbar navbar-expand fixed-top justify-content-between">
       <a href="index.html" class="navbar-brand ml-5"><img src="img/logo.svg" alt="logo image"></a>
+
+      <nav id="spy-nav-top" class="spy-nav navbar navbar-expand py-4">
+        <ul class="navbar-nav w-100 nav-justified">
+          <li class="nav-item grid"><a href="#about" class="nav-link mon-color">about</a></li>
+          <li class="nav-item grid"><a href="#works" class="nav-link mon-color">works</a></li>
+          <li class="nav-item grid"><a href="#members" class="nav-link mon-color">members</a></li>
+          <li class="nav-item grid"><a href="#contact" class="nav-link mon-color">contact</a></li>
+        </ul>
+      </nav>
+
       <li id="open" class="fas fa-bars"></li>
       <li class="tori-url">
         <a href="https://www.instagram.com/mongamae_official/?hl=ja" class="tori insta"><img src="img/tori-insta.png" alt=""></a>
@@ -55,12 +65,12 @@
     </div>
   </header>
 
-  <nav id="spy-nav" class="navbar navbar-expand py-4">
+  <nav id="spy-nav-bottom" class="spy-nav navbar navbar-expand py-4">
     <ul class="navbar-nav w-100 nav-justified">
-      <li class="nav-item"><a href="#about" class="nav-link mon-color">about</a></li>
-      <li class="nav-item"><a href="#works" class="nav-link mon-color">works</a></li>
-      <li class="nav-item"><a href="#members" class="nav-link mon-color">members</a></li>
-      <li class="nav-item"><a href="#contact" class="nav-link mon-color">contact</a></li>
+      <li class="nav-item grid"><a href="#about" class="nav-link mon-color">about</a></li>
+      <li class="nav-item grid"><a href="#works" class="nav-link mon-color">works</a></li>
+      <li class="nav-item grid"><a href="#members" class="nav-link mon-color">members</a></li>
+      <li class="nav-item grid"><a href="#contact" class="nav-link mon-color">contact</a></li>
     </ul>
   </nav>
 
@@ -244,5 +254,6 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/spynav.js"></script>
 </body>
 </html>

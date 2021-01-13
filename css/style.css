@@ -44,7 +44,9 @@ h1 > span {
 
 #header-nav {
   height: 15vh;
-  background-color: #f0e6ce; }
+  background-color: #fbedbb; }
+  #header-nav #spy-nav-top {
+    display: none; }
   #header-nav .fas {
     color: #c20000;
     display: none; }
@@ -90,22 +92,17 @@ h1 > span {
 .carousel-caption h3 {
   color: rgba(213, 213, 213, 0.91); }
 
-#spy-nav {
+.spy-nav {
   height: 10vh;
   z-index: 10;
-  background-color: #f0e6ce; }
-  #spy-nav.fixed-spy {
-    height: 1.6rem; }
-
-#spy-nav.fixed {
-  position: sticky;
-  width: 100vw; }
-
-#spy-nav li:hover {
-  font-weight: bold; }
-
-#spy-nav a {
-  font-size: 1.5rem; }
+  background-color: #fbedbb; }
+  .spy-nav a {
+    font-size: 1.5rem;
+    width: min-content;
+    align-self: center;
+    justify-self: center; }
+    .spy-nav a:hover {
+      font-weight: bold; }
 
 .spy-target > h1 {
   margin-top: 5rem;
@@ -273,7 +270,7 @@ footer {
     justify-items: center;
     grid-template-columns: 1fr;
     color: #c20000;
-    background-color: #f0e6ce; }
+    background-color: #fbedbb; }
     #modal ul {
       margin: 0 auto;
       width: 85%; }
@@ -318,7 +315,7 @@ footer {
       margin: 1rem auto;
       padding: 0.5rem; }
 
-  #spy-nav {
+  .spy-nav {
     display: none; }
 
   #about-bg img {
