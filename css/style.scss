@@ -203,6 +203,10 @@ h1 > span {
   background-image: url("../img/haru-back.jpg");
 }
 
+#ikidukai {
+  background-image: url("../img/iki.png");
+}
+
 #notyet {
   background-image: url('../img/notyet.jpg');
 }
@@ -461,7 +465,7 @@ footer {
   }
 
   .spy-nav {
-    display: none;
+    display: none!important;
   }
 
   #about-bg {

@@ -137,6 +137,9 @@ h1 > span {
 #iwake {
   background-image: url("../img/haru-back.jpg"); }
 
+#ikidukai {
+  background-image: url("../img/iki.png"); }
+
 #notyet {
   background-image: url("../img/notyet.jpg"); }
 
@@ -316,7 +319,7 @@ footer {
       padding: 0.5rem; }
 
   .spy-nav {
-    display: none; }
+    display: none !important; }
 
   #about-bg img {
     height: 30vh; }

@@ -21,7 +21,7 @@ $(document).scroll(function(){
     // 使わない
     $('body').attr('data-offset', headerNavHeight+spyNavHeight);
     $.when(
-      $('.tori-url').fadeOut(),
+      $('#header-nav').find('.tori-url').fadeOut(),
       $('#spy-nav-bottom').find('.nav-link').fadeOut()
     ).done(function(){
       $('#spy-nav-top').fadeIn();
@@ -35,7 +35,7 @@ $(document).scroll(function(){
     $.when(
       $('#spy-nav-top').fadeOut()
     ).done(function(){
-      $('.tori-url').fadeIn();
+      $('#header-nav').find('.tori-url').fadeIn();
       $('#spy-nav-bottom').find('.nav-link').fadeIn();
     });
   }
