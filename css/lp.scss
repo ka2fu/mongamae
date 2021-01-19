@@ -1,0 +1,17 @@
+
+
+$mon-red: #c20000;
+// $bg-gray: #fff; // bit yellowno
+$bg-gray: #fbedbb; // bit yellowno
+$spy-color: #f0e6ce; // bit yellowno
+$footer: #d7b214;
+$spy-red: rgb(194, 0, 0);
+// $footer: #696969;
+
+.has-border {
+  border: solid $mon-red 2px;
+}
+
+#header-wrapper, #spy-nav-bottom, .spy-nav {
+  background-color: #fff;
+}

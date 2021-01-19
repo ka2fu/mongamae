@@ -42,27 +42,38 @@ a {
 h1 > span {
   color: white; }
 
-#header-nav {
-  height: 15vh;
+#logo-icon {
+  background-color: #fff; }
+
+#header-wrapper {
+  height: 12vh;
+  width: 100vw;
   background-color: #fbedbb; }
+
+#header-nav {
+  height: 10vh;
+  width: 98vw;
+  padding: 0;
+  margin: 1vh 1vw; }
   #header-nav #spy-nav-top {
     display: none; }
   #header-nav .fas {
     color: #c20000;
     display: none; }
   #header-nav .tori-url {
-    margin-right: 5rem; }
+    margin-right: 3rem;
+    margin-bottom: -2rem; }
     #header-nav .tori-url .tori {
       height: 0;
       width: 0; }
       #header-nav .tori-url .tori img {
-        height: 3.5rem;
-        width: 3.5rem;
-        margin-left: 3rem; }
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-left: 1.5rem; }
 
 #header-nav img {
-  width: 6rem;
-  height: 6rem; }
+  width: 5rem;
+  height: 5rem; }
 
 #header-nav > span {
   font-weight: bold;
@@ -70,9 +81,9 @@ h1 > span {
   margin-right: 5rem; }
 
 .header-img {
-  height: 75vh;
+  height: 78vh;
   width: 100vw;
-  margin-top: 15vh;
+  margin-top: 12vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -96,6 +107,8 @@ h1 > span {
   height: 10vh;
   z-index: 10;
   background-color: #fbedbb; }
+  .spy-nav ul {
+    width: 100vw; }
   .spy-nav a {
     font-size: 1.5rem;
     width: min-content;
