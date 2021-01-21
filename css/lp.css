@@ -1,7 +1,32 @@
-.has-border {
-  border: solid #c20000 2px; }
+.p-ac {
+  border-bottom: solid #c20000 10px; }
 
 #header-wrapper, #spy-nav-bottom, .spy-nav {
-  background-color: #fff; }
+  background-color: #f0e6ce; }
+
+#spy-nav-bottom li {
+  border: solid #c20000 2px; }
+
+.carousel-inner {
+  position: relative; }
+  .carousel-inner #header-text-inner {
+    z-index: 100;
+    float: left;
+    position: absolute;
+    top: 12vh;
+    left: 10vw;
+    height: 78vh;
+    width: max-content;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center; }
+    .carousel-inner #header-text-inner h1 {
+      color: rgba(233, 233, 233, 0.8);
+      font-size: 10rem; }
+
+footer {
+  background-color: #ccc; }
+  footer p {
+    color: white; }
 
 /*# sourceMappingURL=lp.css.map */

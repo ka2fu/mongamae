@@ -10,6 +10,15 @@ var spyBttom = spyStart + spyNavHeight;
 var distance = 0;
 var monColor = 'rgb(194, 0, 0)';
 
+// ずれ問題
+  var a_height = headerNavHeight + spyNavHeight*3;
+  $('a.nav-link').click(function (){
+    var href = $(this).attr('href');
+    var target = $(href == "#" || href == "" ? "body" : href);
+    var position = target.offset().top - a_height;
+    $('html, body').animate({ scrollTop: position }, 500, "swing");
+    return false;
+  });
 
 $(document).scroll(function(){
   distance = $(this).scrollTop() + headerNavHeight;
@@ -49,5 +58,4 @@ $(document).scroll(function(){
       $(this).css('filter', 'brightness(1.0)');
     }
   );
-
 });

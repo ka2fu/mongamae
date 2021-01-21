@@ -16,12 +16,13 @@
 </head>
 <body data-spy="scroll" data-target=".spy-nav">
   <header>
-    <div id="header-wrapper" class="fixed-top">
+    <div id="header-wrapper" class="fixed-top p-ac">
+      <!-- <nav id="header-nav" class="has-border grid"> -->
       <nav id="header-nav" class="has-border navbar navbar-expand justify-content-between">
         <a href="index.html" class="navbar-brand ml-5"><img src="img/logo.svg" alt="logo image"></a>
 
-        <nav id="spy-nav-top" class="spy-nav navbar navbar-expand py-4">
-          <ul class="navbar-nav w-100 nav-justified">
+        <nav id="spy-nav-top" class="spy-nav">
+          <ul class="navbar-nav grid">
             <li class="nav-item grid"><a href="#about" class="nav-link mon-color">about</a></li>
             <li class="nav-item grid"><a href="#works" class="nav-link mon-color">works</a></li>
             <li class="nav-item grid"><a href="#members" class="nav-link mon-color">members</a></li>
@@ -30,7 +31,7 @@
         </nav>
 
         <li id="open" class="fas fa-bars"></li>
-        <li class="tori-url">
+        <li class="tori-url pc-header-r">
           <a href="https://www.instagram.com/mongamae_official/?hl=ja" class="tori insta"><img src="img/tori-insta.png" alt=""></a>
           <a href="https://note.com/_mongamae" class="tori note"><img src="img/tori-note.png" alt=""></a>
           <a href="https://www.youtube.com/channel/UCaXBN0HjHEAzKccim2k_RTA" class="tori tube"><img src="img/tori-tube.png" alt=""></a>
@@ -41,6 +42,8 @@
     </div>
 
     <div id="header-images" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
+
+
       <ul class="carousel-indicators">
         <li data-target="#header-images" data-slide-to="0" class="active"></li>
         <li data-target="#header-images" data-slide-to="1"></li>
@@ -49,6 +52,9 @@
       </ul>
 
       <div class="carousel-inner">
+        <div id="header-text-inner" class="grid">
+          <div id="header-text"><h1>おちつけ、母。</h1></div>
+        </div>
         <div class="carousel-item header-img active" id="header1">
         </div>
         <div class="carousel-item header-img" id="header2">
@@ -66,16 +72,29 @@
         <span class="carousel-control-next-icon"></span>
       </a>
     </div>
+
+    <!-- <div id="header-text-inner" class="grid">
+      <div id="header-text"><h1>プペル</h1></div>
+    </div> -->
   </header>
 
-  <nav id="spy-nav-bottom" class="spy-nav navbar navbar-expand py-4">
-    <ul class="has-border navbar-nav w-100 nav-justified">
+
+  <nav id="spy-nav-bottom" class="spy-nav p-ac">
+    <ul class="has-border grid">
       <li class="nav-item grid"><a href="#about" class="nav-link mon-color">about</a></li>
       <li class="nav-item grid"><a href="#works" class="nav-link mon-color">works</a></li>
       <li class="nav-item grid"><a href="#members" class="nav-link mon-color">members</a></li>
       <li class="nav-item grid"><a href="#contact" class="nav-link mon-color">contact</a></li>
     </ul>
   </nav>
+  <!-- <nav id="spy-nav-bottom" class="spy-nav navbar navbar-expand ">
+    <ul class="has-border navbar-nav w-100 nav-justified">
+      <li class="nav-item grid"><a href="#about" class="nav-link mon-color">about</a></li>
+      <li class="nav-item grid"><a href="#works" class="nav-link mon-color">works</a></li>
+      <li class="nav-item grid"><a href="#members" class="nav-link mon-color">members</a></li>
+      <li class="nav-item grid"><a href="#contact" class="nav-link mon-color">contact</a></li>
+    </ul>
+  </nav> -->
 
   <div id="modal" class="grid">
     <ul class="">

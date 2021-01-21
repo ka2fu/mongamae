@@ -11,12 +11,21 @@ $bg-url: '../img-ikidukai/';
   background-image: url($bg-url + $url + '.jpg');
 }
 
+@mixin bg-png($url){
+  background-image: url($bg-url + $url + '.png');
+}
+
 p, h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word;
 }
 
+.vanished {
+  display: none;
+}
+
 #header-wrapper {
   background: $bg-trans;
+  z-index: 999;
 }
 
 #spy-nav-bottom {
@@ -25,15 +34,48 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 #wrapper {
+  position: relative;
   height: 100vh;
   background-color: #fff;
-  @include bg-img('moya');
-  z-index: -10;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  &.index {
+    @include bg-img('moya');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .title-anime {
+      cursor: pointer;
+      margin-top: 17rem;
+
+      h1 {
+        font-size: 6rem;
+      }
+    }
+  }
 
   p, h1, h2 {
     z-index: 10;
+  }
+}
+
+#outline {
+
+  .bg-kyonko {
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    width: 70vw;
+    height: 80vh;
+    @include bg-png('kyonkoko');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .text-inner {
+    position: absolute;
+    top: 40vh;
+    left: 55vw;
+    width: 30vw;
   }
 }
 
@@ -56,6 +98,59 @@ p, h1, h2, h3, h4, h5, h6 {
     h1 {
       font-size: 4rem;
       font-weight: bold;
+    }
+  }
+}
+
+#ppl-inner {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+
+  #ppl {
+    height: 40vh;
+    width: 70vw;
+    align-content: center;
+    grid-template-columns: repeat(4, 1fr);
+
+    .item {
+      width: 100%;
+      height: 40vh;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+      & > a{
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        &:hover {
+          filter: brightness(0.7);
+        }
+
+        &.zumin {
+          @include bg-png('zumin');
+        }
+        &.berisa {
+          @include bg-png('berisa');
+        }
+        &.techi {
+          @include bg-png('techi');
+        }
+        &.kyonko {
+          @include bg-png('kyonko');
+        }
+      }
     }
   }
 }

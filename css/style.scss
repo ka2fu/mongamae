@@ -60,6 +60,22 @@ a {
 .mon-color {
   color: rgb(194, 0, 0)!important;
 }
+
+// positionをalign centerの位置にするn
+.p-ac {
+  position: absolute;
+}
+
+.has-border {
+  position: relative;
+  top: 0;
+  // top: 1vh;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 h1 > span {
   color: white;
 }
@@ -76,10 +92,10 @@ h1 > span {
 
 #header-nav {
   height: 10vh;
-  width: 98vw;
-  // background-color: $bg-gray;
   padding: 0;
-  margin: 1vh 1vw;
+  // grid-template-columns: repeat(2, min-content);
+  // align-content: center;
+  // justify-content: space-between;
 
   #spy-nav-top {
     display: none;
@@ -148,12 +164,17 @@ h1 > span {
 }
 
 .spy-nav {
-  height: 10vh;
   z-index: 10;
   background-color: $bg-gray;
 
-  ul {
+  & > ul {
     width: 100vw;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+
+    li {
+      margin: 0;
+    }
   }
 
   a {
@@ -180,8 +201,12 @@ h1 > span {
   border-bottom: 1px solid #c20000;
 }
 
-#psy-nav-bottom {
+#spy-nav-bottom {
+  height: 10vh;
 
+  & > ul {
+    height: 8vh;
+  }
 }
 
 .works-list {

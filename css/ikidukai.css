@@ -1,22 +1,47 @@
 p, h1, h2, h3, h4, h5, h6 {
   word-wrap: break-word; }
 
+.vanished {
+  display: none; }
+
 #header-wrapper {
-  background: rgba(255, 255, 255, 0); }
+  background: rgba(255, 255, 255, 0);
+  z-index: 999; }
 
 #spy-nav-bottom {
   margin-top: 15vh;
   display: none; }
 
 #wrapper {
+  position: relative;
   height: 100vh;
-  background-color: #fff;
-  background-image: url("../img-ikidukai/moya.jpg");
-  z-index: -10;
-  background-repeat: no-repeat;
-  background-size: cover; }
+  background-color: #fff; }
+  #wrapper.index {
+    background-image: url("../img-ikidukai/moya.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; }
+    #wrapper.index .title-anime {
+      cursor: pointer;
+      margin-top: 17rem; }
+      #wrapper.index .title-anime h1 {
+        font-size: 6rem; }
   #wrapper p, #wrapper h1, #wrapper h2 {
     z-index: 10; }
+
+#outline .bg-kyonko {
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  width: 70vw;
+  height: 80vh;
+  background-image: url("../img-ikidukai/kyonkoko.png");
+  background-repeat: no-repeat;
+  background-size: contain; }
+#outline .text-inner {
+  position: absolute;
+  top: 40vh;
+  left: 55vw;
+  width: 30vw; }
 
 .title-inner {
   justify-content: center;
@@ -33,6 +58,43 @@ p, h1, h2, h3, h4, h5, h6 {
     .title-inner .title h1 {
       font-size: 4rem;
       font-weight: bold; }
+
+#ppl-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10; }
+  #ppl-inner #ppl {
+    height: 40vh;
+    width: 70vw;
+    align-content: center;
+    grid-template-columns: repeat(4, 1fr); }
+    #ppl-inner #ppl .item {
+      width: 100%;
+      height: 40vh;
+      background-repeat: no-repeat;
+      background-size: contain; }
+      #ppl-inner #ppl .item > a {
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: relative; }
+        #ppl-inner #ppl .item > a:hover {
+          filter: brightness(0.7); }
+        #ppl-inner #ppl .item > a.zumin {
+          background-image: url("../img-ikidukai/zumin.png"); }
+        #ppl-inner #ppl .item > a.berisa {
+          background-image: url("../img-ikidukai/berisa.png"); }
+        #ppl-inner #ppl .item > a.techi {
+          background-image: url("../img-ikidukai/techi.png"); }
+        #ppl-inner #ppl .item > a.kyonko {
+          background-image: url("../img-ikidukai/kyonko.png"); }
 
 footer {
   margin-top: 0;

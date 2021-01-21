@@ -39,6 +39,17 @@ a {
 .mon-color {
   color: #c20000 !important; }
 
+.p-ac {
+  position: absolute; }
+
+.has-border {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
 h1 > span {
   color: white; }
 
@@ -52,9 +63,7 @@ h1 > span {
 
 #header-nav {
   height: 10vh;
-  width: 98vw;
-  padding: 0;
-  margin: 1vh 1vw; }
+  padding: 0; }
   #header-nav #spy-nav-top {
     display: none; }
   #header-nav .fas {
@@ -104,11 +113,14 @@ h1 > span {
   color: rgba(213, 213, 213, 0.91); }
 
 .spy-nav {
-  height: 10vh;
   z-index: 10;
   background-color: #fbedbb; }
-  .spy-nav ul {
-    width: 100vw; }
+  .spy-nav > ul {
+    width: 100vw;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center; }
+    .spy-nav > ul li {
+      margin: 0; }
   .spy-nav a {
     font-size: 1.5rem;
     width: min-content;
@@ -123,6 +135,11 @@ h1 > span {
   font-weight: bold;
   text-shadow: #c20000 1px 1px 0px, #c20000 -1px 1px 0px, #c20000 1px -1px 0px, #c20000 -1px -1px 0px;
   border-bottom: 1px solid #c20000; }
+
+#spy-nav-bottom {
+  height: 10vh; }
+  #spy-nav-bottom > ul {
+    height: 8vh; }
 
 .works-list {
   grid-template-columns: 1fr 1fr;
