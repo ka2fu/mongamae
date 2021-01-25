@@ -44,7 +44,7 @@ a {
 
 .has-border {
   position: relative;
-  top: 0;
+  top: .5vh;
   left: 0;
   width: 100%;
   padding: 0;

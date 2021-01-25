@@ -34,10 +34,34 @@ $spy-red: rgb(194, 0, 0);
 }
 
 #spy-nav-bottom {
+
   li {
-  //   a { border: solid $mon-red 2px; }
-  // }
-  border: solid $mon-red 2px;
+    border-right: 1px solid $mon-red;
+    border-left: 1px solid $mon-red;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    // &:hover {
+    //   background-color: $mon-red;
+    // }
+
+    a {
+      &:hover {
+        text-shadow:
+          1px 0 5px $mon-red,
+          -1px 0 5px $mon-red,
+          0 -1px 5px $mon-red,
+          0 1px 5px $mon-red;
+        font-size: 1.7rem;
+        color: $spy-color!important;
+      }
+    }
   }
 }
 
