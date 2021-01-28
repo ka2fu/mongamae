@@ -3,6 +3,9 @@
 var monColor = 'rgb(194, 0, 0)';
 
 
+// modalを隠す
+$('#modal').hide();
+
 $(function(){
 
   // linkいたずら
@@ -47,7 +50,6 @@ $(function(){
   });
 
   // modal
-  $('#modal').hide();
   $('nav').on('click', '#open', function (){
     $('#open').fadeOut(1, function (){
       $('#modal').slideDown();

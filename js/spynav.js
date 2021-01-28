@@ -11,7 +11,7 @@ var distance = 0;
 var monColor = 'rgb(194, 0, 0)';
 
 // ずれ問題
-  var a_height = headerNavHeight + spyNavHeight*3;
+  var a_height = headerNavHeight + spyNavHeight*1;
   $('a.nav-link').click(function (){
     var href = $(this).attr('href');
     var target = $(href == "#" || href == "" ? "body" : href);
@@ -25,9 +25,6 @@ $(document).scroll(function(){
 
   // fix navbar
   if(spyBttom <= distance){ // under position
-    // 使わない
-    // $('.spy-nav').addClass('fixed fixed-spy').css('top', headerNavHeight);
-    // 使わない
     $('body').attr('data-offset', headerNavHeight+spyNavHeight);
     $.when(
       $('#header-nav').find('.tori-url').fadeOut(),
@@ -37,9 +34,6 @@ $(document).scroll(function(){
     });
   }
   else if(spyBttom > distance){ // over position
-    // 使わない
-    // $('.spy-nav').removeClass('fixed fixed-spy').css('top', '0');
-    // 使わない
     $('body').attr('data-offset', distance+spyNavHeight);
     $.when(
       $('#spy-nav-top').fadeOut()

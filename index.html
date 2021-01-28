@@ -17,12 +17,11 @@
 <body data-spy="scroll" data-target=".spy-nav">
   <header>
     <div id="header-wrapper" class="fixed-top p-ac">
-      <!-- <nav id="header-nav" class="has-border grid"> -->
-      <nav id="header-nav" class="has-border navbar navbar-expand justify-content-between">
-        <a href="index.html" class="navbar-brand ml-5"><img src="img/logo.svg" alt="logo image"></a>
+      <nav id="header-nav" class="has-border grid">
+        <a href="index.html" id="mon-icon" class="navbar-brand ml-5"><img src="img/logo.svg" alt="logo image"></a>
 
-        <nav id="spy-nav-top" class="spy-nav">
-          <ul class="navbar-nav grid">
+        <nav id="spy-nav-top" class="spy-nav pc-header-r">
+          <ul class="grid">
             <li class="nav-item grid"><a href="#about" class="nav-link mon-color">about</a></li>
             <li class="nav-item grid"><a href="#works" class="nav-link mon-color">works</a></li>
             <li class="nav-item grid"><a href="#members" class="nav-link mon-color">members</a></li>
@@ -30,7 +29,7 @@
           </ul>
         </nav>
 
-        <li id="open" class="fas fa-bars"></li>
+        <li id="open" class="fas fa-bars pc-header-r"></li>
         <li class="tori-url pc-header-r">
           <a href="https://www.instagram.com/mongamae_official/?hl=ja" class="tori insta"><img src="img/tori-insta.png" alt=""></a>
           <a href="https://note.com/_mongamae" class="tori note"><img src="img/tori-note.png" alt=""></a>
@@ -72,10 +71,6 @@
         <span class="carousel-control-next-icon"></span>
       </a>
     </div>
-
-    <!-- <div id="header-text-inner" class="grid">
-      <div id="header-text"><h1>プペル</h1></div>
-    </div> -->
   </header>
 
 
@@ -87,14 +82,6 @@
       <li class="nav-item grid"><a href="#contact" class="nav-link mon-color">contact</a></li>
     </ul>
   </nav>
-  <!-- <nav id="spy-nav-bottom" class="spy-nav navbar navbar-expand ">
-    <ul class="has-border navbar-nav w-100 nav-justified">
-      <li class="nav-item grid"><a href="#about" class="nav-link mon-color">about</a></li>
-      <li class="nav-item grid"><a href="#works" class="nav-link mon-color">works</a></li>
-      <li class="nav-item grid"><a href="#members" class="nav-link mon-color">members</a></li>
-      <li class="nav-item grid"><a href="#contact" class="nav-link mon-color">contact</a></li>
-    </ul>
-  </nav> -->
 
   <div id="modal" class="grid">
     <ul class="">
@@ -160,13 +147,19 @@
     <h1 class="display-3 container-title"><strong class="mon-color">W</strong><span>orks</span></h1>
     <div class="works-list grid">
       <a href="iwake.html" class="works-item a-style">
-        <div class="works-bg" id="iwake"></div>
+        <div class="works-bg-inner">
+          <!-- <div class="works-bg" id="iwake"></div> -->
+          <img src="img/haru-back.jpg" alt="" id="iwake" class="works-bg">
+        </div>
         <p>カキゾメ</p>
         <h3>言い訳</h3>
       </a>
 
       <a href="#" class="works-item a-style disable">
-        <div class="works-bg" id="notyet"></div>
+        <div class="works-bg-inner">
+          <!-- <div class="works-bg" id="notyet"></div> -->
+          <img src="img/notyet.jpg" alt="" id="notyet" class="works-bg">
+        </div>
         <p>未定</p>
         <h3>next work is ...</h3>
       </a>
