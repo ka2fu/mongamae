@@ -47,9 +47,9 @@ $spy-red: rgb(194, 0, 0);
       border-right: none;
     }
 
-    // &:hover {
-    //   background-color: $mon-red;
-    // }
+    &:hover {
+      // background-color: $mon-red;
+    }
 
     a {
       &:hover {
@@ -58,7 +58,6 @@ $spy-red: rgb(194, 0, 0);
           -2px 0 2.5px $mon-red,
           0 -2px 2.5px $mon-red,
           0 2px 2.5px $mon-red;
-        // font-size: 1.7rem;
         color: $spy-color!important;
       }
     }
