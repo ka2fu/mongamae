@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>トップページ | 門 <モンガマエ></title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lp.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
@@ -13,21 +14,35 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body data-spy="scroll" data-target="#spy-nav">
+<body data-spy="scroll" data-target=".spy-nav">
   <header>
-    <nav id="header-nav" class="navbar navbar-expand fixed-top justify-content-between">
-      <a href="index.html" class="navbar-brand ml-5"><img src="img/logo.svg" alt="logo image"></a>
-      <li id="open" class="fas fa-bars"></li>
-      <li class="tori-url">
-        <a href="https://www.instagram.com/mongamae_official/?hl=ja" class="tori insta"><img src="img/tori-insta.png" alt=""></a>
-        <a href="https://note.com/_mongamae" class="tori note"><img src="img/tori-note.png" alt=""></a>
-        <a href="https://www.youtube.com/channel/UCaXBN0HjHEAzKccim2k_RTA" class="tori tube"><img src="img/tori-tube.png" alt=""></a>
-        <a href="https://twitter.com/Mongamae_OA" class="tori twi"><img class="sns-img" src="img/tori-twi.png" alt=""></a>
-        <!-- <a href="https://team.pring.app/teams/2594" class="tori pring"><img class="sns-img" src="img/tori-kane.png" alt=""></a> -->
-      </li>
-    </nav>
+    <div id="header-wrapper" class="fixed-top p-ac">
+      <nav id="header-nav" class="has-border grid">
+        <a href="index.html" id="mon-icon" class="navbar-brand ml-5"><img src="img/logo.svg" alt="logo image"></a>
+
+        <nav id="spy-nav-top" class="spy-nav pc-header-r">
+          <ul class="grid">
+            <li class="nav-item grid"><a href="#about" class="nav-link mon-color">about</a></li>
+            <li class="nav-item grid"><a href="#works" class="nav-link mon-color">works</a></li>
+            <li class="nav-item grid"><a href="#members" class="nav-link mon-color">members</a></li>
+            <li class="nav-item grid"><a href="#contact" class="nav-link mon-color">contact</a></li>
+          </ul>
+        </nav>
+
+        <li id="open" class="fas fa-bars pc-header-r"></li>
+        <li class="tori-url pc-header-r">
+          <a href="https://www.instagram.com/mongamae_official/?hl=ja" class="tori insta"><img src="img/tori-insta.png" alt=""></a>
+          <a href="https://note.com/_mongamae" class="tori note"><img src="img/tori-note.png" alt=""></a>
+          <a href="https://www.youtube.com/channel/UCaXBN0HjHEAzKccim2k_RTA" class="tori tube"><img src="img/tori-tube.png" alt=""></a>
+          <a href="https://twitter.com/Mongamae_OA" class="tori twi"><img class="sns-img" src="img/tori-twi.png" alt=""></a>
+          <!-- <a href="https://team.pring.app/teams/2594" class="tori pring"><img class="sns-img" src="img/tori-kane.png" alt=""></a> -->
+        </li>
+      </nav>
+    </div>
 
     <div id="header-images" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
+
+
       <ul class="carousel-indicators">
         <li data-target="#header-images" data-slide-to="0" class="active"></li>
         <li data-target="#header-images" data-slide-to="1"></li>
@@ -36,6 +51,9 @@
       </ul>
 
       <div class="carousel-inner">
+        <div id="header-text-inner" class="grid">
+          <div id="header-text"><h1>おちつけ、母。</h1></div>
+        </div>
         <div class="carousel-item header-img active" id="header1">
         </div>
         <div class="carousel-item header-img" id="header2">
@@ -55,12 +73,13 @@
     </div>
   </header>
 
-  <nav id="spy-nav" class="navbar navbar-expand py-4">
-    <ul class="navbar-nav w-100 nav-justified">
-      <li class="nav-item"><a href="#about" class="nav-link mon-color">about</a></li>
-      <li class="nav-item"><a href="#works" class="nav-link mon-color">works</a></li>
-      <li class="nav-item"><a href="#members" class="nav-link mon-color">members</a></li>
-      <li class="nav-item"><a href="#contact" class="nav-link mon-color">contact</a></li>
+
+  <nav id="spy-nav-bottom" class="spy-nav p-ac">
+    <ul class="has-border grid">
+      <li class="nav-item grid"><a href="#about" class="nav-link mon-color">about</a></li>
+      <li class="nav-item grid"><a href="#works" class="nav-link mon-color">works</a></li>
+      <li class="nav-item grid"><a href="#members" class="nav-link mon-color">members</a></li>
+      <li class="nav-item grid"><a href="#contact" class="nav-link mon-color">contact</a></li>
     </ul>
   </nav>
 
@@ -80,6 +99,9 @@
         <div class="modal-link-contents">
           <ul>
             <li><a href="iwake.html" class="modal-child-link">言い訳</a></li>
+          </ul>
+          <ul>
+            <li><a href="ikidukai.html" class="modal-child-link">いきヅカイ</a></li>
           </ul>
         </div>
       </li>
@@ -125,13 +147,19 @@
     <h1 class="display-3 container-title"><strong class="mon-color">W</strong><span>orks</span></h1>
     <div class="works-list grid">
       <a href="iwake.html" class="works-item a-style">
-        <div class="works-bg" id="iwake"></div>
+        <div class="works-bg-inner">
+          <!-- <div class="works-bg" id="iwake"></div> -->
+          <img src="img/haru-back.jpg" alt="" id="iwake" class="works-bg">
+        </div>
         <p>カキゾメ</p>
         <h3>言い訳</h3>
       </a>
 
       <a href="#" class="works-item a-style disable">
-        <div class="works-bg" id="notyet"></div>
+        <div class="works-bg-inner">
+          <!-- <div class="works-bg" id="notyet"></div> -->
+          <img src="img/notyet.jpg" alt="" id="notyet" class="works-bg">
+        </div>
         <p>未定</p>
         <h3>next work is ...</h3>
       </a>
@@ -244,5 +272,6 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/spynav.js"></script>
 </body>
 </html>

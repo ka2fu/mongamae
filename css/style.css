@@ -39,38 +39,60 @@ a {
 .mon-color {
   color: #c20000 !important; }
 
+.p-ac {
+  position: absolute; }
+
+.pc-header-r ul {
+  text-align: right; }
+
+.has-border {
+  position: relative;
+  top: 1vh;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
 h1 > span {
   color: white; }
 
+#header-wrapper {
+  height: 12vh;
+  width: 100vw;
+  background-color: #fbedbb; }
+
 #header-nav {
-  height: 15vh;
-  background-color: #f0e6ce; }
+  height: 10vh;
+  padding: 0;
+  grid-template-columns: max-content 60%;
+  justify-content: space-between; }
+  #header-nav #mon-icon, #header-nav .tori-url {
+    height: 10vh; }
+  #header-nav #mon-icon {
+    padding: 0; }
+    #header-nav #mon-icon img {
+      height: 100%; }
+  #header-nav .pc-header-r {
+    align-self: end;
+    justify-self: end; }
   #header-nav .fas {
     color: #c20000;
     display: none; }
   #header-nav .tori-url {
-    margin-right: 5rem; }
+    margin-right: 3rem;
+    margin-bottom: -1.5rem; }
     #header-nav .tori-url .tori {
       height: 0;
       width: 0; }
       #header-nav .tori-url .tori img {
-        height: 3.5rem;
-        width: 3.5rem;
-        margin-left: 3rem; }
-
-#header-nav img {
-  width: 6rem;
-  height: 6rem; }
-
-#header-nav > span {
-  font-weight: bold;
-  font-size: 2rem;
-  margin-right: 5rem; }
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-left: 1.7rem; }
 
 .header-img {
-  height: 75vh;
+  height: 78vh;
   width: 100vw;
-  margin-top: 15vh;
+  margin-top: 12vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -90,23 +112,6 @@ h1 > span {
 .carousel-caption h3 {
   color: rgba(213, 213, 213, 0.91); }
 
-#spy-nav {
-  height: 10vh;
-  z-index: 10;
-  background-color: #f0e6ce; }
-  #spy-nav.fixed-spy {
-    height: 1.6rem; }
-
-#spy-nav.fixed {
-  position: sticky;
-  width: 100vw; }
-
-#spy-nav li:hover {
-  font-weight: bold; }
-
-#spy-nav a {
-  font-size: 1.5rem; }
-
 .spy-target > h1 {
   margin-top: 5rem;
   margin-bottom: 4rem;
@@ -114,34 +119,40 @@ h1 > span {
   text-shadow: #c20000 1px 1px 0px, #c20000 -1px 1px 0px, #c20000 1px -1px 0px, #c20000 -1px -1px 0px;
   border-bottom: 1px solid #c20000; }
 
+.spy-nav {
+  z-index: 10;
+  background-color: #fbedbb;
+  width: 100%; }
+  .spy-nav > ul {
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center; }
+    .spy-nav > ul li {
+      margin: 0; }
+  .spy-nav a {
+    font-size: 1.5rem;
+    width: min-content;
+    align-self: center;
+    justify-self: center; }
+    .spy-nav a:hover {
+      font-weight: bold; }
+
+#spy-nav-top {
+  display: none; }
+
+#spy-nav-bottom {
+  height: 10vh; }
+  #spy-nav-bottom > ul {
+    height: 8vh; }
+
+#about {
+  margin-top: 25vh; }
+
 .works-list {
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   justify-items: center;
   align-items: center; }
-
-.works-item {
-  width: 90%;
-  height: 30rem;
-  /* z-index: -10; */ }
-
-.works-item:hover {
-  opacity: 0.7; }
-
-.works-bg {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline-block;
-  width: 100%;
-  height: 80%;
-  border-radius: 5px; }
-
-#iwake {
-  background-image: url("../img/haru-back.jpg"); }
-
-#notyet {
-  background-image: url("../img/notyet.jpg"); }
 
 #about-bg > img {
   height: 60vh; }
@@ -273,7 +284,7 @@ footer {
     justify-items: center;
     grid-template-columns: 1fr;
     color: #c20000;
-    background-color: #f0e6ce; }
+    background-color: #fbedbb; }
     #modal ul {
       margin: 0 auto;
       width: 85%; }
@@ -318,8 +329,8 @@ footer {
       margin: 1rem auto;
       padding: 0.5rem; }
 
-  #spy-nav {
-    display: none; }
+  .spy-nav {
+    display: none !important; }
 
   #about-bg img {
     height: 30vh; }
