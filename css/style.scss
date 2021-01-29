@@ -1,11 +1,8 @@
 
-
+/* 汎用カラーコード */
 $mon-red: #c20000;
-// $bg-gray: #fff; // bit yellowno
-$bg-gray: #fbedbb; // bit yellowno
-$spy-color: #f0e6ce; // bit yellowno
+$mon-yellow: #fbedbb;
 $footer: #d7b214;
-$spy-red: rgb(194, 0, 0);
 // $footer: #696969;
 
 * {
@@ -94,7 +91,7 @@ h1 > span {
 #header-wrapper {
   height: 12vh;
   width: 100vw;
-  background-color: $bg-gray;
+  background-color: $mon-yellow;
 }
 
 #header-nav {
@@ -196,7 +193,7 @@ h1 > span {
 
 .spy-nav {
   z-index: 10;
-  background-color: $bg-gray;
+  background-color: $mon-yellow;
   width: 100%;
 
   & > ul {
@@ -430,7 +427,7 @@ footer {
     // font-size: 2rem;
     grid-template-columns: 1fr;
     color: $mon-red;
-    background-color: $bg-gray;
+    background-color: $mon-yellow;
 
     ul {
       // margin-bottom: 0;

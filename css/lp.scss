@@ -1,17 +1,13 @@
 
-
-// $mon-red: #ffc2c2;
+/* 汎用カラーコード */
 $mon-red: #c20000;
-$bg-gray: #fbedbb; // bit yellowno
-$spy-color: #f0e6ce; // bit yellowno
-// $spy-color: #eec784; // bit yellowno
-$footer: #d7b214;
+$mon-yellow: #fbedbb;
+$mon-beige: #f0e6ce;
 $spy-red: rgb(194, 0, 0);
-// $footer: #696969;
 
 .p-ac {
-  // border-top: solid $spy-color 1vh;
-  // border-bottom: solid $spy-color 1vh;
+  // border-top: solid $mon-beige 1vh;
+  // border-bottom: solid $$mon-beige 1vh;
   // border-top: solid red 2px;
   border-bottom: solid $mon-red 10px;
   // border-top: solid white 1vh;
@@ -21,7 +17,7 @@ $spy-red: rgb(194, 0, 0);
 
 #header-wrapper, #spy-nav-bottom, .spy-nav {
   // background-color: white;
-  background-color: $spy-color;
+  background-color: $mon-beige;
 }
 
 .tori-url {
@@ -58,7 +54,7 @@ $spy-red: rgb(194, 0, 0);
           -2px 0 2.5px $mon-red,
           0 -2px 2.5px $mon-red,
           0 2px 2.5px $mon-red;
-        color: $spy-color!important;
+        color: $mon-beige!important;
       }
     }
   }
