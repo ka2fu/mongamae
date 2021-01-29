@@ -86,6 +86,24 @@ $spy-red: rgb(194, 0, 0);
   }
 }
 
+/* titleのスタイリングの変更 */
+// .spy-target > .container-title {
+//   border-bottom: 1.8rem solid $mon-beige;
+//   position: relative;
+//
+//   strong {
+//     position: absolute;
+//     top: -3.5rem;
+//   }
+//
+//   span {
+//     color: $mon-beige;
+//     position: absolute;
+//     top: -3.5rem;
+//     left: 4.5rem;
+//   }
+// }
+
 .works-item {
   width: 90%;
   height: 30rem;
@@ -110,6 +128,28 @@ $spy-red: rgb(194, 0, 0);
       height: 80%;
       // border-radius: 5px;
       overflow: hidden;
+    }
+  }
+
+  /* ちぇけらボタンの追加 */
+  .chekera {
+    border: 2px solid $mon-red;
+    border-radius: 1rem;
+    background-color: $mon-beige;
+
+    p {
+      color: $mon-red;
+    }
+  }
+
+  &:hover {
+    .chekera {
+      background-color: $mon-red;
+
+      p {
+        color: $mon-beige;
+        // color: white;
+      }
     }
   }
 }
