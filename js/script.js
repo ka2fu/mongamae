@@ -4,14 +4,12 @@ var monColor = 'rgb(194, 0, 0)';
 
 // 画面幅によるスマホかどうかの判定
 function isSmartPhone() {
-  if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches) {
+  if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches){
     return true;
   } else {
     return false;
   }
 }
-
-isSmartPhone();
 
 $(function(){
 
