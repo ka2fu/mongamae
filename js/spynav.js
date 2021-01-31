@@ -42,14 +42,4 @@ $(document).scroll(function(){
       $('#spy-nav-bottom').find('.nav-link').fadeIn();
     });
   }
-
-  // hover
-  // $('.spy-nav').find('.nav-link').hover(
-  //   function(){
-  //     $(this).css('filter', 'brightness(0.85)');
-  //   },
-  //   function(){
-  //     $(this).css('filter', 'brightness(1.0)');
-  //   }
-  // );
 });
