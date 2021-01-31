@@ -68,6 +68,8 @@
       transition: all .2s ease-out; }
     .works-item .works-bg-inner #iwake {
       background-image: url("../img/haru-back.jpg"); }
+    .works-item .works-bg-inner #ikidukai {
+      background-image: url("../img/iki.png"); }
     .works-item .works-bg-inner #notyet {
       background-image: url("../img/notyet.jpg"); }
 
