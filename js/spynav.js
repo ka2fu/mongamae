@@ -24,7 +24,7 @@ $(document).scroll(function(){
   distance = $(this).scrollTop() + headerNavHeight;
 
   // fix navbar
-  if(isSmartPhone()){
+  if(!(isSmartPhone())){
     if(spyBttom <= distance){ // under position
       $('body').attr('data-offset', headerNavHeight+spyNavHeight);
       $.when(
