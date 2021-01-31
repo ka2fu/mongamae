@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 }
 
 .hidden {
-  display: none;
+  display: none!important;
 }
 
 .opa {
@@ -388,7 +388,7 @@ footer {
   .header-img {
     height: 35vh;
     width: 100vw;
-    margin-top: 13vh;
+    margin-top: 12.9vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

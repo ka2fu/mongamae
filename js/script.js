@@ -3,9 +3,6 @@
 var monColor = 'rgb(194, 0, 0)';
 
 
-// modalを隠す
-$('#modal').hide();
-
 $(function(){
 
   // linkいたずら
@@ -78,9 +75,10 @@ $(function(){
 
   // modal
   $('nav').on('click', '#open', function (){
-    // $('#open').fadeOut(1, function (){
-    //   $('#modal').slideDown();
-    // });
+    if($('#modal').hasClass('hidden')){ // modalの顔一瞬出てくる現象抑制　
+      $('#modal').hide();
+      $('#modal').removeClass('hidden');
+    }
     $('#open').fadeOut();
     $('#header-wrapper').addClass('border-inherit');
     $('#modal').slideDown();
