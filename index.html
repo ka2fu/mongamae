@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>トップページ | 門 <モンガマエ></title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#f0e6ce">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/lp.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -17,12 +24,11 @@
 <body data-spy="scroll" data-target=".spy-nav">
   <header>
     <div id="header-wrapper" class="fixed-top p-ac">
-      <!-- <nav id="header-nav" class="has-border grid"> -->
-      <nav id="header-nav" class="has-border navbar navbar-expand justify-content-between">
-        <a href="index.html" class="navbar-brand ml-5"><img src="img/logo.svg" alt="logo image"></a>
+      <nav id="header-nav" class="has-border grid">
+        <a href="index.html" id="mon-icon" class="navbar-brand ml-5"><img src="img/logo.svg" alt="logo image"></a>
 
-        <nav id="spy-nav-top" class="spy-nav">
-          <ul class="navbar-nav grid">
+        <nav id="spy-nav-top" class="spy-nav pc-header-r">
+          <ul class="grid">
             <li class="nav-item grid"><a href="#about" class="nav-link mon-color">about</a></li>
             <li class="nav-item grid"><a href="#works" class="nav-link mon-color">works</a></li>
             <li class="nav-item grid"><a href="#members" class="nav-link mon-color">members</a></li>
@@ -30,7 +36,7 @@
           </ul>
         </nav>
 
-        <li id="open" class="fas fa-bars"></li>
+        <li id="open" class="fas fa-bars pc-header-r"></li>
         <li class="tori-url pc-header-r">
           <a href="https://www.instagram.com/mongamae_official/?hl=ja" class="tori insta"><img src="img/tori-insta.png" alt=""></a>
           <a href="https://note.com/_mongamae" class="tori note"><img src="img/tori-note.png" alt=""></a>
@@ -72,12 +78,7 @@
         <span class="carousel-control-next-icon"></span>
       </a>
     </div>
-
-    <!-- <div id="header-text-inner" class="grid">
-      <div id="header-text"><h1>プペル</h1></div>
-    </div> -->
   </header>
-
 
   <nav id="spy-nav-bottom" class="spy-nav p-ac">
     <ul class="has-border grid">
@@ -87,16 +88,8 @@
       <li class="nav-item grid"><a href="#contact" class="nav-link mon-color">contact</a></li>
     </ul>
   </nav>
-  <!-- <nav id="spy-nav-bottom" class="spy-nav navbar navbar-expand ">
-    <ul class="has-border navbar-nav w-100 nav-justified">
-      <li class="nav-item grid"><a href="#about" class="nav-link mon-color">about</a></li>
-      <li class="nav-item grid"><a href="#works" class="nav-link mon-color">works</a></li>
-      <li class="nav-item grid"><a href="#members" class="nav-link mon-color">members</a></li>
-      <li class="nav-item grid"><a href="#contact" class="nav-link mon-color">contact</a></li>
-    </ul>
-  </nav> -->
 
-  <div id="modal" class="grid">
+  <div id="modal" class="grid hidden">
     <ul class="">
       <li class="grid modal-link">
         <a href="#about" class="nav-link">about</a>
@@ -113,9 +106,9 @@
           <ul>
             <li><a href="iwake.html" class="modal-child-link">言い訳</a></li>
           </ul>
-          <ul>
+          <!-- <ul>
             <li><a href="ikidukai.html" class="modal-child-link">いきヅカイ</a></li>
-          </ul>
+          </ul> -->
         </div>
       </li>
       <li class="grid modal-link">
@@ -160,21 +153,25 @@
     <h1 class="display-3 container-title"><strong class="mon-color">W</strong><span>orks</span></h1>
     <div class="works-list grid">
       <a href="iwake.html" class="works-item a-style">
-        <div class="works-bg" id="iwake"></div>
-        <p>カキゾメ</p>
-        <h3>言い訳</h3>
-      </a>
-
-      <a href="ikidukai.html" class="works-item a-style">
-        <div class="works-bg" id="ikidukai"></div>
-        <p>二画目</p>
-        <h3>いきヅカイ</h3>
+        <!-- <div class="works-bg" id="iwake"></div> -->
+        <div class="works-bg-inner">
+          <div class="works-bg" id="iwake"></div>
+        </div>
+        <div class="works-title">
+          <p>カキゾメ</p>
+          <h3>言い訳</h3>
+        </div>
       </a>
 
       <a href="#" class="works-item a-style disable">
-        <div class="works-bg" id="notyet"></div>
-        <p>未定</p>
-        <h3>next work is ...</h3>
+        <!-- <img src="img/notyet.jpg" alt="" id="notyet" class="works-bg"> -->
+        <div class="works-bg-inner">
+          <div class="works-bg" id="notyet"></div>
+        </div>
+        <div class="works-title">
+          <p>未定</p>
+          <h3>next work is ...</h3>
+        </div>
       </a>
     </div>
   </div>

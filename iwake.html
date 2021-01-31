@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>言い訳 | 門 <モンガマエ></title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#f0e6ce">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/iwake.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -15,12 +22,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <div id="header-wrapper" class="fixed-top">
-    <nav id="header-nav" class="has-border navbar navbar-expand justify-content-between">
-      <a href="index.html" class="navbar-brand ml-5"><img src="img/logo.svg" alt="logo image"></a>
+  <div id="header-wrapper" class="fixed-top p-ac">
+    <nav id="header-nav" class="has-border grid">
+      <a href="index.html" id="mon-icon" class="navbar-brand ml-5"><img src="img/logo.svg" alt="logo image"></a>
 
-      <li id="open" class="fas fa-bars"></li>
-      <li class="tori-url">
+      <li id="open" class="fas fa-bars pc-header-r"></li>
+      <li class="tori-url pc-header-r">
         <a href="https://www.instagram.com/mongamae_official/?hl=ja" class="tori insta"><img src="img/tori-insta.png" alt=""></a>
         <a href="https://note.com/_mongamae" class="tori note"><img src="img/tori-note.png" alt=""></a>
         <a href="https://www.youtube.com/channel/UCaXBN0HjHEAzKccim2k_RTA" class="tori tube"><img src="img/tori-tube.png" alt=""></a>
@@ -30,7 +37,7 @@
     </nav>
   </div>
 
-  <div id="modal" class="grid">
+  <div id="modal" class="grid hidden">
     <ul class="">
       <li class="grid modal-link">
         <a href="index.html#about" class="nav-link">about</a>

@@ -1,51 +1,64 @@
 
-
-// $mon-red: #ffc2c2;
+/* 汎用カラーコード */
 $mon-red: #c20000;
-$bg-gray: #fbedbb; // bit yellowno
-$spy-color: #f0e6ce; // bit yellowno
-// $spy-color: #eec784; // bit yellowno
-$footer: #d7b214;
+$mon-yellow: #fbedbb;
+$mon-beige: #f0e6ce;
 $spy-red: rgb(194, 0, 0);
-// $footer: #696969;
 
 .p-ac {
-  // border-top: solid $spy-color 1vh;
-  // border-bottom: solid $spy-color 1vh;
-  // border-top: solid red 2px;
   border-bottom: solid $mon-red 10px;
-  // border-top: solid white 1vh;
-  // border-bottom: solid white 1vh;
-
 }
 
-.has-border {
-  // border-top: solid $mon-red 2px;
-  // border-bottom: solid $mon-red 2px;
+.border-inherit {
+  border-bottom: 10px solid $mon-beige;
 }
 
 #header-wrapper, #spy-nav-bottom, .spy-nav {
-  // background-color: white;
-  background-color: $spy-color;
+  background-color: $mon-beige;
 }
 
 .tori-url {
-  // border: solid $mon-red 2px;
 }
 
-#spy-nav-bottom {
+.has-border {
+  top: .5vh;
+}
+
+.spy-nav {
   li {
-  //   a { border: solid $mon-red 2px; }
-  // }
-  border: solid $mon-red 2px;
+    border-right: 1px solid $mon-red;
+    border-left: 1px solid $mon-red;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    a {
+      &:hover {
+        text-shadow:
+          2px 0 2.5px $mon-red,
+          -2px 0 2.5px $mon-red,
+          0 -2px 2.5px $mon-red,
+          0 2px 2.5px $mon-red;
+        color: $mon-beige!important;
+      }
+    }
   }
+}
+
+#spy-nav-top {
+  height: 80%;
 }
 
 .carousel-inner {
   position: relative;
 
   #header-text-inner {
-    z-index: 100;
+    z-index: 40;
     float: left;
     position: absolute;
     top: 12vh;
@@ -63,14 +76,70 @@ $spy-red: rgb(194, 0, 0);
   }
 }
 
+.works-item {
+  width: 85%;
+  height: 60vh;
+
+  .works-title {
+    margin-top: 1.5rem;
+
+    p {
+      margin-bottom: .5rem;
+    }
+  }
+
+  &:hover .works-bg {
+    opacity: .8;
+    transform: scale(1.05);
+    transition: all .2s ease-out;
+  }
+
+  .works-bg-inner {
+    width: 100%;
+    height: 75%;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .works-bg {
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: all .2s ease-out;
+    }
+
+    #iwake {
+      background-image: url("../img/haru-back.jpg");
+    }
+
+    #notyet {
+      background-image: url("../img/notyet.jpg");
+    }
+  }
+}
+
 
 footer{
-  // background-color: $mon-red;
-  // background-color: white;
   background-color: #ccc;
 
   p {
-    // color: $mon-red;
     color: white;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  #spy-nav-top, .tori-url {
+    display: none;
+  }
+
+  #modal {
+    background-color: $mon-beige;
+    border-bottom: 10px solid $mon-red;
+  }
+
+  .works-item {
+    height: 55vh;
   }
 }

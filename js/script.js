@@ -2,6 +2,14 @@
 
 var monColor = 'rgb(194, 0, 0)';
 
+// 画面幅によるスマホかどうかの判定
+function isSmartPhone() {
+  if (window.matchMedia && window.matchMedia('(max-device-width: 640px)').matches){
+    return true;
+  } else {
+    return false;
+  }
+}
 
 $(function(){
 
@@ -13,6 +21,7 @@ $(function(){
     });
   });
 
+  /* sp/tbの時のタッチ効果 */
   // tori変化
   let insta_url = 'img/tori-insta.png';
   let tube_url = 'img/tori-tube.png';
@@ -45,17 +54,47 @@ $(function(){
       }
     }
   });
+  // lpの作品のとこ 保留
+  // $('.works-item').on({
+  //   'touchstart' : function(){
+  //     $(this).off('mouseover mouseout');
+  //   },
+  //   'touchstart mouseover' : function(){
+  //     $(this).find('.works-bg').animate({
+  //       opacity: 0.8
+  //     }, {
+  //       duaration: 200,
+  //       specialEasing: {
+  //         transform: "easeOutQuad"
+  //       }
+  //     });
+  //   },
+  //   'touchend mouseout' : function(){
+  //     $(this).find('.works-bg').animate({
+  //       opacity: 1.0
+  //     }, {
+  //       duaration: 200,
+  //       specialEasing: {
+  //         transform: "easeOutQuad"
+  //       }
+  //     });
+  //   }
+  // });
 
   // modal
-  $('#modal').hide();
   $('nav').on('click', '#open', function (){
-    $('#open').fadeOut(1, function (){
-      $('#modal').slideDown();
-    });
+    if($('#modal').hasClass('hidden')){ // modalの顔一瞬出てくる現象抑制　
+      $('#modal').hide();
+      $('#modal').removeClass('hidden');
+    }
+    $('#open').fadeOut();
+    $('#header-wrapper').addClass('border-inherit');
+    $('#modal').slideDown();
   });
   $('#modal').on('click', '#close', function (){
     $('#modal').slideUp(function (){
-      $('#open').show();
+      $('#header-wrapper').removeClass('border-inherit');
+      $('#open').fadeIn();
     })
   })
 

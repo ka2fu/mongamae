@@ -1,10 +1,15 @@
 
+
+/* 汎用カラーコード */
 $mon-red: #c20000;
 $mon-blue: #0a0b8e;
 $toka-red: rgba(#9c0000, 0.8);
 $toka-blue: rgba(#0a0b8e, 0.7);
 $bg-gray: #ccc;
-$spy-color: #f0e6ce;
+$mon-beige: #f0e6ce;
+$mon-beige: #f0e6ce;
+
+/* パス設定 */
 $bg-url: '../img-iwake/';
 
 @mixin bg-img($url){

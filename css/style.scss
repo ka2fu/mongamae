@@ -1,11 +1,8 @@
 
-
+/* 汎用カラーコード */
 $mon-red: #c20000;
-// $bg-gray: #fff; // bit yellowno
-$bg-gray: #fbedbb; // bit yellowno
-$spy-color: #f0e6ce; // bit yellowno
+$mon-yellow: #fbedbb;
 $footer: #d7b214;
-$spy-red: rgb(194, 0, 0);
 // $footer: #696969;
 
 * {
@@ -25,7 +22,7 @@ h1, h2, h3, h4, h5, h6, p, li {
 }
 
 .hidden {
-  display: none;
+  display: none!important;
 }
 
 .opa {
@@ -61,15 +58,20 @@ a {
   color: rgb(194, 0, 0)!important;
 }
 
-// positionをalign centerの位置にするn
 .p-ac {
   position: absolute;
 }
 
+.pc-header-r {
+
+  ul {
+    text-align: right;
+  }
+}
+
 .has-border {
   position: relative;
-  top: 0;
-  // top: 1vh;
+  top: 1vh;
   left: 0;
   width: 100%;
   padding: 0;
@@ -80,25 +82,33 @@ h1 > span {
   color: white;
 }
 
-#logo-icon {
-  background-color: #fff;
-}
-
 #header-wrapper {
   height: 12vh;
   width: 100vw;
-  background-color: $bg-gray;
+  background-color: $mon-yellow;
 }
 
 #header-nav {
   height: 10vh;
   padding: 0;
-  // grid-template-columns: repeat(2, min-content);
-  // align-content: center;
-  // justify-content: space-between;
+  grid-template-columns: max-content 60%;
+  justify-content: space-between;
 
-  #spy-nav-top {
-    display: none;
+  #mon-icon, .tori-url {
+    height: 10vh;
+  }
+
+  #mon-icon {
+    padding: 0;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .pc-header-r {
+    align-self: end;
+    justify-self: end;
   }
 
   .fas {
@@ -108,7 +118,7 @@ h1 > span {
 
   .tori-url {
     margin-right: 3rem;
-    margin-bottom: -2rem;
+    margin-bottom: -1.5rem;
 
     .tori {
       height: 0;
@@ -117,21 +127,10 @@ h1 > span {
       img {
         height: 2.5rem;
         width: 2.5rem;
-        margin-left: 1.5rem;
+        margin-left: 1.7rem;
       }
     }
   }
-}
-
-#header-nav img {
-  width: 5rem;
-  height: 5rem;
-}
-
-#header-nav > span {
-  font-weight: bold;
-  font-size: 2rem;
-  margin-right: 5rem;
 }
 
 .header-img {
@@ -163,12 +162,25 @@ h1 > span {
   color: rgba(213, 213, 213, 0.91);
 }
 
+.spy-target > h1 {
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  font-weight: bold;
+  text-shadow:
+     #c20000 1px 1px 0px,
+     #c20000 -1px 1px 0px,
+     #c20000 1px -1px 0px,
+     #c20000 -1px -1px 0px;
+  border-bottom: 1px solid #c20000;
+}
+
 .spy-nav {
   z-index: 10;
-  background-color: $bg-gray;
+  background-color: $mon-yellow;
+  width: 100%;
 
   & > ul {
-    width: 100vw;
+    width: 100%;
     grid-template-columns: repeat(4, 1fr);
     align-content: center;
 
@@ -189,16 +201,8 @@ h1 > span {
   }
 }
 
-.spy-target > h1 {
-  margin-top: 5rem;
-  margin-bottom: 4rem;
-  font-weight: bold;
-  text-shadow:
-     #c20000 1px 1px 0px,
-     #c20000 -1px 1px 0px,
-     #c20000 1px -1px 0px,
-     #c20000 -1px -1px 0px;
-  border-bottom: 1px solid #c20000;
+#spy-nav-top {
+  display: none;
 }
 
 #spy-nav-bottom {
@@ -209,43 +213,15 @@ h1 > span {
   }
 }
 
+#about {
+  margin-top: 25vh;
+}
+
 .works-list {
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   justify-items: center;
   align-items: center;
-}
-
-.works-item {
-  width: 90%;
-  height: 30rem;
-  /* z-index: -10; */
-}
-
-.works-item:hover {
-  opacity: 0.7;
-}
-
-.works-bg {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline-block;
-  width: 100%;
-  height: 80%;
-  border-radius: 5px;
-}
-
-#iwake {
-  background-image: url("../img/haru-back.jpg");
-}
-
-#ikidukai {
-  background-image: url("../img/iki.png");
-}
-
-#notyet {
-  background-image: url('../img/notyet.jpg');
 }
 
 #about-bg > img {
@@ -381,30 +357,38 @@ footer {
     font-size: 4rem!important;
   }
 
-  #header-nav {
+  #header-wrapper {
     height: 13vh;
 
-    #open {
-      display: block;
-      font-size: 2.5rem;
-      margin-right: 0.8rem;
-    }
+    #header-nav {
+      height: 100%;
 
-    .tori-url {
-      display: none;
+      #open {
+        display: block;
+        font-size: 2.5rem;
+        margin-right: 0.8rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        align-self: center;
+      }
+
+      .tori-url {
+        display: none;
+      }
+
+      img {
+        margin-left: -3rem;
+        width: 5rem;
+        height: 5rem;
+      }
     }
   }
 
-  #header-nav img {
-    margin-left: -3rem;
-    width: 5rem;
-    height: 5rem;
-  }
 
   .header-img {
     height: 35vh;
     width: 100vw;
-    margin-top: 13vh;
+    margin-top: 12.9vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -412,7 +396,7 @@ footer {
 
   #modal {
     position: fixed;
-    top: 13vh;
+    top: 12.9vh;
     left: 0;
     z-index: 50;
     width: 100vw;
@@ -422,7 +406,7 @@ footer {
     // font-size: 2rem;
     grid-template-columns: 1fr;
     color: $mon-red;
-    background-color: $bg-gray;
+    background-color: $mon-yellow;
 
     ul {
       // margin-bottom: 0;
@@ -505,6 +489,10 @@ footer {
     display: none!important;
   }
 
+  #about {
+    margin-top: 0;
+  }
+
   #about-bg {
     img {
       height: 30vh;
@@ -514,10 +502,6 @@ footer {
   .works-list {
     grid-template-columns: 1fr;
     grid-row-gap: 3rem;
-  }
-
-  .works-item:active {
-    opacity: 0.7;
   }
 
   .deck {
