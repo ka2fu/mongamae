@@ -58,7 +58,6 @@ a {
   color: rgb(194, 0, 0)!important;
 }
 
-// positionをalign centerの位置にするn
 .p-ac {
   position: absolute;
 }
@@ -72,7 +71,6 @@ a {
 
 .has-border {
   position: relative;
-  // top: 0;
   top: 1vh;
   left: 0;
   width: 100%;
@@ -83,10 +81,6 @@ a {
 h1 > span {
   color: white;
 }
-
-// #logo-icon {
-//   background-color: #fff;
-// }
 
 #header-wrapper {
   height: 12vh;
@@ -138,17 +132,6 @@ h1 > span {
     }
   }
 }
-
-// #header-nav img {
-//   width: 5rem;
-//   height: 5rem;
-// }
-//
-// #header-nav > span {
-//   font-weight: bold;
-//   font-size: 2rem;
-//   margin-right: 5rem;
-// }
 
 .header-img {
   height: 78vh;
@@ -240,18 +223,6 @@ h1 > span {
   justify-items: center;
   align-items: center;
 }
-
-// #iwake {
-//   background-image: url("../img/haru-back.jpg");
-// }
-//
-// #ikidukai {
-//   background-image: url("../img/iki.png");
-// }
-//
-// #notyet {
-//   background-image: url('../img/notyet.jpg');
-// }
 
 #about-bg > img {
   height: 60vh;
@@ -386,25 +357,33 @@ footer {
     font-size: 4rem!important;
   }
 
-  #header-nav {
+  #header-wrapper {
     height: 13vh;
 
-    #open {
-      display: block;
-      font-size: 2.5rem;
-      margin-right: 0.8rem;
-    }
+    #header-nav {
+      height: 100%;
 
-    .tori-url {
-      display: none;
+      #open {
+        display: block;
+        font-size: 2.5rem;
+        margin-right: 0.8rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        align-self: center;
+      }
+
+      .tori-url {
+        display: none;
+      }
+
+      img {
+        margin-left: -3rem;
+        width: 5rem;
+        height: 5rem;
+      }
     }
   }
 
-  #header-nav img {
-    margin-left: -3rem;
-    width: 5rem;
-    height: 5rem;
-  }
 
   .header-img {
     height: 35vh;
@@ -417,7 +396,7 @@ footer {
 
   #modal {
     position: fixed;
-    top: 13vh;
+    top: 12.9vh;
     left: 0;
     z-index: 50;
     width: 100vw;
@@ -510,6 +489,10 @@ footer {
     display: none!important;
   }
 
+  #about {
+    margin-top: 0;
+  }
+
   #about-bg {
     img {
       height: 30vh;
@@ -519,10 +502,6 @@ footer {
   .works-list {
     grid-template-columns: 1fr;
     grid-row-gap: 3rem;
-  }
-
-  .works-item:active {
-    opacity: 0.7;
   }
 
   .deck {

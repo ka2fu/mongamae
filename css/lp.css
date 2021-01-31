@@ -3,6 +3,9 @@
 .p-ac {
   border-bottom: solid #c20000 10px; }
 
+.border-inherit {
+  border-bottom: 10px solid #f0e6ce; }
+
 #header-wrapper, #spy-nav-bottom, .spy-nav {
   background-color: #f0e6ce; }
 
@@ -26,7 +29,7 @@
 .carousel-inner {
   position: relative; }
   .carousel-inner #header-text-inner {
-    z-index: 100;
+    z-index: 40;
     float: left;
     position: absolute;
     top: 12vh;
@@ -40,41 +43,48 @@
       color: rgba(233, 233, 233, 0.8);
       font-size: 10rem; }
 
-/* titleのスタイリングの変更 */
 .works-item {
-  width: 90%;
-  height: 30rem;
-  /* z-index: -10; */
-  /* ちぇけらボタンの追加 */ }
+  width: 85%;
+  height: 60vh; }
+  .works-item .works-title {
+    margin-top: 1.5rem; }
+    .works-item .works-title p {
+      margin-bottom: .5rem; }
   .works-item:hover .works-bg {
-    transform: scale(1.1);
-    overflow: hidden; }
+    opacity: .8;
+    transform: scale(1.05);
+    transition: all .2s ease-out; }
   .works-item .works-bg-inner {
     width: 100%;
-    height: 80%;
-    border-radius: 5px; }
+    height: 75%;
+    border-radius: 5px;
+    overflow: hidden; }
     .works-item .works-bg-inner .works-bg {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: inline-block;
       width: 100%;
-      height: 80%;
-      overflow: hidden; }
-  .works-item .chekera {
-    border: 2px solid #c20000;
-    border-radius: 1rem;
-    background-color: #f0e6ce; }
-    .works-item .chekera p {
-      color: #c20000; }
-  .works-item:hover .chekera {
-    background-color: #c20000; }
-    .works-item:hover .chekera p {
-      color: #f0e6ce; }
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: all .2s ease-out; }
+    .works-item .works-bg-inner #iwake {
+      background-image: url("../img/haru-back.jpg"); }
+    .works-item .works-bg-inner #notyet {
+      background-image: url("../img/notyet.jpg"); }
 
 footer {
   background-color: #ccc; }
   footer p {
     color: white; }
+
+@media only screen and (max-width: 600px) {
+  #header-nav .pc-header-r {
+    display: none; }
+
+  #modal {
+    background-color: #f0e6ce;
+    border-bottom: 10px solid #c20000; }
+
+  .works-item {
+    height: 55vh; } }
 
 /*# sourceMappingURL=lp.css.map */

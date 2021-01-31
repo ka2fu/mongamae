@@ -6,27 +6,21 @@ $mon-beige: #f0e6ce;
 $spy-red: rgb(194, 0, 0);
 
 .p-ac {
-  // border-top: solid $mon-beige 1vh;
-  // border-bottom: solid $$mon-beige 1vh;
-  // border-top: solid red 2px;
   border-bottom: solid $mon-red 10px;
-  // border-top: solid white 1vh;
-  // border-bottom: solid white 1vh;
+}
 
+.border-inherit {
+  border-bottom: 10px solid $mon-beige;
 }
 
 #header-wrapper, #spy-nav-bottom, .spy-nav {
-  // background-color: white;
   background-color: $mon-beige;
 }
 
 .tori-url {
-  // border: solid $mon-red 2px;
 }
 
 .has-border {
-  // border-top: solid $mon-red 2px;
-  // border-bottom: solid $mon-red 2px;
   top: .5vh;
 }
 
@@ -41,10 +35,6 @@ $spy-red: rgb(194, 0, 0);
 
     &:last-child {
       border-right: none;
-    }
-
-    &:hover {
-      // background-color: $mon-red;
     }
 
     a {
@@ -68,7 +58,7 @@ $spy-red: rgb(194, 0, 0);
   position: relative;
 
   #header-text-inner {
-    z-index: 100;
+    z-index: 40;
     float: left;
     position: absolute;
     top: 12vh;
@@ -86,85 +76,70 @@ $spy-red: rgb(194, 0, 0);
   }
 }
 
-/* titleのスタイリングの変更 */
-// .spy-target > .container-title {
-//   border-bottom: 1.8rem solid $mon-beige;
-//   position: relative;
-//
-//   strong {
-//     position: absolute;
-//     top: -3.5rem;
-//   }
-//
-//   span {
-//     color: $mon-beige;
-//     position: absolute;
-//     top: -3.5rem;
-//     left: 4.5rem;
-//   }
-// }
-
 .works-item {
-  width: 90%;
-  height: 30rem;
-  /* z-index: -10; */
+  width: 85%;
+  height: 60vh;
+
+  .works-title {
+    margin-top: 1.5rem;
+
+    p {
+      margin-bottom: .5rem;
+    }
+  }
 
   &:hover .works-bg {
-    transform: scale(1.1);
-    overflow: hidden;
+    opacity: .8;
+    transform: scale(1.05);
+    transition: all .2s ease-out;
   }
 
   .works-bg-inner {
     width: 100%;
-    height: 80%;
+    height: 75%;
     border-radius: 5px;
+    overflow: hidden;
 
     .works-bg {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: inline-block;
       width: 100%;
-      height: 80%;
-      // border-radius: 5px;
-      overflow: hidden;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: all .2s ease-out;
     }
-  }
 
-  /* ちぇけらボタンの追加 */
-  .chekera {
-    border: 2px solid $mon-red;
-    border-radius: 1rem;
-    background-color: $mon-beige;
-
-    p {
-      color: $mon-red;
+    #iwake {
+      background-image: url("../img/haru-back.jpg");
     }
-  }
 
-  &:hover {
-    .chekera {
-      background-color: $mon-red;
-
-      p {
-        color: $mon-beige;
-        // color: white;
-      }
+    #notyet {
+      background-image: url("../img/notyet.jpg");
     }
   }
 }
 
-// .works-item:hover {
-//   transform: scale(1.1);
-// }
 
 footer{
-  // background-color: $mon-red;
-  // background-color: white;
   background-color: #ccc;
 
   p {
-    // color: $mon-red;
     color: white;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  #header-nav .pc-header-r {
+    display: none;
+  }
+
+  #modal {
+    background-color: $mon-beige;
+    border-bottom: 10px solid $mon-red;
+  }
+
+  .works-item {
+    height: 55vh;
   }
 }

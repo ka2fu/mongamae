@@ -16,6 +16,7 @@ $(function(){
     });
   });
 
+  /* sp/tbの時のタッチ効果 */
   // tori変化
   let insta_url = 'img/tori-insta.png';
   let tube_url = 'img/tori-tube.png';
@@ -48,16 +49,46 @@ $(function(){
       }
     }
   });
+  // lpの作品のとこ 保留
+  // $('.works-item').on({
+  //   'touchstart' : function(){
+  //     $(this).off('mouseover mouseout');
+  //   },
+  //   'touchstart mouseover' : function(){
+  //     $(this).find('.works-bg').animate({
+  //       opacity: 0.8
+  //     }, {
+  //       duaration: 200,
+  //       specialEasing: {
+  //         transform: "easeOutQuad"
+  //       }
+  //     });
+  //   },
+  //   'touchend mouseout' : function(){
+  //     $(this).find('.works-bg').animate({
+  //       opacity: 1.0
+  //     }, {
+  //       duaration: 200,
+  //       specialEasing: {
+  //         transform: "easeOutQuad"
+  //       }
+  //     });
+  //   }
+  // });
 
   // modal
   $('nav').on('click', '#open', function (){
-    $('#open').fadeOut(1, function (){
-      $('#modal').slideDown();
-    });
+    // $('#open').fadeOut(1, function (){
+    //   $('#modal').slideDown();
+    // });
+    $('#open').fadeOut();
+    $('#header-wrapper').addClass('border-inherit');
+    $('#modal').slideDown();
   });
   $('#modal').on('click', '#close', function (){
     $('#modal').slideUp(function (){
-      $('#open').show();
+      $('#header-wrapper').removeClass('border-inherit');
+      $('#open').fadeIn();
     })
   })
 
