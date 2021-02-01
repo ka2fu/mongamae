@@ -124,6 +124,18 @@ body { // background-imageをspでも正常になるように固定
   }
 }
 
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 999;
+
+  p {
+    color: #000;
+  }
+}
+
 @media only screen and (max-width: 600px) {
 
   .index {

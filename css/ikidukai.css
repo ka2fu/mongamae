@@ -65,6 +65,15 @@ body.index::before {
     .index .gimmick-inner #ppl-inner .ppl#techi {
       background-image: url("../img-ikidukai/techi.png"); }
 
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 999; }
+  footer p {
+    color: #000; }
+
 @media only screen and (max-width: 600px) {
   .index .title-inner {
     width: 100%;
