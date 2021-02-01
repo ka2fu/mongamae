@@ -1,0 +1,59 @@
+
+$mon-red: #c20000;
+$iki-bule: #041e78;
+$bg-url: '../img-ikidukai/';
+
+@mixin bg-jpg($url){
+  background-image: url($bg-url + $url + '.jpg');
+}
+
+@mixin bg-png($url){
+  background-image: url($bg-url + $url + '.jpg');
+}
+
+* {
+  background-color: transparent;
+  z-index: 1;
+}
+
+body { // background-imageをspでも正常になるように固定
+
+  &::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &.index::before {
+    @include bg-jpg('moya');
+  }
+}
+
+#header-wrapper {
+  background-color: transparent;
+  z-index: 999;
+}
+
+#modal {
+  background-color: transparent;
+
+  /* modalの色を青にするパターン */
+//   color: $iki-bule;
+//   ul {
+//     li{
+//       &.modal-link {
+//         border-bottom: 1px solid $iki-bule;
+//       }
+//       a {
+//         color: $iki-bule!important;
+//       }
+//     }
+//   }
+}

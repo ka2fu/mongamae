@@ -24,7 +24,83 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-  
+  <div id="header-wrapper" class="fixed-top p-ac">
+    <nav id="header-nav" class="has-border grid">
+      <a href="index.html" id="mon-icon" class="navbar-brand ml-5"><img src="img/logo.svg" alt="logo image"></a>
+
+      <li id="open" class="fas fa-bars pc-header-r"></li>
+      <li class="tori-url pc-header-r">
+        <a href="https://www.instagram.com/mongamae_official/?hl=ja" class="tori insta"><img src="img/tori-insta.png" alt=""></a>
+        <a href="https://note.com/_mongamae" class="tori note"><img src="img/tori-note.png" alt=""></a>
+        <a href="https://www.youtube.com/channel/UCaXBN0HjHEAzKccim2k_RTA" class="tori tube"><img src="img/tori-tube.png" alt=""></a>
+        <a href="https://twitter.com/Mongamae_OA" class="tori twi"><img class="sns-img" src="img/tori-twi.png" alt=""></a>
+        <!-- <a href="https://team.pring.app/teams/2594" class="tori pring"><img class="sns-img" src="img/tori-kane.png" alt=""></a> -->
+      </li>
+    </nav>
+  </div>
+
+  <div id="modal" class="grid hidden">
+    <ul class="">
+      <li class="grid modal-link">
+        <a href="index.html#about" class="nav-link">about</a>
+        <!-- <div class="li-btn">
+          <span class="fas fa-plus"></span><span class="fas fa-minus"></span>
+        </div> -->
+      </li>
+      <li class="grid modal-link">
+        <a href="index.html#works" class="nav-link">works</a>
+        <div class="li-btn">
+          <span class="fas fa-plus plus"></span><span class="fas fa-minus minus"></span>
+        </div>
+        <div class="modal-link-contents">
+          <ul>
+            <li><a href="iwake.html" class="modal-child-link">言い訳</a></li>
+          </ul>
+          <ul>
+            <li><a href="ikidukai.html" class="modal-child-link">いきヅカイ</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="grid modal-link">
+        <a href="index.html#members" class="nav-link">members</a>
+        <!-- <div class="li-btn">
+          <span class="fas fa-plus"></span><span class="fas fa-minus"></span>
+        </div> -->
+      </li>
+      <li class="grid modal-link">
+        <a href="index.html#contact" class="nav-link">contact</a>
+        <!-- <div class="li-btn">
+          <span class="fas fa-plus"></span><span class="fas fa-minus"></span>
+        </div> -->
+      </li>
+      <li class="tori-url grid">
+        <a href="https://www.instagram.com/mongamae_official/?hl=ja" class="tori insta small"><img src="img/tori-insta.png" alt=""></a>
+        <a href="https://note.com/_mongamae" class="tori note small"><img src="img/tori-note.png" alt=""></a>
+        <a href="https://www.youtube.com/channel/UCaXBN0HjHEAzKccim2k_RTA" class="tori tube small"><img src="img/tori-tube.png" alt=""></a>
+        <a href="https://team.pring.app/teams/2594" class="tori pring small"><img src="img/tori-kane.png" alt=""></a>
+      </li>
+    </ul>
+    <i id="close" class="fas fa-angle-up"></i>
+  </div>
+
+  <div id="wrapper" class="">
+    <div class="title-inner grid"> <!-- lpの場合background-imageを指定 -->
+      <div class="title title-anime">
+        <p>ニカクメ</p>  <!-- lpのみ表示 -->
+        <img src="" alt="">
+      </div>
+    </div>
+
+    <!-- lpでは第二層のギミックを配置、各ページ内ではここで虫眼鏡を配置？ -->
+    <div class="gimmick-inner">
+
+      <!-- 虫眼鏡を配置 -->
+      <div id="mushimegane"></div>
+
+      <!-- 各ページのテキスト用のinner -->
+      <div id="info-inner"></div>
+    </div>
+  </div>
 
   <script src="js/script.js"></script>
   <script src="js/ikidukai.js"></script>

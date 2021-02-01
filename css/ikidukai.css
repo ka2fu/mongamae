@@ -9,11 +9,10 @@ p, h1, h2, h3, h4, h5, h6 {
   display: none; }
 
 #header-wrapper {
-  background: rgba(255, 255, 255, 0);
+  background: transparent;
   z-index: 999; }
 
 #spy-nav-bottom {
-  margin-top: 15vh;
   display: none; }
 
 #modal {
@@ -109,7 +108,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 footer {
   margin-top: 0;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: transparent;
   z-index: 10;
   position: fixed;
   bottom: 0; }

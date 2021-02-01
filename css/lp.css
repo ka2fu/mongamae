@@ -43,6 +43,9 @@
       color: rgba(233, 233, 233, 0.8);
       font-size: 10rem; }
 
+.works-list {
+  grid-row-gap: 2rem; }
+
 .works-item {
   width: 85%;
   height: 60vh; }

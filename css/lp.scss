@@ -76,6 +76,10 @@ $spy-red: rgb(194, 0, 0);
   }
 }
 
+.works-list {
+  grid-row-gap: 2rem;
+}
+
 .works-item {
   width: 85%;
   height: 60vh;
