@@ -23,7 +23,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body class="index">
   <div id="header-wrapper" class="fixed-top p-ac">
     <nav id="header-nav" class="has-border grid">
       <a href="index.html" id="mon-icon" class="navbar-brand ml-5"><img src="img/logo.svg" alt="logo image"></a>
@@ -83,26 +83,35 @@
     <i id="close" class="fas fa-angle-up"></i>
   </div>
 
-  <div id="wrapper" class="index">
-    <div class="title-inner grid">
-      <div class="title title-anime">
-        <p>ニカクメ</p>
+  <div id="wrapper" class="">
+    <div class="title-inner grid"> <!-- lpの場合background-imageを指定？ -->
+      <div class="title">
+        <p>ニカクメ</p>  <!-- lpのみ表示 -->
         <img src="img-ikidukai/logo-toka.png" alt="いきヅカイのロゴ">
       </div>
     </div>
-    <div id="ppl-inner" class="grid hidden">
-      <div id="ppl" class="grid">
-        <div class="item"><a href="https://yukawanet.com/archives/imaizumi20210121.html" class="zumin"></a></div>
-        <div class="item"><a class="berisa"></a></div>
-        <div class="item"><a href="ikidukai-outline.html" class="kyonko"></a></div>
-        <div class="item"><a class="techi"></a></div>
+
+    <!-- lpでは第二層のギミックを配置、各ページ内ではここで虫眼鏡を配置？ -->
+    <div class="gimmick-inner">
+      <div id="ppl-inner" class="grid hidden">
+        <div class="ppl" id="zumin"></div>
+        <div class="ppl" id="berisa"></div>
+        <a href="ikidukai-detail.html" class="ppl" id="kyonko"></a>
+        <!-- <div class="ppl" id="kyonko"></div> -->
+        <div class="ppl" id="techi"></div>
+        <!-- <img src="img-ikidukai/zumin.png" alt="" class="ppl" id="zumin">
+        <img src="img-ikidukai/berisa.png" alt="" class="ppl" id="berisa">
+        <img src="img-ikidukai/kyonko.png" alt="" class="ppl" id="kyonko">
+        <img src="img-ikidukai/techi.png" alt="" class="ppl" id="techi"> -->
       </div>
+
+      <!-- 虫眼鏡を配置 -->
+      <div id="mushimegane"></div>
+
+      <!-- 各ページのテキスト用のinner -->
+      <div id="info-inner"></div>
     </div>
   </div>
-
-  <footer class="grid">
-    <p>copyright © mongamae</p>
-  </footer>
 
   <script src="js/script.js"></script>
   <script src="js/ikidukai.js"></script>

@@ -3,7 +3,7 @@ $mon-red: #c20000;
 $iki-bule: #041e78;
 $bg-url: '../img-ikidukai/';
 
-@mixin bg-img($url){
+@mixin bg-jpg($url){
   background-image: url($bg-url + $url + '.jpg');
 }
 
@@ -13,24 +13,33 @@ $bg-url: '../img-ikidukai/';
 
 * {
   background-color: transparent;
+  z-index: 1;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  word-wrap: break-word;
-}
+body { // background-imageをspでも正常になるように固定
 
-.hidden {
-  display: none;
+  &::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // @include bg-jpg('moya');
+  }
+
+  &.index::before {
+    @include bg-jpg('moya');
+  }
 }
 
 #header-wrapper {
-  background: transparent;
+  background-color: transparent;
   z-index: 999;
-}
-
-#spy-nav-bottom {
-  // margin-top: 15vh;
-  display: none;
 }
 
 #modal {
@@ -50,145 +59,94 @@ p, h1, h2, h3, h4, h5, h6 {
 //   }
 }
 
-#wrapper {
-  position: relative;
-  height: 100vh;
-  background-color: transparent;
+.index {
 
-  &.index {
-    @include bg-img('moya');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  .title-inner {
+    position: absolute;
+    // display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: max-content;
+    align-content: center;
 
-    .title-anime {
-      cursor: pointer;
-      margin-top: 17rem;
+    .title {
+      width: max-content;
+      height: 100%;
 
-      img {
-        height: 30vh;
-        width: 80vw;
+      p {
+        font-size: 2.5rem;
+        margin-left: 5rem;
+        margin-bottom: -3rem;
       }
     }
   }
 
-  p, h1, h2 {
-    z-index: 10;
-  }
-}
+  .gimmick-inner {
+    #ppl-inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70vw;
+      height: 60vh;
+      grid-template-columns: repeat(4, 1fr);
 
-#outline {
-
-  .bg-kyonko {
-    position: absolute;
-    top: 20vh;
-    left: 0;
-    width: 70vw;
-    height: 80vh;
-    @include bg-png('kyonkoko');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-  }
-
-  .text-inner {
-    position: absolute;
-    top: 40vh;
-    left: 55vw;
-    width: 30vw;
-  }
-}
-
-.title-inner {
-  justify-content: center;
-  align-content: center;
-  position: relative;
-
-  .title {
-    display: inline-block;
-    margin: 10rem auto 2rem auto;
-    color: #000;
-    z-index: 10;
-
-    p {
-      padding-left: 2.5rem;
-      font-size: 1.5rem;
-    }
-
-    h1 {
-      font-size: 4rem;
-      font-weight: bold;
-    }
-  }
-}
-
-#ppl-inner {
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  align-content: center;
-  height: 100vh;
-  width: 100vw;
-  z-index: 10;
-
-  #ppl {
-    height: 40vh;
-    width: 70vw;
-    align-content: center;
-    grid-template-columns: repeat(4, 1fr);
-
-    .item {
-      width: 100%;
-      height: 40vh;
-      background-repeat: no-repeat;
-      background-size: contain;
-
-
-      & > a{
+      .ppl {
+        width: 90%;
+        background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        position: relative;
 
         &:hover {
-          filter: brightness(0.7);
+          opacity: .8;
         }
 
-        &.zumin {
+        &#zumin {
           @include bg-png('zumin');
         }
-        &.berisa {
+
+        &#berisa {
           @include bg-png('berisa');
         }
-        &.techi {
-          @include bg-png('techi');
-        }
-        &.kyonko {
+
+        &#kyonko {
           @include bg-png('kyonko');
+          transform: rotateX(180deg);
+        }
+
+        &#techi {
+          @include bg-png('techi');
         }
       }
     }
-  }
-}
-
-footer {
-  margin-top: 0;
-  background-color: transparent;
-  z-index: 10;
-  position: fixed;
-  bottom: 0;
-
-  p {
-    color: #000;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  #wrapper {
 
+  .index {
+    .title-inner {
+      width: 100%;
+      height: max-content;
+
+      .title {
+        width: 100%;
+        height: max-content;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .gimmick-inner {
+      #ppl-inner{
+        width: 85vw;
+        height: 70vh;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   }
 }
