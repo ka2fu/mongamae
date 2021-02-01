@@ -48,7 +48,7 @@ a {
 
 .has-border {
   position: relative;
-  top: 1vh;
+  top: 0;
   left: 0;
   width: 100%;
   padding: 0;
@@ -70,7 +70,8 @@ h1 > span {
   #header-nav #mon-icon, #header-nav .tori-url {
     height: 10vh; }
   #header-nav #mon-icon {
-    padding: 0; }
+    padding: 0;
+    align-self: center; }
     #header-nav #mon-icon img {
       height: 100%; }
   #header-nav .pc-header-r {

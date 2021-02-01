@@ -71,7 +71,7 @@ a {
 
 .has-border {
   position: relative;
-  top: 1vh;
+  top: 0;
   left: 0;
   width: 100%;
   padding: 0;
@@ -100,6 +100,7 @@ h1 > span {
 
   #mon-icon {
     padding: 0;
+    align-self: center;
 
     img {
       height: 100%;
