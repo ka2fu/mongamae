@@ -45,8 +45,9 @@ body.index::before {
     align-self: center; }
     .index .title-inner .title p {
       position: absolute;
-      top: 0;
-      left: 0; }
+      top: 20%;
+      left: 8%;
+      font-size: 3rem; }
 .index .gimmick-inner #ppl-inner {
   position: fixed;
   top: 50%;
@@ -85,6 +86,9 @@ footer {
   .index .title-inner .title {
     width: 100vw;
     height: 30vh; }
+    .index .title-inner .title p {
+      top: 2%;
+      left: 9%; }
   .index .gimmick-inner #ppl-inner {
     width: 85vw;
     height: 70vh;

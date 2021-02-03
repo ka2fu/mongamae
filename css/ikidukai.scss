@@ -83,8 +83,9 @@ body { // background-imageをspでも正常になるように固定
 
       p {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 20%;
+        left: 8%;
+        font-size: 3rem;
       }
     }
   }
@@ -151,7 +152,8 @@ footer {
         height: 30vh;
 
         p {
-
+          top: 2%;
+          left: 9%;
         }
       }
     }
