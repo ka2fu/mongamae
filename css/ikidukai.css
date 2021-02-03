@@ -16,6 +16,10 @@ body::before {
   background-repeat: no-repeat; }
 body.index::before {
   background-image: url("../img-ikidukai/moya.jpg"); }
+body.detail::before {
+  background-image: url("../img-ikidukai/kyonkoko.png");
+  background-size: 70%;
+  background-position: top 0 left -10%; }
 
 #header-wrapper {
   background-color: transparent;
@@ -24,6 +28,22 @@ body.index::before {
 #modal {
   background-color: transparent;
   /* modalの色を青にするパターン */ }
+
+/* グローバル設定 */
+.gimmick-inner {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh; }
+  .gimmick-inner #info-inner {
+    position: absolute;
+    width: 70vw;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 15vh; }
+    .gimmick-inner #info-inner .info-text {
+      width: 70%; }
+    .gimmick-inner #info-inner > img {
+      width: 50%; }
 
 .index .title-inner {
   position: fixed;
@@ -73,6 +93,9 @@ body.index::before {
     .index .gimmick-inner #ppl-inner .ppl#techi {
       background-image: url("../img-ikidukai/techi.png"); }
 
+.detail .gimmick-inner #info-inner {
+  right: 0; }
+
 footer {
   position: fixed;
   left: 0;
@@ -83,6 +106,16 @@ footer {
     color: #000; }
 
 @media only screen and (max-width: 600px) {
+  /* グローバル */
+  body.detail::before {
+    background-image: url("../img-ikidukai/kyonkoko-sp.png");
+    background-size: 100%;
+    background-position: bottom 20% left 0; }
+
+  .gimmick-inner #info-inner {
+    margin-top: 14vh; }
+
+  /* グルーバルp */
   .index .title-inner .title {
     width: 100vw;
     height: 30vh; }
