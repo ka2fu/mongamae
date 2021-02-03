@@ -96,7 +96,7 @@ body { // background-imageをspでも正常になるように固定
     width: 100vw;
     height: 100vh;
     grid-template-rows: 1fr;
-    align-content: center;
+    align-items: center;
     justify-content: center;
 
     .title {
@@ -107,7 +107,7 @@ body { // background-imageをspでも正常になるように固定
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      align-self: center;
+      z-index: 900;
 
       p {
         position: absolute;

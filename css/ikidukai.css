@@ -52,7 +52,7 @@ body.detail::before {
   width: 100vw;
   height: 100vh;
   grid-template-rows: 1fr;
-  align-content: center;
+  align-items: center;
   justify-content: center; }
   .index .title-inner .title {
     position: relative;
@@ -62,7 +62,7 @@ body.detail::before {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    align-self: center; }
+    z-index: 900; }
     .index .title-inner .title p {
       position: absolute;
       top: 20%;
