@@ -26,22 +26,29 @@ body.index::before {
   /* modalの色を青にするパターン */ }
 
 .index .title-inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 80%;
-  width: max-content;
-  align-content: center; }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: 1fr;
+  align-content: center;
+  justify-content: center; }
   .index .title-inner .title {
-    width: max-content;
-    height: 100%; }
+    position: relative;
+    width: 70vw;
+    height: 50vh;
+    background-image: url("../img-ikidukai/logo-toka.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-self: center; }
     .index .title-inner .title p {
-      font-size: 2.5rem;
-      margin-left: 5rem;
-      margin-bottom: -3rem; }
+      position: absolute;
+      top: 0;
+      left: 0; }
 .index .gimmick-inner #ppl-inner {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -75,14 +82,9 @@ footer {
     color: #000; }
 
 @media only screen and (max-width: 600px) {
-  .index .title-inner {
-    width: 100%;
-    height: max-content; }
-    .index .title-inner .title {
-      width: 100%;
-      height: max-content; }
-      .index .title-inner .title img {
-        width: 100%; }
+  .index .title-inner .title {
+    width: 100vw;
+    height: 30vh; }
   .index .gimmick-inner #ppl-inner {
     width: 85vw;
     height: 70vh;
