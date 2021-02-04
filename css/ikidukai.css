@@ -37,9 +37,12 @@ body.detail::before {
   .gimmick-inner #info-inner {
     position: absolute;
     width: 70vw;
+    height: 82vh;
     grid-template-columns: 1fr;
     justify-items: center;
-    margin-top: 15vh; }
+    padding-top: 15vh;
+    top: 10.5vh;
+    overflow-y: scroll; }
     .gimmick-inner #info-inner .info-text {
       width: 70%; }
     .gimmick-inner #info-inner > img {
@@ -101,6 +104,7 @@ footer {
   left: 0;
   bottom: 0;
   background-color: transparent;
+  margin-top: 0;
   z-index: 900; }
   footer p {
     color: #000; }
@@ -112,8 +116,15 @@ footer {
     background-size: 100%;
     background-position: bottom 20% left 0; }
 
-  .gimmick-inner #info-inner {
-    margin-top: 14vh; }
+  .gimmick-inner {
+    background-color: rgba(255, 255, 255, 0.7); }
+    .gimmick-inner #info-inner {
+      padding-top: 14vh;
+      top: 11vh;
+      height: 81vh;
+      width: 80vw; }
+      .gimmick-inner #info-inner .info-text {
+        width: 95%; }
 
   /* グルーバルp */
   .index .title-inner .title {

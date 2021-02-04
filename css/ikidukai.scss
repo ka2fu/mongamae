@@ -1,6 +1,7 @@
 
 $mon-red: #c20000;
 $iki-bule: #041e78;
+$bg-white: rgba(255, 255, 255, 0.7);
 $bg-url: '../img-ikidukai/';
 
 @mixin bg-jpg($url){
@@ -73,9 +74,13 @@ body { // background-imageをspでも正常になるように固定
   #info-inner {
     position: absolute;
     width: 70vw;
+    height: 82vh;
     grid-template-columns: 1fr;
     justify-items: center;
-    margin-top: 15vh;
+    padding-top: 15vh;
+    top: 10.5vh;
+    overflow-y: scroll;
+    // background-color: $bg-white;
 
     .info-text {
       width: 70%;
@@ -174,6 +179,7 @@ footer {
   left: 0;
   bottom: 0;
   background-color: transparent;
+  margin-top: 0;
   z-index: 900;
 
   p {
@@ -194,9 +200,17 @@ footer {
   }
 
   .gimmick-inner{
+    background-color: $bg-white;
 
     #info-inner {
-      margin-top: 14vh;
+      padding-top: 14vh;
+      top: 11vh;
+      height: 81vh;
+      width: 80vw;
+
+      .info-text {
+        width: 95%;
+      }
     }
   }
 
