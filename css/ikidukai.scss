@@ -200,7 +200,8 @@ footer {
   }
 
   .gimmick-inner{
-    background-color: $bg-white;
+    // background-color: $bg-white;
+
 
     #info-inner {
       padding-top: 14vh;
@@ -208,8 +209,18 @@ footer {
       height: 81vh;
       width: 80vw;
 
+      img {
+        filter: drop-shadow(0 0 1rem #fff);
+      }
+
       .info-text {
         width: 95%;
+        font-size: 1.1rem;
+        text-shadow:
+          1rem 0 1rem #fff,
+          -1rem 0 1rem #fff,
+          0 1rem 1rem #fff,
+          0 -1rem 1rem #fff;
       }
     }
   }
