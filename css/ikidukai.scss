@@ -70,42 +70,41 @@ body { // background-imageをspでも正常になるように固定
   position: relative;
   width: 100vw;
   min-height: 100vh;
+}
 
-  #info-outer {
-    position: fixed;
-    top: 10vh;
-    left: 0;
-    width: 100vw;
-    // height: 100vh;
-    height: 90vh;
-    overflow-y: scroll;
+#info-outer {
+  position: relative;
+  width: 100vw;
+  margin-top: 12vh;
+  // height: 100vh;
+  height: max-content;
+  // overflow-y: scroll;
+  overflow-x: visible;
+
+  .info-inner {
+    position: absolute;
+    width: 70vw;
+    height: max-content;
+    // height: 82vh;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-top: 15vh;
+    top: 0;
     overflow-x: visible;
 
-    .info-inner {
+    .info-text {
+      width: 70%;
+      margin-bottom: 20vh;
+    }
+
+    & > img {
+      width: 50%;
+    }
+
+    footer {
       position: absolute;
-      width: 70vw;
-      height: max-content;
-      // height: 82vh;
-      grid-template-columns: 1fr;
-      justify-items: center;
-      padding-top: 15vh;
-      top: 0;
-      overflow-x: visible;
-
-      .info-text {
-        width: 70%;
-        margin-bottom: 20vh;
-      }
-
-      & > img {
-        width: 50%;
-      }
-
-      footer {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-      }
+      right: 0;
+      bottom: 0;
     }
   }
 }
@@ -184,15 +183,15 @@ body { // background-imageをspでも正常になるように固定
 
 .detail {
 
-  .gimmick-inner {
+  // .gimmick-inner {
 
     .info-inner {
       right: 0;
     }
-  }
+  // }
 }
 
-body > footer {
+footer.in-top {
   position: fixed;
   left: 0;
   bottom: 0;

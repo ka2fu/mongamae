@@ -34,32 +34,31 @@ body.detail::before {
   position: relative;
   width: 100vw;
   min-height: 100vh; }
-  .gimmick-inner #info-outer {
-    position: fixed;
-    top: 10vh;
-    left: 0;
-    width: 100vw;
-    height: 90vh;
-    overflow-y: scroll;
+
+#info-outer {
+  position: relative;
+  width: 100vw;
+  margin-top: 12vh;
+  height: max-content;
+  overflow-x: visible; }
+  #info-outer .info-inner {
+    position: absolute;
+    width: 70vw;
+    height: max-content;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-top: 15vh;
+    top: 0;
     overflow-x: visible; }
-    .gimmick-inner #info-outer .info-inner {
+    #info-outer .info-inner .info-text {
+      width: 70%;
+      margin-bottom: 20vh; }
+    #info-outer .info-inner > img {
+      width: 50%; }
+    #info-outer .info-inner footer {
       position: absolute;
-      width: 70vw;
-      height: max-content;
-      grid-template-columns: 1fr;
-      justify-items: center;
-      padding-top: 15vh;
-      top: 0;
-      overflow-x: visible; }
-      .gimmick-inner #info-outer .info-inner .info-text {
-        width: 70%;
-        margin-bottom: 20vh; }
-      .gimmick-inner #info-outer .info-inner > img {
-        width: 50%; }
-      .gimmick-inner #info-outer .info-inner footer {
-        position: absolute;
-        right: 0;
-        bottom: 0; }
+      right: 0;
+      bottom: 0; }
 
 .index .title-inner {
   position: fixed;
@@ -109,10 +108,10 @@ body.detail::before {
     .index .gimmick-inner #ppl-inner .ppl#techi {
       background-image: url("../img-ikidukai/techi.png"); }
 
-.detail .gimmick-inner .info-inner {
+.detail .info-inner {
   right: 0; }
 
-body > footer {
+footer.in-top {
   position: fixed;
   left: 0;
   bottom: 0; }
