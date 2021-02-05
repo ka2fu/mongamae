@@ -71,23 +71,41 @@ body { // background-imageをspでも正常になるように固定
   width: 100vw;
   min-height: 100vh;
 
-  #info-inner {
-    position: absolute;
-    width: 70vw;
-    height: 82vh;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    padding-top: 15vh;
-    top: 10.5vh;
+  #info-outer {
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    width: 100vw;
+    // height: 100vh;
+    height: 90vh;
     overflow-y: scroll;
-    // background-color: $bg-white;
+    overflow-x: visible;
 
-    .info-text {
-      width: 70%;
-    }
+    .info-inner {
+      position: absolute;
+      width: 70vw;
+      height: max-content;
+      // height: 82vh;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      padding-top: 15vh;
+      top: 0;
+      overflow-x: visible;
 
-    & > img {
-      width: 50%;
+      .info-text {
+        width: 70%;
+        margin-bottom: 20vh;
+      }
+
+      & > img {
+        width: 50%;
+      }
+
+      footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
     }
   }
 }
@@ -168,16 +186,19 @@ body { // background-imageをspでも正常になるように固定
 
   .gimmick-inner {
 
-    #info-inner {
+    .info-inner {
       right: 0;
     }
   }
 }
 
-footer {
+body > footer {
   position: fixed;
   left: 0;
   bottom: 0;
+}
+
+footer {
   background-color: transparent;
   margin-top: 0;
   z-index: 900;
@@ -202,25 +223,27 @@ footer {
   .gimmick-inner{
     // background-color: $bg-white;
 
+    #info-outer {
+      top: 11.5vh;
+      height: 88.5vh;
 
-    #info-inner {
-      padding-top: 14vh;
-      top: 11vh;
-      height: 81vh;
-      width: 80vw;
+      .info-inner {
+        padding-top: 14vh;
+        width: 80vw;
 
-      img {
-        filter: drop-shadow(0 0 1rem #fff);
-      }
+        img {
+          filter: drop-shadow(0 0 1rem #fff);
+        }
 
-      .info-text {
-        width: 95%;
-        font-size: 1.1rem;
-        text-shadow:
+        .info-text {
+          width: 95%;
+          font-size: 1.1rem;
+          text-shadow:
           1rem 0 1rem #fff,
           -1rem 0 1rem #fff,
           0 1rem 1rem #fff,
           0 -1rem 1rem #fff;
+        }
       }
     }
   }

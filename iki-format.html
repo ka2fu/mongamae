@@ -88,7 +88,15 @@
     <!-- lpでは第二層のギミックを配置、各ページ内ではここで虫眼鏡を配置？ -->
     <div class="gimmick-inner">
       <!-- 各ページのテキスト用のinner -->
-      <div id="info-inner"></div>
+      <div id="info-outer">
+        <div class="inner">
+
+          <!-- 各ページではここで表示 -->
+          <footer class="grid">
+            <p>copyright © mongamae</p>
+          </footer>
+        </div>
+      </div>
 
       <!-- 虫眼鏡を配置 -->
       <div id="mushimegane"></div>
@@ -102,9 +110,10 @@
     </div>
   </div>
 
-  <footer class="grid">
+  <!-- トップページではこれ -->
+  <!-- <footer class="grid">
     <p>copyright © mongamae</p>
-  </footer>
+  </footer> -->
 
   <script src="js/script.js"></script>
   <script src="js/ikidukai.js"></script>

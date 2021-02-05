@@ -34,19 +34,32 @@ body.detail::before {
   position: relative;
   width: 100vw;
   min-height: 100vh; }
-  .gimmick-inner #info-inner {
-    position: absolute;
-    width: 70vw;
-    height: 82vh;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    padding-top: 15vh;
-    top: 10.5vh;
-    overflow-y: scroll; }
-    .gimmick-inner #info-inner .info-text {
-      width: 70%; }
-    .gimmick-inner #info-inner > img {
-      width: 50%; }
+  .gimmick-inner #info-outer {
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    overflow-y: scroll;
+    overflow-x: visible; }
+    .gimmick-inner #info-outer .info-inner {
+      position: absolute;
+      width: 70vw;
+      height: max-content;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      padding-top: 15vh;
+      top: 0;
+      overflow-x: visible; }
+      .gimmick-inner #info-outer .info-inner .info-text {
+        width: 70%;
+        margin-bottom: 20vh; }
+      .gimmick-inner #info-outer .info-inner > img {
+        width: 50%; }
+      .gimmick-inner #info-outer .info-inner footer {
+        position: absolute;
+        right: 0;
+        bottom: 0; }
 
 .index .title-inner {
   position: fixed;
@@ -96,13 +109,15 @@ body.detail::before {
     .index .gimmick-inner #ppl-inner .ppl#techi {
       background-image: url("../img-ikidukai/techi.png"); }
 
-.detail .gimmick-inner #info-inner {
+.detail .gimmick-inner .info-inner {
   right: 0; }
 
-footer {
+body > footer {
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 0; }
+
+footer {
   background-color: transparent;
   margin-top: 0;
   z-index: 900; }
@@ -116,17 +131,18 @@ footer {
     background-size: 100%;
     background-position: bottom 20% left 0; }
 
-  .gimmick-inner #info-inner {
-    padding-top: 14vh;
-    top: 11vh;
-    height: 81vh;
-    width: 80vw; }
-    .gimmick-inner #info-inner img {
-      filter: drop-shadow(0 0 1rem #fff); }
-    .gimmick-inner #info-inner .info-text {
-      width: 95%;
-      font-size: 1.1rem;
-      text-shadow: 1rem 0 1rem #fff, -1rem 0 1rem #fff, 0 1rem 1rem #fff, 0 -1rem 1rem #fff; }
+  .gimmick-inner #info-outer {
+    top: 11.5vh;
+    height: 88.5vh; }
+    .gimmick-inner #info-outer .info-inner {
+      padding-top: 14vh;
+      width: 80vw; }
+      .gimmick-inner #info-outer .info-inner img {
+        filter: drop-shadow(0 0 1rem #fff); }
+      .gimmick-inner #info-outer .info-inner .info-text {
+        width: 95%;
+        font-size: 1.1rem;
+        text-shadow: 1rem 0 1rem #fff, -1rem 0 1rem #fff, 0 1rem 1rem #fff, 0 -1rem 1rem #fff; }
 
   /* グルーバルp */
   .index .title-inner .title {
