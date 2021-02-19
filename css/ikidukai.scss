@@ -178,6 +178,11 @@ body { // background-imageをspでも正常になるように固定
     right: 0;
     bottom: 0;
   }
+
+  &.in-top{
+    height: 78vh;
+    
+  }
 }
 
 footer {

@@ -112,6 +112,8 @@ body.detail::before {
   position: absolute;
   right: 0;
   bottom: 0; }
+#wrapper.in-top {
+  height: 78vh; }
 
 footer {
   background-color: transparent;
