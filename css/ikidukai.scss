@@ -44,7 +44,7 @@ body { // background-imageをspでも正常になるように固定
 }
 
 #header-wrapper {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.6);
   z-index: 999;
 }
 
@@ -100,14 +100,29 @@ body { // background-imageをspでも正常になるように固定
     & > img {
       width: 50%;
     }
-
-    footer {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-    }
   }
 }
+
+// .info-inner {
+//   position: absolute;
+//   width: 70vw;
+//   height: max-content;
+//   // height: 82vh;
+//   grid-template-columns: 1fr;
+//   justify-items: center;
+//   padding-top: 15vh;
+//   top: 0;
+//   overflow-x: visible;
+//
+//   .info-text {
+//     width: 70%;
+//     margin-bottom: 20vh;
+//   }
+//
+//   & > img {
+//     width: 50%;
+//   }
+// }
 
 .index {
 
@@ -191,10 +206,18 @@ body { // background-imageをspでも正常になるように固定
   // }
 }
 
-footer.in-top {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+// footer.in-top {
+//   position: fixed;
+//   left: 0;
+//   bottom: 0;
+// }
+
+#wrapper {
+  footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 footer {
@@ -222,31 +245,46 @@ footer {
   .gimmick-inner{
     // background-color: $bg-white;
 
-    #info-outer {
-      top: 11.5vh;
-      height: 88.5vh;
+  }
 
-      .info-inner {
-        padding-top: 14vh;
-        width: 80vw;
+  #info-outer {
+    .info-inner {
+      padding-top: 14vh;
+      width: 80vw;
 
-        img {
-          filter: drop-shadow(0 0 1rem #fff);
-        }
+      img {
+        filter: drop-shadow(0 0 1rem #fff);
+      }
 
-        .info-text {
-          width: 95%;
-          font-size: 1.1rem;
-          text-shadow:
-          1rem 0 1rem #fff,
-          -1rem 0 1rem #fff,
-          0 1rem 1rem #fff,
-          0 -1rem 1rem #fff;
-        }
+      .info-text {
+        width: 95%;
+        font-size: 1.1rem;
+        text-shadow:
+        1rem 0 1rem #fff,
+        -1rem 0 1rem #fff,
+        0 1rem 1rem #fff,
+        0 -1rem 1rem #fff;
       }
     }
   }
-
+  // .info-inner {
+  //   padding-top: 14vh;
+  //   width: 80vw;
+  //
+  //   img {
+  //     filter: drop-shadow(0 0 1rem #fff);
+  //   }
+  //
+  //   .info-text {
+  //     width: 95%;
+  //     font-size: 1.1rem;
+  //     text-shadow:
+  //     1rem 0 1rem #fff,
+  //     -1rem 0 1rem #fff,
+  //     0 1rem 1rem #fff,
+  //     0 -1rem 1rem #fff;
+  //   }
+  // }
   /* グルーバルp */
 
   .index {

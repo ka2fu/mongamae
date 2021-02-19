@@ -22,7 +22,7 @@ body.detail::before {
   background-position: top 0 left -10%; }
 
 #header-wrapper {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.6);
   z-index: 999; }
 
 #modal {
@@ -55,10 +55,6 @@ body.detail::before {
       margin-bottom: 20vh; }
     #info-outer .info-inner > img {
       width: 50%; }
-    #info-outer .info-inner footer {
-      position: absolute;
-      right: 0;
-      bottom: 0; }
 
 .index .title-inner {
   position: fixed;
@@ -111,9 +107,9 @@ body.detail::before {
 .detail .info-inner {
   right: 0; }
 
-footer.in-top {
-  position: fixed;
-  left: 0;
+#wrapper footer {
+  position: absolute;
+  right: 0;
   bottom: 0; }
 
 footer {
@@ -130,18 +126,15 @@ footer {
     background-size: 100%;
     background-position: bottom 20% left 0; }
 
-  .gimmick-inner #info-outer {
-    top: 11.5vh;
-    height: 88.5vh; }
-    .gimmick-inner #info-outer .info-inner {
-      padding-top: 14vh;
-      width: 80vw; }
-      .gimmick-inner #info-outer .info-inner img {
-        filter: drop-shadow(0 0 1rem #fff); }
-      .gimmick-inner #info-outer .info-inner .info-text {
-        width: 95%;
-        font-size: 1.1rem;
-        text-shadow: 1rem 0 1rem #fff, -1rem 0 1rem #fff, 0 1rem 1rem #fff, 0 -1rem 1rem #fff; }
+  #info-outer .info-inner {
+    padding-top: 14vh;
+    width: 80vw; }
+    #info-outer .info-inner img {
+      filter: drop-shadow(0 0 1rem #fff); }
+    #info-outer .info-inner .info-text {
+      width: 95%;
+      font-size: 1.1rem;
+      text-shadow: 1rem 0 1rem #fff, -1rem 0 1rem #fff, 0 1rem 1rem #fff, 0 -1rem 1rem #fff; }
 
   /* グルーバルp */
   .index .title-inner .title {
