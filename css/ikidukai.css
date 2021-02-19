@@ -22,12 +22,11 @@ body.detail::before {
   background-position: top 0 left -10%; }
 
 #header-wrapper {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 999; }
 
 #modal {
-  background-color: transparent;
-  /* modalの色を青にするパターン */ }
+  background-color: transparent; }
 
 /* グローバル設定 */
 .gimmick-inner {
@@ -56,6 +55,8 @@ body.detail::before {
     #info-outer .info-inner > img {
       width: 50%; }
 
+.index #header-wrapper {
+  background-color: transparent; }
 .index .title-inner {
   position: fixed;
   top: 0;

@@ -44,25 +44,12 @@ body { // background-imageをspでも正常になるように固定
 }
 
 #header-wrapper {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.5);
   z-index: 999;
 }
 
 #modal {
   background-color: transparent;
-
-  /* modalの色を青にするパターン */
-//   color: $iki-bule;
-//   ul {
-//     li{
-//       &.modal-link {
-//         border-bottom: 1px solid $iki-bule;
-//       }
-//       a {
-//         color: $iki-bule!important;
-//       }
-//     }
-//   }
 }
 
 /* グローバル設定 */
@@ -103,28 +90,10 @@ body { // background-imageをspでも正常になるように固定
   }
 }
 
-// .info-inner {
-//   position: absolute;
-//   width: 70vw;
-//   height: max-content;
-//   // height: 82vh;
-//   grid-template-columns: 1fr;
-//   justify-items: center;
-//   padding-top: 15vh;
-//   top: 0;
-//   overflow-x: visible;
-//
-//   .info-text {
-//     width: 70%;
-//     margin-bottom: 20vh;
-//   }
-//
-//   & > img {
-//     width: 50%;
-//   }
-// }
-
 .index {
+  #header-wrapper {
+    background-color: transparent;
+  }
 
   .title-inner {
     position: fixed;
@@ -198,19 +167,10 @@ body { // background-imageをspでも正常になるように固定
 
 .detail {
 
-  // .gimmick-inner {
-
-    .info-inner {
-      right: 0;
-    }
-  // }
+  .info-inner {
+    right: 0;
+  }
 }
-
-// footer.in-top {
-//   position: fixed;
-//   left: 0;
-//   bottom: 0;
-// }
 
 #wrapper {
   footer {
@@ -267,24 +227,6 @@ footer {
       }
     }
   }
-  // .info-inner {
-  //   padding-top: 14vh;
-  //   width: 80vw;
-  //
-  //   img {
-  //     filter: drop-shadow(0 0 1rem #fff);
-  //   }
-  //
-  //   .info-text {
-  //     width: 95%;
-  //     font-size: 1.1rem;
-  //     text-shadow:
-  //     1rem 0 1rem #fff,
-  //     -1rem 0 1rem #fff,
-  //     0 1rem 1rem #fff,
-  //     0 -1rem 1rem #fff;
-  //   }
-  // }
   /* グルーバルp */
 
   .index {

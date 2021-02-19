@@ -38,21 +38,38 @@ $('nav').on('click', '#open', function (){
 });
 $('#modal').on('click', '#close', function (){
 
-  // modalを閉じる時背景力を戻す
-  $('#header-wrapper').animate({
-    backgroundColor: "transparent"
-  }, {
-    duration: 600,
-    easing: "easeInCubic",
-    queue: false
-  });
-  $('#modal').animate({
-    backgroundColor: "transparent"
-  }, {
-    duration: 600,
-    easing: "easeInCubic",
-    queue: false
-  });
+  // modalを閉じる時背景色を戻す
+  if(!($(this).hasClass('in-top'))){ // トップページでない場合
+    $('#header-wrapper').animate({
+      backgroundColor: "rgba(255, 255, 255, 0.5)"
+    }, {
+      duration: 600,
+      easing: "easeInCubic",
+      queue: false
+    });
+    $('#modal').animate({
+      backgroundColor: "rgba(255, 255, 255, 0.5)"
+    }, {
+      duration: 600,
+      easing: "easeInCubic",
+      queue: false
+    });
+  } else { // トップメージの場合
+    $('#header-wrapper').animate({
+      backgroundColor: "transparent"
+    }, {
+      duration: 600,
+      easing: "easeInCubic",
+      queue: false
+    });
+    $('#modal').animate({
+      backgroundColor: "transparent"
+    }, {
+      duration: 600,
+      easing: "easeInCubic",
+      queue: false
+    });
+  }
 
   $('#modal').slideUp(function (){
     $('#header-wrapper').removeClass('border-inherit');
