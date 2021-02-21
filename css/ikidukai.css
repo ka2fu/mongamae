@@ -38,7 +38,6 @@ body.detail::before {
   position: relative;
   width: 100vw;
   margin-top: 12vh;
-  height: max-content;
   overflow-x: visible; }
   #info-outer .info-inner {
     position: absolute;
@@ -141,7 +140,7 @@ footer {
     #info-outer .info-inner .info-text {
       width: 95%;
       font-size: 1.1rem;
-      text-shadow: 1rem 0 1rem #fff, -1rem 0 1rem #fff, 0 1rem 1rem #fff, 0 -1rem 1rem #fff; }
+      text-shadow: 1px 1px 5px #fff, -1px 1px 5px #fff, 1px -1px 5px #fff, -1px -1px 5px #fff; }
 
   /* グルーバルp */
   .index .title-inner .title {

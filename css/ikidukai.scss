@@ -45,6 +45,7 @@ body { // background-imageをspでも正常になるように固定
 
 #header-wrapper {
   background-color: rgba(255, 255, 255, 0.5);
+  // background-color: transparent;
   z-index: 999;
 }
 
@@ -63,16 +64,12 @@ body { // background-imageをspでも正常になるように固定
   position: relative;
   width: 100vw;
   margin-top: 12vh;
-  // height: 100vh;
-  height: max-content;
-  // overflow-y: scroll;
   overflow-x: visible;
 
   .info-inner {
     position: absolute;
     width: 70vw;
     height: max-content;
-    // height: 82vh;
     grid-template-columns: 1fr;
     justify-items: center;
     padding-top: 15vh;
@@ -230,10 +227,10 @@ footer {
         width: 95%;
         font-size: 1.1rem;
         text-shadow:
-        1rem 0 1rem #fff,
-        -1rem 0 1rem #fff,
-        0 1rem 1rem #fff,
-        0 -1rem 1rem #fff;
+        1px 1px 5px #fff,
+        -1px 1px 5px #fff,
+        1px -1px 5px #fff,
+        -1px -1px 5px #fff;
       }
     }
   }
