@@ -57,6 +57,8 @@ body.detail::before {
 
 .index #header-wrapper {
   background-color: transparent; }
+.index #wrapper {
+  height: 100vh; }
 .index .title-inner {
   position: fixed;
   top: 0;
@@ -104,6 +106,10 @@ body.detail::before {
       transform: rotateX(180deg); }
     .index .gimmick-inner #ppl-inner .ppl#techi {
       background-image: url("../img-ikidukai/techi.png"); }
+.index footer {
+  position: fixed;
+  bottom: 0;
+  left: 0; }
 
 .detail .info-inner {
   right: 0; }
@@ -112,8 +118,6 @@ body.detail::before {
   position: absolute;
   right: 0;
   bottom: 0; }
-#wrapper.in-top {
-  height: 78vh; }
 
 footer {
   background-color: transparent;

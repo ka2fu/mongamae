@@ -95,6 +95,10 @@ body { // background-imageをspでも正常になるように固定
     background-color: transparent;
   }
 
+  #wrapper {
+    height: 100vh;
+  }
+
   .title-inner {
     position: fixed;
     top: 0;
@@ -163,6 +167,12 @@ body { // background-imageをspでも正常になるように固定
       }
     }
   }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .detail {
@@ -177,11 +187,6 @@ body { // background-imageをspでも正常になるように固定
     position: absolute;
     right: 0;
     bottom: 0;
-  }
-
-  &.in-top{
-    height: 78vh;
-    
   }
 }
 

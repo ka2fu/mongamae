@@ -39,7 +39,7 @@ $('nav').on('click', '#open', function (){
 $('#modal').on('click', '#close', function (){
 
   // modalを閉じる時背景色を戻す
-  if(!($(this).hasClass('in-top'))){ // トップページでない場合
+  if(!($('body').hasClass('index'))){ // トップページでない場合
     $('#header-wrapper').animate({
       backgroundColor: "rgba(255, 255, 255, 0.5)"
     }, {
