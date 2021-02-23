@@ -117,14 +117,17 @@ $('.mushi-link').click(function(){
 });
 
 // info-outerの中のfooterの位置を整える
-let title_height = $('.info-inner').offset().top - $('#info-outer').offset().top;
-let footer_pos = $('.info-inner').height() + title_height;
-let footer = $('#info-outer').find('footer');
-$(footer).css('top', footer_pos);
-$(footer).removeClass('hidden'); // リフレッシュで一瞬現れるの防止で隠す
-$(document).scroll(function(){ // 一応画面幅が途中で変わっとトキのために
+let is_index = $('body').hasClass('index');
+if(!is_index){
   let title_height = $('.info-inner').offset().top - $('#info-outer').offset().top;
   let footer_pos = $('.info-inner').height() + title_height;
   let footer = $('#info-outer').find('footer');
   $(footer).css('top', footer_pos);
-});
+  $(footer).removeClass('hidden'); // リフレッシュで一瞬現れるの防止で隠す
+  $(document).scroll(function(){ // 一応画面幅が途中で変わっとトキのために
+    let title_height = $('.info-inner').offset().top - $('#info-outer').offset().top;
+    let footer_pos = $('.info-inner').height() + title_height;
+    let footer = $('#info-outer').find('footer');
+    $(footer).css('top', footer_pos);
+  });
+}

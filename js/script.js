@@ -11,6 +11,10 @@ function isSmartPhone() {
   }
 }
 
+// modalのとこにちょっと線入るのきもい
+let header_wrapper_height = $('#header-wrapper').height();
+$('#modal').css('top', header_wrapper_height);
+
 $(function(){
 
   // linkいたずら
