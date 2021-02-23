@@ -160,6 +160,8 @@ body.detail::before {
       transform: rotateX(180deg); }
     .index .gimmick-inner #ppl-inner .ppl#techi {
       background-image: url("../img-ikidukai/techi.png"); }
+.index .gimmick-inner #mushimegane {
+  top: 13vh; }
 .index footer {
   position: fixed;
   bottom: 0;
