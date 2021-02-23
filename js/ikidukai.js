@@ -3,8 +3,8 @@ $('#wrapper').on('click', '.title', function(){
   $.when(
     $('.title-inner').fadeOut()
   ).done(function(){
-    $('#ppl-inner').removeClass('hidden');
-    $('#ppl-inner').fadeIn();
+    $('.fadein').removeClass('hidden');
+    $('.fadein').fadeIn();
   });
 });
 
