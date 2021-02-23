@@ -4,6 +4,10 @@ $iki-bule: #041e78;
 $bg-white: rgba(255, 255, 255, 0.7);
 $bg-url: '../img-ikidukai/';
 
+/* 変数 */
+$max-wid: calc(100vw - calc(100vw - 100%));
+$text-right: calc(0% + calc(100vw - 100%));
+
 @mixin bg-jpg($url){
   background-image: url($bg-url + $url + '.jpg');
 }
@@ -25,7 +29,7 @@ body { // background-imageをspでも正常になるように固定
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: $max-wid;
     height: 100vh;
     z-index: 0;
     background-size: cover;
@@ -44,8 +48,8 @@ body { // background-imageをspでも正常になるように固定
 }
 
 #header-wrapper {
-  background-color: rgba(255, 255, 255, 0.5);
-  // background-color: transparent;
+  // background-color: rgba(255, 255, 255, 0.5);
+  background-color: transparent;
   z-index: 999;
 }
 
@@ -54,17 +58,49 @@ body { // background-imageをspでも正常になるように固定
 }
 
 /* グローバル設定 */
+#wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: $max-wid;
+}
 .gimmick-inner { // z-indexのずれ対策
   position: relative;
-  width: 100vw;
-  min-height: 100vh;
+  width: $max-wid;
+  height: 100vh;
+
+  #mushimegane {
+    position: absolute;
+    bottom: 5vh;
+    left: 5vw;
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+
+    }
+  }
 }
 
 #info-outer {
   position: relative;
-  width: 100vw;
-  margin-top: 12vh;
+  width: $max-wid;
+  margin-top: 20vh;
   overflow-x: visible;
+
+  .sub-title-inner {
+    position: absolute;
+    width: 100vw;
+    justify-items: center;
+
+    img {
+      width: 30%;
+    }
+  }
 
   .info-inner {
     position: absolute;
@@ -72,20 +108,66 @@ body { // background-imageをspでも正常になるように固定
     height: max-content;
     grid-template-columns: 1fr;
     justify-items: center;
-    padding-top: 15vh;
     top: 0;
     overflow-x: visible;
+    margin-top: 15vh;
 
     .info-text {
       width: 70%;
-      margin-bottom: 20vh;
-    }
 
-    & > img {
-      width: 50%;
+      &:last-child {
+        margin-bottom: 10vh;
+      }
+
+      .topic {
+        margin: 10vh 0;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 3rem;
+      }
+
+      &:first-child {
+        .topic {
+          margin-top: 15vh;
+        }
+      }
     }
   }
 }
+
+#mushi-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: $max-wid;
+  background-color: rgba(75, 75, 75, 0.45);
+
+  #mushimo-outer {
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: 80%;
+    background-color: #f8f8f8;
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+
+    & > i {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  a {
+    color: #000;
+  }
+}
+/* グローバル設定 */
 
 .index {
   #header-wrapper {
@@ -100,7 +182,7 @@ body { // background-imageをspでも正常になるように固定
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: $max-wid;
     height: 100vh;
     grid-template-rows: 1fr;
     align-items: center;
@@ -142,7 +224,7 @@ body { // background-imageをspでも正常になるように固定
         background-size: contain;
 
         &:hover {
-          opacity: .8;
+          // opacity: .8;
         }
 
         &#zumin {
@@ -174,16 +256,20 @@ body { // background-imageをspでも正常になるように固定
 
 .detail {
 
-  .info-inner {
+  .sub-title-inner {
+    // right: calc(-1 * $text-right);
     right: 0;
+  }
+
+  .info-inner {
+    right: $text-right;
   }
 }
 
-#wrapper {
+#info-outer {
   footer {
     position: absolute;
     right: 0;
-    bottom: 0;
   }
 }
 
@@ -191,6 +277,7 @@ footer {
   background-color: transparent;
   margin-top: 0;
   z-index: 900;
+  width: 100vw;
 
   p {
     color: #000;
@@ -210,27 +297,64 @@ footer {
   }
 
   .gimmick-inner{
-    // background-color: $bg-white;
-
   }
 
   #info-outer {
-    .info-inner {
-      padding-top: 14vh;
-      width: 80vw;
 
-      img {
-        filter: drop-shadow(0 0 1rem #fff);
+    .sub-title-inner{
+
+      .sub-title {
+        width: 50%;
+      }
+    }
+
+    .info-inner {
+      width: 80vw;
+      margin-top: 10vh;
+
+      .sub-title-inner {
+        .sub-title {
+          width: 50%;
+          filter: drop-shadow(0 0 1rem #fff);
+        }
       }
 
       .info-text {
         width: 95%;
+        color: #444;
         font-size: 1.1rem;
+        font-weight: bold;
+        margin-right: 1.5rem;
         text-shadow:
         1px 1px 5px #fff,
         -1px 1px 5px #fff,
         1px -1px 5px #fff,
         -1px -1px 5px #fff;
+
+          .topic {
+            font-size: 2.5rem;
+            margin: 7vh 0;
+          }
+
+          &:first-child {
+            .topic {
+              margin-top: 10vh;
+            }
+          }
+        }
+      }
+    }
+
+
+  #mushi-modal {
+
+    #mushimo-outer {
+      border-radius: 1rem;
+      padding: 1.5rem 1rem;
+
+      & > i {
+        top: 1rem;
+        right: 1rem;
       }
     }
   }

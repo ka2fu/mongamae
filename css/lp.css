@@ -1,13 +1,19 @@
 @charset "UTF-8";
 /* 汎用カラーコード */
+/* 変数 */
 .p-ac {
-  border-bottom: solid #c20000 10px; }
+  border-bottom: solid #c20000 1vh; }
 
 .border-inherit {
   border-bottom: 10px solid #f0e6ce; }
 
 #header-wrapper, #spy-nav-bottom, .spy-nav {
   background-color: #f0e6ce; }
+
+#header-nav {
+  top: 0; }
+  #header-nav #mon-icon {
+    margin-top: -0.5vh; }
 
 .has-border {
   top: .5vh; }
@@ -24,7 +30,8 @@
     color: #f0e6ce !important; }
 
 #spy-nav-top {
-  height: 80%; }
+  height: 70%;
+  margin-bottom: 2vh; }
 
 .carousel-inner {
   position: relative; }
@@ -82,6 +89,11 @@ footer {
     color: white; }
 
 @media only screen and (max-width: 600px) {
+  #header-nav {
+    top: 0; }
+    #header-nav #mon-icon, #header-nav #open {
+      margin-top: -0.5vh; }
+
   #spy-nav-top, .tori-url {
     display: none; }
 

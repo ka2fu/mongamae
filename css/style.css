@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* 汎用カラーコード */
+/* 変数 */
 * {
   font-family: 'Sawarabi Mincho', 'TsukuBRdGothic-Regular','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif; }
 
@@ -58,8 +59,8 @@ h1 > span {
   color: white; }
 
 #header-wrapper {
-  height: 12vh;
-  width: 100vw;
+  height: 10vh;
+  width: calc(100% - calc(100% - 100vw));
   background-color: #fbedbb; }
 
 #header-nav {
@@ -82,7 +83,7 @@ h1 > span {
     display: none; }
   #header-nav .tori-url {
     margin-right: 3rem;
-    margin-bottom: -1.5rem; }
+    margin-bottom: -1.8rem; }
     #header-nav .tori-url .tori {
       height: 0;
       width: 0; }
@@ -92,9 +93,9 @@ h1 > span {
         margin-left: 1.7rem; }
 
 .header-img {
-  height: 78vh;
-  width: 100vw;
-  margin-top: 12vh;
+  height: 80vh;
+  width: 100%;
+  margin-top: 10vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -240,7 +241,7 @@ h1 > span {
 
 footer {
   background-color: #d7b214;
-  width: 100vw;
+  width: 100%;
   height: 10vh;
   margin-top: 8rem;
   justify-content: center;
@@ -254,7 +255,7 @@ footer {
     font-size: 4rem !important; }
 
   #header-wrapper {
-    height: 13vh; }
+    height: 10vh; }
     #header-wrapper #header-nav {
       height: 100%; }
       #header-wrapper #header-nav #open {
@@ -267,24 +268,22 @@ footer {
       #header-wrapper #header-nav .tori-url {
         display: none; }
       #header-wrapper #header-nav img {
-        margin-left: -3rem;
-        width: 5rem;
-        height: 5rem; }
+        margin-left: -3rem; }
 
   .header-img {
     height: 35vh;
-    width: 100vw;
-    margin-top: 12.991vh;
+    width: 100%;
+    margin-top: 9.9vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
 
   #modal {
     position: fixed;
-    top: 12.991vh;
+    top: 9.9vh;
     left: 0;
     z-index: 950;
-    width: 100vw;
+    width: 100%;
     align-content: space-between;
     justify-content: center;
     justify-items: center;
@@ -354,20 +353,24 @@ footer {
 
   #contact .mail {
     margin-left: 5vw; }
-  #contact .sns-link .sns-item:last-child p {
-    font-size: 1rem; }
-  #contact .sns-link .sns-item p {
-    margin-bottom: 0;
-    font-size: 1.5rem; }
-  #contact .sns-link .sns-item i {
-    font-size: 2rem;
-    color: #3c3c3c; }
-  #contact .sns-link .sns-item .sns-img {
-    height: 3.5rem;
-    width: 3.5rem; }
-    #contact .sns-link .sns-item .sns-img.moto {
-      height: 3.5rem;
-      width: 3.5rem; }
+  #contact .sns-link {
+    width: 100%; }
+    #contact .sns-link .sns-item {
+      width: 100%; }
+      #contact .sns-link .sns-item:last-child p {
+        font-size: 1rem; }
+      #contact .sns-link .sns-item p {
+        margin-bottom: 0;
+        font-size: 1.5rem; }
+      #contact .sns-link .sns-item i {
+        font-size: 2rem;
+        color: #3c3c3c; }
+      #contact .sns-link .sns-item .sns-img {
+        height: 3.5rem;
+        width: 3.5rem; }
+        #contact .sns-link .sns-item .sns-img.moto {
+          height: 3.5rem;
+          width: 3.5rem; }
 
   footer {
     margin-top: 5rem; } }

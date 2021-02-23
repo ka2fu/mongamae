@@ -4,6 +4,8 @@ $mon-red: #c20000;
 $mon-yellow: #fbedbb;
 $footer: #d7b214;
 // $footer: #696969;
+/* 変数 */
+$max-wid: calc(100% - calc(100% - 100vw));
 
 * {
   font-family: 'Sawarabi Mincho', 'TsukuBRdGothic-Regular','ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',YuGothic,'Yu Gothic',sans-serif;
@@ -83,8 +85,8 @@ h1 > span {
 }
 
 #header-wrapper {
-  height: 12vh;
-  width: 100vw;
+  height: 10vh;
+  width: $max-wid;
   background-color: $mon-yellow;
 }
 
@@ -119,7 +121,7 @@ h1 > span {
 
   .tori-url {
     margin-right: 3rem;
-    margin-bottom: -1.5rem;
+    margin-bottom: -1.8rem;
 
     .tori {
       height: 0;
@@ -135,9 +137,10 @@ h1 > span {
 }
 
 .header-img {
-  height: 78vh;
-  width: 100vw;
-  margin-top: 12vh;
+  height: 80vh;
+  width: 100%;
+  // width: 100vw;
+  margin-top: 10vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -340,7 +343,8 @@ h1 > span {
 
 footer {
   background-color: $footer;
-  width: 100vw;
+  width: 100%;
+  // width: 100vw;
   height: 10vh;
   margin-top: 8rem;
   justify-content: center;
@@ -359,7 +363,8 @@ footer {
   }
 
   #header-wrapper {
-    height: 13vh;
+    height: 10vh;
+    // height: 13vh;
 
     #header-nav {
       height: 100%;
@@ -379,8 +384,6 @@ footer {
 
       img {
         margin-left: -3rem;
-        width: 5rem;
-        height: 5rem;
       }
     }
   }
@@ -388,8 +391,10 @@ footer {
 
   .header-img {
     height: 35vh;
-    width: 100vw;
-    margin-top: 12.991vh;
+    width: 100%;
+    // width: 100vw;
+    margin-top: 9.9vh;
+    // margin-top: 12.991vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -397,10 +402,12 @@ footer {
 
   #modal {
     position: fixed;
-    top: 12.991vh;
+    top: 9.9vh;
+    // top: 12.991vh;
     left: 0;
     z-index: 950;
-    width: 100vw;
+    width: 100%;
+    // width: 100vw;
     align-content: space-between;
     justify-content: center;
     justify-items: center;
@@ -519,7 +526,11 @@ footer {
     }
 
     .sns-link {
+      width: 100%;
+
       .sns-item {
+        width: 100%;
+
         &:last-child {
           p {
             font-size: 1rem;

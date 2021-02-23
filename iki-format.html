@@ -83,32 +83,91 @@
     <i id="close" class="fas fa-angle-up"></i>
   </div>
 
-  <div id="wrapper" class="">
-    <div id="info-outer">
-      <div class="inner">
-
-        <!-- 各ページではここで表示 -->
-        <footer class="grid">
-          <p>copyright © mongamae</p>
-        </footer>
+  <div id="info-outer">
+    <div class="sub-title-inner grid">
+      <img src="" alt="" class="sub-title">
+    </div>
+    <div class="info-inner grid">
+      <div id="" class="info-text">
+        <h2 class="topic"></h2>
+        <p>
+        </p>
       </div>
-    </div >
+
+      <!-- 各ページではここで表示 -->
+    </div>
+    <footer class="grid">
+      <p>copyright © mongamae</p>
+    </footer>
+  </div >
+
+  <div id="wrapper" class="">
 
     <!-- lpでは第二層のギミックを配置、各ページ内ではここで虫眼鏡を配置？ -->
     <div class="gimmick-inner">
       <!-- 各ページのテキスト用のinner -->
 
-      <!-- 虫眼鏡を配置 -->
-      <div id="mushimegane"></div>
-    </div>
+      <div class="title-inner grid"> <!-- lpの場合background-imageを指定 -->
+        <div class="title"> <!-- ここにbackground-imageを設定(文字を被せたい＆スマホのスタイリングの都合上) -->
+          <!-- lpのみ表示 -->
+          <!-- <p>ニカクメ</p>   -->
+        </div>
+      </div>
 
-    <div class="title-inner grid"> <!-- lpの場合background-imageを指定 -->
-      <div class="title"> <!-- ここにbackground-imageを設定(文字を被せたい＆スマホのスタイリングの都合上) -->
-        <!-- lpのみ表示 -->
-        <!-- <p>ニカクメ</p>   -->
+      <!-- 虫眼鏡を配置 -->
+      <div id="mushimegane" class="hovamoya-inner">
+        <img src="img-ikidukai/megane.png" alt="" class="moya hovable-moya">
       </div>
     </div>
-  </div>
+
+    <!-- 虫眼鏡モーダル -->
+    <div id="mushi-modal" class="hidden">
+      <div id="mushimo-outer">
+        <i id="close" class="far fa-times-circle"></i>
+
+        <ul class="mushimo-inner">
+          <li class="mushimo-sec">
+            <ul class="mushimo-items">
+              <li class="mushimo-title"><a href="ikidukai-detail.html" class="mushi-link">作品詳細</a></li>
+              <li class="mushimo-topic"><a href="ikidukai-detail.html#outline" class="mushi-link">あらすじ</a></li>
+              <li class="mushimo-topic"><a href="ikidukai-detail.html#credit" class="mushi-link">クレジット</a></li>
+            </ul>
+          </li>
+
+          <li class="mushimo-sec">
+            <ul class="mushimo-items">
+              <li class="mushimo-title"><a href="" class="mushi-link disable">当日案内</a></li>
+              <li class="mushimo-topic"><a href="" class="mushi-link disable">スケジュール</a></li>
+              <li class="mushimo-topic"><a href="" class="mushi-link disable">チケット販売</a></li>
+              <li class="mushimo-topic"><a href="" class="mushi-link disable">アクセス</a></li>
+            </ul>
+          </li>
+
+          <li class="mushimo-sec">
+            <ul class="mushimo-items">
+              <li class="mushimo-title"><a href="" class="mushi-link disable">ギャラリー</a></li>
+              <li class="mushimo-topic"><a href="" class="mushi-link disable">ＰＶ</a></li>
+              <li class="mushimo-topic"><a href="" class="mushi-link disable">助っ人メンバー</a></li>
+            </ul>
+          </li>
+
+          <li class="mushimo-sec">
+            <ul class="mushimo-items">
+              <li class="mushimo-title"><a href="" class="mushi-link disable">コロナ対策</a></li>
+              <li class="mushimo-topic"><a href="" class="mushi-link disable"></a></li>
+            </ul>
+          </li>
+
+          <li class="mushimo-sec">
+            <ul class="mushimo-items">
+              <li class="mushimo-topic caution"><a href="" class="mushi-link disable">注意事項</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div> <!-- gimmick-innerとじ -->
 
   <!-- トップページではこれ -->
   <!-- <footer class="grid">

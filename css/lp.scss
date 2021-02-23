@@ -4,9 +4,11 @@ $mon-red: #c20000;
 $mon-yellow: #fbedbb;
 $mon-beige: #f0e6ce;
 $spy-red: rgb(194, 0, 0);
+/* 変数 */
+$max-wid: calc(100% - calc(100% - 100vw));
 
 .p-ac {
-  border-bottom: solid $mon-red 10px;
+  border-bottom: solid $mon-red 1vh;
 }
 
 .border-inherit {
@@ -15,6 +17,14 @@ $spy-red: rgb(194, 0, 0);
 
 #header-wrapper, #spy-nav-bottom, .spy-nav {
   background-color: $mon-beige;
+}
+
+#header-nav {
+  top: 0;
+
+  #mon-icon {
+    margin-top: -0.5vh;
+  }
 }
 
 .tori-url {
@@ -51,7 +61,8 @@ $spy-red: rgb(194, 0, 0);
 }
 
 #spy-nav-top {
-  height: 80%;
+  height: 70%;
+  margin-bottom: 2vh;
 }
 
 .carousel-inner {
@@ -137,6 +148,14 @@ footer{
 }
 
 @media only screen and (max-width: 600px) {
+
+  #header-nav {
+    top: 0;
+
+    #mon-icon, #open {
+      margin-top: -0.5vh;
+    }
+  }
 
   #spy-nav-top, .tori-url {
     display: none;

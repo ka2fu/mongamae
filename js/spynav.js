@@ -14,6 +14,10 @@ var monColor = 'rgb(194, 0, 0)';
   var a_height = headerNavHeight + spyNavHeight*1;
   $('a.nav-link').click(function (){
     var href = $(this).attr('href');
+    $('#modal').slideUp(function (){ // 連続でクリックするとなんかバグるし、ui的にも消したい
+      $('#header-wrapper').removeClass('border-inherit');
+      $('#open').fadeIn();
+    });
     var target = $(href == "#" || href == "" ? "body" : href);
     var position = target.offset().top - a_height;
     $('html, body').animate({ scrollTop: position }, 500, "swing");

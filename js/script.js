@@ -95,8 +95,8 @@ $(function(){
     $('#modal').slideUp(function (){
       $('#header-wrapper').removeClass('border-inherit');
       $('#open').fadeIn();
-    })
-  })
+    });
+  });
 
   // button in modal
   $('.plus').click(function(){
