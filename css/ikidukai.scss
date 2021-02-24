@@ -3,6 +3,7 @@ $mon-red: #c20000;
 $iki-bule: #041e78;
 $bg-white: rgba(255, 255, 255, 0.7);
 $bg-url: '../img-ikidukai/';
+$text-colour: #444;
 
 /* 変数 */
 $max-wid: calc(100vw - calc(100vw - 100%));
@@ -97,8 +98,9 @@ body { // background-imageをspでも正常になるように固定
     width: 100vw;
     justify-items: center;
 
-    img {
+    .sub-title {
       width: 30%;
+      filter: drop-shadow(0 0 0.3rem #fff);
     }
   }
 
@@ -114,6 +116,14 @@ body { // background-imageをspでも正常になるように固定
 
     .info-text {
       width: 70%;
+      color: $text-colour;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-shadow:
+      1px 1px 5px #fff,
+      -1px 1px 5px #fff,
+      1px -1px 5px #fff,
+      -1px -1px 5px #fff;
 
       &:last-child {
         margin-bottom: 10vh;
@@ -149,8 +159,8 @@ body { // background-imageをspでも正常になるように固定
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 80%;
-    width: 80%;
+    height: 50%;
+    width: 70%;
     background-color: #f8f8f8;
     border-radius: 1rem;
     padding: 2.5rem 2rem;
@@ -160,6 +170,60 @@ body { // background-imageをspでも正常になるように固定
       top: 1.5rem;
       right: 1.5rem;
       font-size: 1.5rem;
+    }
+
+    .mushimo-inner {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 0;
+      grid-auto-flow: column;
+      margin-bottom: 0;
+      height: 100%;
+
+      .mushimo-items {
+        margin-left: 3rem;
+
+        li:not(.caution) {
+
+          a:hover {
+            opacity: .65;
+          }
+
+          &.mushimo-topic > a:hover {
+            border-bottom: 1px #000 solid;
+          }
+        }
+
+        .mushimo-title {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .mushimo-topic {
+          font-size: 1.3rem;
+          margin-left: 1rem;
+        }
+      }
+
+      .mushimo-sec:nth-child(2) {
+        grid-row: span 2;
+      }
+
+      .caution {
+        position: absolute;
+        bottom: 2.5rem;
+        right: 50%;
+        transform: translateX(calc(100% + 3rem));
+
+        a {
+          color: $mon-red;
+          border: 1px $mon-red solid;
+          padding: 2px 4px;
+
+          &:hover {
+            filter: brightness(200%);
+          }
+        }
+      }
     }
   }
 
@@ -325,7 +389,7 @@ footer {
 
       .info-text {
         width: 95%;
-        color: #444;
+        color: $text-colour;
         font-size: 1.1rem;
         font-weight: bold;
         margin-right: 1.5rem;
@@ -355,10 +419,48 @@ footer {
     #mushimo-outer {
       border-radius: 1rem;
       padding: 1.5rem 1rem;
+      width: 80%;
 
       & > i {
         top: 1rem;
         right: 1rem;
+      }
+
+      .mushimo-inner {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, max-content);
+        // width: 50%;
+        // margin: 0 auto;
+
+        .mushimo-items {
+          margin-left: 0;
+
+          li {
+            text-align: center;
+            // text-align: left;
+          }
+
+          .mushimo-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0;
+            margin-top: 0.5rem;
+          }
+
+          .mushimo-topic {
+            margin-left: 0;
+            // margin-left: 1rem;
+            font-size: 1rem;
+
+            &.caution {
+              bottom: 1rem;
+            }
+          }
+        }
+
+        .mushimo-sec:nth-child(2) {
+          grid-row: 2 / 3;
+        }
       }
     }
   }
