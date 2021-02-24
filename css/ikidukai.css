@@ -111,18 +111,32 @@ body.detail::before {
       position: absolute;
       top: 1.5rem;
       right: 1.5rem;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      z-index: 10; }
+    #mushi-modal #mushimo-outer .caution {
+      position: absolute;
+      bottom: 2.5rem;
+      right: 50%;
+      transform: translateX(calc(100% + 3rem));
+      font-size: 1.3rem;
+      color: #c20000;
+      border: 1px #c20000 solid;
+      padding: 2px 4px; }
+      #mushi-modal #mushimo-outer .caution:hover {
+        filter: brightness(200%); }
     #mushi-modal #mushimo-outer .mushimo-inner {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 0;
+      grid-template-rows: 1fr 1fr;
       grid-auto-flow: column;
       margin-bottom: 0;
       height: 100%; }
       #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items {
         margin-left: 3rem; }
-        #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items li:not(.caution) a:hover {
-          opacity: .65; }
-        #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items li:not(.caution).mushimo-topic > a:hover {
+        #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items li a {
+          color: #000; }
+          #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items li a:hover {
+            opacity: .65; }
+        #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items li.mushimo-topic > a:hover {
           border-bottom: 1px #000 solid; }
         #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items .mushimo-title {
           font-size: 1.5rem;
@@ -130,21 +144,6 @@ body.detail::before {
         #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items .mushimo-topic {
           font-size: 1.3rem;
           margin-left: 1rem; }
-      #mushi-modal #mushimo-outer .mushimo-inner .mushimo-sec:nth-child(2) {
-        grid-row: span 2; }
-      #mushi-modal #mushimo-outer .mushimo-inner .caution {
-        position: absolute;
-        bottom: 2.5rem;
-        right: 50%;
-        transform: translateX(calc(100% + 3rem)); }
-        #mushi-modal #mushimo-outer .mushimo-inner .caution a {
-          color: #c20000;
-          border: 1px #c20000 solid;
-          padding: 2px 4px; }
-          #mushi-modal #mushimo-outer .mushimo-inner .caution a:hover {
-            filter: brightness(200%); }
-  #mushi-modal a {
-    color: #000; }
 
 /* グローバル設定 */
 .index #header-wrapper {
@@ -251,29 +250,38 @@ footer {
   #mushi-modal #mushimo-outer {
     border-radius: 1rem;
     padding: 1.5rem 1rem;
-    width: 80%; }
+    width: 80%;
+    height: max-content; }
     #mushi-modal #mushimo-outer > i {
       top: 1rem;
       right: 1rem; }
+    #mushi-modal #mushimo-outer .caution {
+      top: 1rem;
+      left: 1rem;
+      transform: translate(0, 0);
+      width: max-content;
+      height: max-content;
+      font-size: 1rem; }
     #mushi-modal #mushimo-outer .mushimo-inner {
       grid-template-columns: 100%;
-      grid-template-rows: repeat(5, max-content); }
+      grid-template-rows: repeat(5, max-content);
+      width: max-content;
+      margin: 1.5rem auto 0; }
       #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items {
-        margin-left: 0; }
+        margin-left: 1.8rem; }
         #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items li {
-          text-align: center; }
+          text-align: left;
+          width: max-content; }
+          #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items li a {
+            width: max-content; }
         #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items .mushimo-title {
           font-size: 1.3rem;
           font-weight: bold;
           margin-bottom: 0;
           margin-top: 0.5rem; }
         #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items .mushimo-topic {
-          margin-left: 0;
+          margin-left: 1rem;
           font-size: 1rem; }
-          #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items .mushimo-topic.caution {
-            bottom: 1rem; }
-      #mushi-modal #mushimo-outer .mushimo-inner .mushimo-sec:nth-child(2) {
-        grid-row: 2 / 3; }
 
   /* グルーバルp */
   .index .title-inner .title {

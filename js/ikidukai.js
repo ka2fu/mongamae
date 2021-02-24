@@ -108,6 +108,7 @@ let header_height = $('#header-wrapper').height();
 let space = header_height * 2;
 let a_height = header_height + space;
 $('.mushi-link').click(function(){
+  console.log('mushi-link clicked');
   let href = $(this).attr('href');
   $('#mushi-modal').fadeOut(); // 連続でクリックするとなんかバグるし、ui的にも消したい
   let target = $(href == "#" || href == "" ? "body" : href);

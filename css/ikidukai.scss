@@ -170,11 +170,27 @@ body { // background-imageをspでも正常になるように固定
       top: 1.5rem;
       right: 1.5rem;
       font-size: 1.5rem;
+      z-index: 10;
+    }
+
+    .caution {
+      position: absolute;
+      bottom: 2.5rem;
+      right: 50%;
+      transform: translateX(calc(100% + 3rem));
+      font-size: 1.3rem;
+      color: $mon-red;
+      border: 1px $mon-red solid;
+      padding: 2px 4px;
+
+      &:hover {
+        filter: brightness(200%);
+      }
     }
 
     .mushimo-inner {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 0;
+      grid-template-rows: 1fr 1fr;
       grid-auto-flow: column;
       margin-bottom: 0;
       height: 100%;
@@ -182,10 +198,13 @@ body { // background-imageをspでも正常になるように固定
       .mushimo-items {
         margin-left: 3rem;
 
-        li:not(.caution) {
+        li {
+          a {
+            color: #000;
 
-          a:hover {
-            opacity: .65;
+            &:hover {
+              opacity: .65;
+            }
           }
 
           &.mushimo-topic > a:hover {
@@ -203,32 +222,7 @@ body { // background-imageをspでも正常になるように固定
           margin-left: 1rem;
         }
       }
-
-      .mushimo-sec:nth-child(2) {
-        grid-row: span 2;
-      }
-
-      .caution {
-        position: absolute;
-        bottom: 2.5rem;
-        right: 50%;
-        transform: translateX(calc(100% + 3rem));
-
-        a {
-          color: $mon-red;
-          border: 1px $mon-red solid;
-          padding: 2px 4px;
-
-          &:hover {
-            filter: brightness(200%);
-          }
-        }
-      }
     }
-  }
-
-  a {
-    color: #000;
   }
 }
 /* グローバル設定 */
@@ -420,24 +414,44 @@ footer {
       border-radius: 1rem;
       padding: 1.5rem 1rem;
       width: 80%;
+      height: max-content;
+      // height: 60%;
 
       & > i {
         top: 1rem;
+        // left: 1rem;
         right: 1rem;
+      }
+
+      .caution {
+        top: 1rem;
+        // right: 1rem;
+        left: 1rem;
+        transform: translate(0, 0);
+        width: max-content;
+        height: max-content;
+        font-size: 1rem;
       }
 
       .mushimo-inner {
         grid-template-columns: 100%;
         grid-template-rows: repeat(5, max-content);
         // width: 50%;
-        // margin: 0 auto;
+        width: max-content;
+        margin: 1.5rem auto 0;
 
         .mushimo-items {
-          margin-left: 0;
+          // margin-left: 0;
+          margin-left: 1.8rem;
 
           li {
-            text-align: center;
-            // text-align: left;
+            // text-align: center;
+            text-align: left;
+            width: max-content;
+
+            a {
+              width: max-content;
+            }
           }
 
           .mushimo-title {
@@ -448,18 +462,10 @@ footer {
           }
 
           .mushimo-topic {
-            margin-left: 0;
-            // margin-left: 1rem;
+            // margin-left: 0;
+            margin-left: 1rem;
             font-size: 1rem;
-
-            &.caution {
-              bottom: 1rem;
-            }
           }
-        }
-
-        .mushimo-sec:nth-child(2) {
-          grid-row: 2 / 3;
         }
       }
     }
