@@ -266,7 +266,7 @@ footer {
       grid-template-columns: 100%;
       grid-template-rows: repeat(5, max-content);
       width: max-content;
-      margin: 1.5rem auto 0; }
+      margin: 3rem auto 0; }
       #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items {
         margin-left: 1.8rem; }
         #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items li {
