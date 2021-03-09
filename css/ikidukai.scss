@@ -1,6 +1,6 @@
 
 $mon-red: #c20000;
-$iki-bule: #041e78;
+$iki-blue: #041e78;
 $bg-white: rgba(255, 255, 255, 0.7);
 $bg-url: '../img-ikidukai/';
 $text-colour: #444;
@@ -176,8 +176,10 @@ body { // background-imageをspでも正常になるように固定
     .caution {
       position: absolute;
       bottom: 2.5rem;
-      right: 50%;
-      transform: translateX(calc(100% + 3rem));
+      right: 3rem;
+      // transform: translateX(100%);
+      // right: 50%;
+      // transform: translateX(calc(100% + 3rem));
       font-size: 1.3rem;
       color: $mon-red;
       border: 1px $mon-red solid;
@@ -208,13 +210,18 @@ body { // background-imageをspでも正常になるように固定
           }
 
           &.mushimo-topic > a:hover {
-            border-bottom: 1px #000 solid;
+            // border-bottom: 1px #000 solid;
+            color: #555;
+            opacity: 0.8;
           }
         }
 
         .mushimo-title {
-          font-size: 1.5rem;
           margin-bottom: 0.5rem;
+
+          img {
+            height: 2rem;
+          }
         }
 
         .mushimo-topic {
@@ -250,17 +257,17 @@ body { // background-imageをspでも正常になるように固定
       position: relative;
       width: 70vw;
       height: 50vh;
-      @include bg-png('logo-toka');
+      @include bg-png('ikidukai-logo-2');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
       z-index: 900;
 
-      p {
-        position: absolute;
-        top: 20%;
+      img {
+        position:absolute;
+        top: 2%;
         left: 8%;
-        font-size: 3rem;
+        height: 20%;
       }
     }
   }
@@ -274,6 +281,7 @@ body { // background-imageをspでも正常になるように固定
       width: 70vw;
       height: 60vh;
       grid-template-columns: repeat(4, 1fr);
+      justify-content: space-around;
 
       .ppl {
         width: 90%;
@@ -285,21 +293,26 @@ body { // background-imageをspでも正常になるように固定
           // opacity: .8;
         }
 
-        &#zumin {
-          @include bg-png('zumin');
+        img {
+          height: 60vh;
+          justify-self: center;
         }
 
-        &#berisa {
-          @include bg-png('berisa');
+        &#katsu1 {
+          @include bg-png('katsu1_mozaiku');
         }
 
-        &#kyonko {
-          @include bg-png('kyonko');
-          transform: rotateX(180deg);
+        &#hira1 {
+          @include bg-png('hira1_mozaiku');
         }
 
-        &#techi {
-          @include bg-png('techi');
+        &#yuka1 {
+          @include bg-png('yuka1_mozaiku');
+          // transform: rotateX(180deg);
+        }
+
+        &#hoshi1 {
+          @include bg-png('hoshi1_mozaiku');
         }
       }
     }
@@ -438,7 +451,7 @@ footer {
         grid-template-rows: repeat(5, max-content);
         // width: 50%;
         width: max-content;
-        margin: 3rem auto 0;
+        margin: 1.5rem auto 0;
 
         .mushimo-items {
           // margin-left: 0;
@@ -455,10 +468,13 @@ footer {
           }
 
           .mushimo-title {
-            font-size: 1.3rem;
             font-weight: bold;
             margin-bottom: 0;
             margin-top: 0.5rem;
+
+            img {
+              height: 1.8rem;
+            }
           }
 
           .mushimo-topic {
@@ -478,7 +494,7 @@ footer {
         width: 100vw;
         height: 30vh;
 
-        p {
+        img {
           top: 2%;
           left: 9%;
         }

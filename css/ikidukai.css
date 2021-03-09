@@ -116,8 +116,7 @@ body.detail::before {
     #mushi-modal #mushimo-outer .caution {
       position: absolute;
       bottom: 2.5rem;
-      right: 50%;
-      transform: translateX(calc(100% + 3rem));
+      right: 3rem;
       font-size: 1.3rem;
       color: #c20000;
       border: 1px #c20000 solid;
@@ -137,10 +136,12 @@ body.detail::before {
           #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items li a:hover {
             opacity: .65; }
         #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items li.mushimo-topic > a:hover {
-          border-bottom: 1px #000 solid; }
+          color: #555;
+          opacity: 0.8; }
         #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items .mushimo-title {
-          font-size: 1.5rem;
           margin-bottom: 0.5rem; }
+          #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items .mushimo-title img {
+            height: 2rem; }
         #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items .mushimo-topic {
           font-size: 1.3rem;
           margin-left: 1rem; }
@@ -163,16 +164,16 @@ body.detail::before {
     position: relative;
     width: 70vw;
     height: 50vh;
-    background-image: url("../img-ikidukai/logo-toka.png");
+    background-image: url("../img-ikidukai/ikidukai-logo-2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 900; }
-    .index .title-inner .title p {
+    .index .title-inner .title img {
       position: absolute;
-      top: 20%;
+      top: 2%;
       left: 8%;
-      font-size: 3rem; }
+      height: 20%; }
 .index .gimmick-inner #ppl-inner {
   position: fixed;
   top: 50%;
@@ -180,21 +181,24 @@ body.detail::before {
   transform: translate(-50%, -50%);
   width: 70vw;
   height: 60vh;
-  grid-template-columns: repeat(4, 1fr); }
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around; }
   .index .gimmick-inner #ppl-inner .ppl {
     width: 90%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain; }
-    .index .gimmick-inner #ppl-inner .ppl#zumin {
-      background-image: url("../img-ikidukai/zumin.png"); }
-    .index .gimmick-inner #ppl-inner .ppl#berisa {
-      background-image: url("../img-ikidukai/berisa.png"); }
-    .index .gimmick-inner #ppl-inner .ppl#kyonko {
-      background-image: url("../img-ikidukai/kyonko.png");
-      transform: rotateX(180deg); }
-    .index .gimmick-inner #ppl-inner .ppl#techi {
-      background-image: url("../img-ikidukai/techi.png"); }
+    .index .gimmick-inner #ppl-inner .ppl img {
+      height: 60vh;
+      justify-self: center; }
+    .index .gimmick-inner #ppl-inner .ppl#katsu1 {
+      background-image: url("../img-ikidukai/katsu1_mozaiku.png"); }
+    .index .gimmick-inner #ppl-inner .ppl#hira1 {
+      background-image: url("../img-ikidukai/hira1_mozaiku.png"); }
+    .index .gimmick-inner #ppl-inner .ppl#yuka1 {
+      background-image: url("../img-ikidukai/yuka1_mozaiku.png"); }
+    .index .gimmick-inner #ppl-inner .ppl#hoshi1 {
+      background-image: url("../img-ikidukai/hoshi1_mozaiku.png"); }
 .index .gimmick-inner #mushimegane {
   top: 13vh; }
 .index footer {
@@ -266,7 +270,7 @@ footer {
       grid-template-columns: 100%;
       grid-template-rows: repeat(5, max-content);
       width: max-content;
-      margin: 3rem auto 0; }
+      margin: 1.5rem auto 0; }
       #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items {
         margin-left: 1.8rem; }
         #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items li {
@@ -275,10 +279,11 @@ footer {
           #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items li a {
             width: max-content; }
         #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items .mushimo-title {
-          font-size: 1.3rem;
           font-weight: bold;
           margin-bottom: 0;
           margin-top: 0.5rem; }
+          #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items .mushimo-title img {
+            height: 1.8rem; }
         #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items .mushimo-topic {
           margin-left: 1rem;
           font-size: 1rem; }
@@ -287,7 +292,7 @@ footer {
   .index .title-inner .title {
     width: 100vw;
     height: 30vh; }
-    .index .title-inner .title p {
+    .index .title-inner .title img {
       top: 2%;
       left: 9%; }
   .index .gimmick-inner #ppl-inner {

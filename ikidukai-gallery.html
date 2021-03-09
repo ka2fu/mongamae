@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>作品詳細 | 門 <モンガマエ></title>
+  <title>フォーマット | 門 <モンガマエ></title>
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -23,7 +23,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body class="detail">
+<body class="gallery">
   <div id="header-wrapper" class="fixed-top p-ac">
     <nav id="header-nav" class="has-border grid">
       <a href="index.html" id="mon-icon" class="navbar-brand ml-5"><img src="img/logo.svg" alt="logo image"></a>
@@ -83,56 +83,29 @@
     <i id="close" class="fas fa-angle-up"></i>
   </div>
 
-  <!-- 各ページのテキスト用のinner -->
   <div id="info-outer">
     <div class="sub-title-inner grid">
-      <img src="img-ikidukai/syosai_yoko.png" alt="" class="sub-title">
+      <img src="img-ikidukai/gallery_yoko.png" alt="" class="sub-title">
     </div>
     <div class="info-inner grid">
-      <div id="outline" class="info-text">
-        <h2 class="topic">あらすじ</h2>
+      <div id="" class="info-text">
+        <h2 class="topic"></h2>
         <p>
-          クラスも何も知らないハジメに恋をした、高校生のリカ。<br><br>
-          大人になった今も、思い出の中で彼に会いに行く。<br><br>
-          しかし10年もすれば想いを伝えられなかった甘酸っぱさは次第に影を潜めて・・・<br><br>
-          「僕はずっとここにいるよ」
         </p>
       </div>
 
-      <div id="credit" class="info-text">
-        <h2 class="topic">クレジット</h2>
-        <p>
-          出演<br>
-          小松原夕佳<br>
-          平田匠<br>
-          福島勝広<br>
-          星野良太朗<br><br>
-          スタッフ<br>
-          作・演出：鳥居巧<br>
-          演出助手：長島朱音<br>
-          美術：春田空良<br>
-          ロゴデザイン：平田匠<br>
-          WEB制作：福島勝広<br>
-          楽曲制作：田中圭(仮)<br>
-          舞台監督：仲縞彩<br>
-          協力：慶應義塾大学<br>
-          製作協力：ミュージカルサークルEM、劇団EnTropy、臼田フォトスタジオ<br>
-          宣伝協力：貴方､貴女､貴方の友人､家族<br>
-          企画・制作・主催：門<モンガマエ>
-        </p>
-      </div>
-
+      <!-- 各ページではここで表示 -->
     </div>
     <footer class="grid hidden">
       <p>copyright © mongamae</p>
     </footer>
-  </div>
+  </div >
 
   <div id="wrapper" class="">
 
-
     <!-- lpでは第二層のギミックを配置、各ページ内ではここで虫眼鏡を配置？ -->
     <div class="gimmick-inner">
+      <!-- 各ページのテキスト用のinner -->
 
       <div class="title-inner grid"> <!-- lpの場合background-imageを指定 -->
         <div class="title"> <!-- ここにbackground-imageを設定(文字を被せたい＆スマホのスタイリングの都合上) -->
@@ -148,23 +121,22 @@
     </div>
 
     <!-- 虫眼鏡モーダル -->
-    <div id="mushi-modal" class="">
-    <!-- <div id="mushi-modal" class="hidden"> -->
+    <div id="mushi-modal" class="hidden">
       <div id="mushimo-outer">
         <i id="close" class="far fa-times-circle"></i>
 
         <ul class="mushimo-inner grid">
           <li class="mushimo-sec">
             <ul class="mushimo-items">
-              <li class="mushimo-title"><a href="" class="mushi-link"><img src="img-ikidukai/syosai_yoko.png" alt=""></a></li>
-              <li class="mushimo-topic"><a href="#outline" class="mushi-link">あらすじ</a></li>
-              <li class="mushimo-topic"><a href="#credit" class="mushi-link">クレジット</a></li>
+              <li class="mushimo-title"><a href="ikidukai-detail.html" class="mushi-link"><img src="img-ikidukai/syosai_yoko.png" alt=""></a></li>
+              <li class="mushimo-topic"><a href="ikidukai-detail.html#outline" class="mushi-link">あらすじ</a></li>
+              <li class="mushimo-topic"><a href="ikidukai-detail.html#credit" class="mushi-link">クレジット</a></li>
             </ul>
           </li>
 
           <li class="mushimo-sec">
             <ul class="mushimo-items">
-              <li class="mushimo-title"><a href="" class="mushi-link"><img src="img-ikidukai/annai_yoko.png" alt=""></a></li>
+              <li class="mushimo-title"><a href="ikidukai-guide.html" class="mushi-link"><img src="img-ikidukai/annai_yoko.png" alt=""></a></li>
               <li class="mushimo-topic"><a href="" class="mushi-link disable">スケジュール</a></li>
               <li class="mushimo-topic"><a href="" class="mushi-link disable">チケット販売</a></li>
               <li class="mushimo-topic"><a href="" class="mushi-link disable">アクセス</a></li>
@@ -173,7 +145,7 @@
 
           <li class="mushimo-sec">
             <ul class="mushimo-items">
-              <li class="mushimo-title"><a href="" class="mushi-link"><img src="img-ikidukai/gallery_yoko_2.png" alt=""></a></li>
+              <li class="mushimo-title"><a href="ikidukai-gallery.html" class="mushi-link"><img src="img-ikidukai/gallery_yoko.png" alt=""></a></li>
               <li class="mushimo-topic"><a href="" class="mushi-link disable">ＰＶ</a></li>
               <li class="mushimo-topic"><a href="" class="mushi-link disable">助っ人メンバー</a></li>
             </ul>
@@ -181,7 +153,7 @@
 
           <li class="mushimo-sec">
             <ul class="mushimo-items">
-              <li class="mushimo-title"><a href="" class="mushi-link"><img src="img-ikidukai/taisaku_yoko.png" alt=""></a></li>
+              <li class="mushimo-title"><a href="ikidukai-measure" class="mushi-link"><img src="img-ikidukai/taisaku_yoko.png" alt=""></a></li>
               <li class="mushimo-topic"><a href="" class="mushi-link disable"></a></li>
             </ul>
           </li>
@@ -189,8 +161,10 @@
         <a href="ikidukai-measure.html#caution" class="caution mushi-link">注意事項</a>
       </div>
     </div>
-  </div>
 
+  </div> <!-- gimmick-innerとじ -->
+
+  <!-- トップページではこれ -->
   <!-- <footer class="grid">
     <p>copyright © mongamae</p>
   </footer> -->
