@@ -132,3 +132,50 @@ if(!is_index){
     $(footer).css('top', footer_pos);
   });
 }
+
+// pplの変化
+let katsu_moza = 'img-ikidukai/katsu1.png';
+let katsu_moji = 'img-ikidukai/katsu1_moji.png';
+let hira_moza = 'img-ikidukai/hira1.png';
+let hira_moji = 'img-ikidukai/hira1_moji.png';
+let hoshi_moza = 'img-ikidukai/hoshi1.png';
+let hoshi_moji = 'img-ikidukai/hoshi1_moji.png';
+let yuka_moza = 'img-ikidukai/yuka1.png';
+let yuka_moji = 'img-ikidukai/yuka1_moji.png';
+if(isSmartPhone()){ //スマホはずっと文字
+  $('#katsu1').find('img').attr('src', katsu_moji);
+  $('#hira1').find('img').attr('src', hira_moji);
+  $('#hoshi1').find('img').attr('src', hoshi_moji);
+  $('#yuka1').find('img').attr('src', yuka_moji);
+} else { // パソコンの変化の処理
+  $('.ppl').hover(
+    function(){
+      if($(this).attr('id') === 'katsu1'){
+        $(this).find('img').attr('src', katsu_moji);
+      }
+      else if($(this).attr('id') === 'hira1'){
+        $(this).find('img').attr('src', hira_moji);
+      }
+      else if($(this).attr('id') === 'yuka1'){
+        $(this).find('img').attr('src', yuka_moji);
+      }
+      else if($(this).attr('id') === 'hoshi1'){
+        $(this).find('img').attr('src', hoshi_moji);
+      }
+    },
+    function(){
+      if($(this).attr('id') === 'katsu1'){
+        $(this).find('img').attr('src', katsu_moza);
+      }
+      else if($(this).attr('id') === 'hira1'){
+        $(this).find('img').attr('src', hira_moza);
+      }
+      else if($(this).attr('id') === 'yuka1'){
+        $(this).find('img').attr('src', yuka_moza);
+      }
+      else if($(this).attr('id') === 'hoshi1'){
+        $(this).find('img').attr('src', hoshi_moza);
+      }
+    }
+  );
+}

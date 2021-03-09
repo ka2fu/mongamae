@@ -191,14 +191,6 @@ body.detail::before {
     .index .gimmick-inner #ppl-inner .ppl img {
       height: 60vh;
       justify-self: center; }
-    .index .gimmick-inner #ppl-inner .ppl#katsu1 {
-      background-image: url("../img-ikidukai/katsu1_mozaiku.png"); }
-    .index .gimmick-inner #ppl-inner .ppl#hira1 {
-      background-image: url("../img-ikidukai/hira1_mozaiku.png"); }
-    .index .gimmick-inner #ppl-inner .ppl#yuka1 {
-      background-image: url("../img-ikidukai/yuka1_mozaiku.png"); }
-    .index .gimmick-inner #ppl-inner .ppl#hoshi1 {
-      background-image: url("../img-ikidukai/hoshi1_mozaiku.png"); }
 .index .gimmick-inner #mushimegane {
   top: 13vh; }
 .index footer {
