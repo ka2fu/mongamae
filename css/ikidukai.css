@@ -215,6 +215,21 @@ body.guide::before {
 .detail .info-inner {
   right: calc(0% + calc(100vw - 100%)); }
 
+.measure .sub-title-inner {
+  right: 0; }
+.measure .info-inner {
+  right: calc(0% + calc(100vw - 100%)); }
+
+.guide .sub-title-inner {
+  left: 0; }
+.guide .info-inner {
+  left: 0; }
+
+.gallery .sub-title-inner {
+  left: 0; }
+.gallery .info-inner {
+  left: 0; }
+
 #info-outer footer {
   position: absolute;
   right: 0; }
@@ -247,7 +262,6 @@ footer {
       color: #444;
       font-size: 1.1rem;
       font-weight: bold;
-      margin-right: 1.5rem;
       text-shadow: 1px 1px 5px #fff, -1px 1px 5px #fff, 1px -1px 5px #fff, -1px -1px 5px #fff; }
       #info-outer .info-inner .info-text .topic {
         font-size: 2.5rem;
@@ -302,6 +316,12 @@ footer {
   .index .gimmick-inner #ppl-inner {
     width: 85vw;
     height: 70vh;
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+
+  .detail .info-text, .measure .info-text {
+    margin-right: 1.5rem; }
+
+  .gallery .info-text, .guide .info-text {
+    margin-left: 1.5rem; } }
 
 /*# sourceMappingURL=ikidukai.css.map */

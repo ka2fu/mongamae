@@ -347,16 +347,38 @@ body { // background-imageをspでも正常になるように固定
   }
 }
 
-.detail {
-
-  .sub-title-inner {
-    // right: calc(-1 * $text-right);
+@mixin info-right(){
+  .sub-title-inner{
     right: 0;
   }
-
   .info-inner {
     right: $text-right;
   }
+}
+
+@mixin info-left(){
+  .sub-title-inner{
+    left: 0;
+  }
+  .info-inner {
+    left: 0;
+  }
+}
+
+.detail {
+  @include info-right();
+}
+
+.measure {
+  @include info-right();
+}
+
+.guide {
+  @include info-left();
+}
+
+.gallery {
+  @include info-left();
 }
 
 #info-outer {
@@ -417,7 +439,6 @@ footer {
         color: $text-colour;
         font-size: 1.1rem;
         font-weight: bold;
-        margin-right: 1.5rem;
         text-shadow:
         1px 1px 5px #fff,
         -1px 1px 5px #fff,
@@ -525,6 +546,18 @@ footer {
         height: 70vh;
         grid-template-columns: repeat(2, 1fr);
       }
+    }
+  }
+
+  .detail, .measure {
+    .info-text {
+      margin-right: 1.5rem;
+    }
+  }
+
+  .gallery, .guide {
+    .info-text {
+      margin-left: 1.5rem;
     }
   }
 }
