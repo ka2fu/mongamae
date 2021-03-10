@@ -39,16 +39,17 @@
     z-index: 40;
     float: left;
     position: absolute;
-    top: 12vh;
-    left: 10vw;
-    height: 78vh;
-    width: max-content;
-    margin: 0 auto;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(calc(-50% + calc(70vw / 24)), -50%);
+    height: 80vh;
+    width: 70vw;
     justify-content: center;
     align-content: center; }
     .carousel-inner #header-text-inner h1 {
       color: rgba(233, 233, 233, 0.8);
-      font-size: 10rem; }
+      font-size: calc(70vw / 6);
+      margin-bottom: 0; }
 
 .works-list {
   grid-row-gap: 2rem; }

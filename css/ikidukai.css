@@ -17,10 +17,22 @@ body::before {
   background-repeat: no-repeat; }
 body.index::before {
   background-image: url("../img-ikidukai/moya.jpg"); }
-body.detail::before {
-  background-image: url("../img-ikidukai/kyonkoko.png");
+body.measure::before {
+  background-image: url("../img-ikidukai/katsu_haikei_kari.png");
   background-size: 70%;
   background-position: top 0 left -10%; }
+body.detail::before {
+  background-image: url("../img-ikidukai/yuka_haikei_kari.png");
+  background-size: 70%;
+  background-position: top 0 left -10%; }
+body.gallery::before {
+  background-image: url("../img-ikidukai/hira_haikei_kari.png");
+  background-size: 70%;
+  background-position: top 0 right -10%; }
+body.guide::before {
+  background-image: url("../img-ikidukai/hoshi_haikei_kari.png");
+  background-size: 70%;
+  background-position: top 0 right -10%; }
 
 #header-wrapper {
   background-color: transparent;

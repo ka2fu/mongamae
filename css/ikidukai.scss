@@ -41,10 +41,28 @@ body { // background-imageをspでも正常になるように固定
     @include bg-jpg('moya');
   }
 
-  &.detail::before {
-    @include bg-png('kyonkoko');
+  &.measure::before {
+    @include bg-png('katsu_haikei_kari');
     background-size: 70%;
     background-position: top 0 left -10%;
+  }
+
+  &.detail::before {
+    @include bg-png('yuka_haikei_kari');
+    background-size: 70%;
+    background-position: top 0 left -10%;
+  }
+
+  &.gallery::before {
+    @include bg-png('hira_haikei_kari');
+    background-size: 70%;
+    background-position: top 0 right -10%;
+  }
+
+  &.guide::before {
+    @include bg-png('hoshi_haikei_kari');
+    background-size: 70%;
+    background-position: top 0 right -10%;
   }
 }
 

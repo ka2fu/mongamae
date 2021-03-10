@@ -123,13 +123,22 @@ if(!is_index){
   let title_height = $('.info-inner').offset().top - $('#info-outer').offset().top;
   let footer_pos = $('.info-inner').height() + title_height;
   let footer = $('#info-outer').find('footer');
-  $(footer).css('top', footer_pos);
+  let min_info_height = $('#wrapper').height() - $('#info-outer').offset().top - footer.height();
+  if(footer_pos < min_info_height){ // info-innerが小さい時は底に固定
+    $(footer).css('top', min_info_height);
+  } else { // footerが画面のしたからスタートする場合
+    $(footer).css('top', footer_pos);
+  }
   $(footer).removeClass('hidden'); // リフレッシュで一瞬現れるの防止で隠す
   $(document).scroll(function(){ // 一応画面幅が途中で変わっとトキのために
     let title_height = $('.info-inner').offset().top - $('#info-outer').offset().top;
     let footer_pos = $('.info-inner').height() + title_height;
     let footer = $('#info-outer').find('footer');
-    $(footer).css('top', footer_pos);
+    if(footer_pos < min_info_height){ // info-innerが小さい時は底に固定
+      $(footer).css('top', min_info_height);
+    } else { // footerが画面のしたからスタートする場合
+      $(footer).css('top', footer_pos);
+    }
   });
 }
 
