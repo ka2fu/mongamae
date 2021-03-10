@@ -204,7 +204,8 @@ body.guide::before {
       height: 60vh;
       justify-self: center; }
 .index .gimmick-inner #mushimegane {
-  top: 13vh; }
+  top: 25vh;
+  left: 18vw; }
 .index footer {
   position: fixed;
   bottom: 0;
@@ -317,6 +318,13 @@ footer {
     width: 85vw;
     height: 70vh;
     grid-template-columns: repeat(2, 1fr); }
+    .index .gimmick-inner #ppl-inner .ppl {
+      height: 100%;
+      width: 100%;
+      display: grid;
+      justify-content: center; }
+      .index .gimmick-inner #ppl-inner .ppl img {
+        height: 35vh; }
 
   .detail .info-text, .measure .info-text {
     margin-right: 1.5rem; }

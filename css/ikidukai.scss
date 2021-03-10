@@ -336,7 +336,9 @@ body { // background-imageをspでも正常になるように固定
     }
 
     #mushimegane {
-      top: 13vh;
+      // top: 13vh;
+      top: 25vh;
+      left: 18vw;
     }
   }
 
@@ -545,6 +547,17 @@ footer {
         width: 85vw;
         height: 70vh;
         grid-template-columns: repeat(2, 1fr);
+
+        .ppl{
+          height: 100%;
+          width: 100%;
+          display: grid;
+          justify-content: center;
+
+          img {
+            height: 35vh;
+          }
+        }
       }
     }
   }
