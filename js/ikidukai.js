@@ -14,10 +14,10 @@ $('.hovable-moya').on({ // ←innerじゃないよ
     $(this).off('mouseover mouseout');
   },
   'touchstart mouseover' : function(){
-    $(this).css('opacity', 0.8);
+    $(this).css('filter', "saturate(0.7)");
   },
   'touchend mouseout' : function(){
-    $(this).css('opacity', 1.0);
+    $(this).css('filter', "saturate(1.0)");
   }
 });
 
@@ -187,4 +187,38 @@ if(isSmartPhone()){ //スマホはずっと文字
       }
     }
   );
+}
+
+// スマホ版の背景画像とテキストのレイアウト(仮)
+function getPseudo(selector, type, property){
+  let properties = window.getComputedStyle($(selector)[0], type);
+  let data = properties.getPropertyValue(property);
+  return data;
+}
+
+if(isSmartPhone()){
+  let text_height = $('.info-text').height();
+  let before_height = getPseudo('body', '::before', 'height');
+  before_height = Number(before_height.slice(-1 * before_height.length, -2));
+  let diff_height = $('body').height() - before_height;
+  text_height += diff_height + $('footer').height();
+  $('.text-bg').css("height", text_height);
+
+  // 画像を挿入していく！！！
+  let images = ['karimoya.png']; // 使う画像の破裂
+
+  // 最初の画像
+  let first_content = `<div class="text-bg-inner grid"><img src="img-ikidukai/${images[0]}" alt=""></div>`;
+  $('.text-bg').append(first_content);
+
+  let inner_height = $(document.getElementsByClassName('text-bg-inner')[0]).height();
+  let img_num = 1;
+  let i = 0;
+  while(text_height - (img_num * inner_height) > inner_height){
+    i++;
+    if(i === images.length) i = 0;
+    let content = `<div class="text-bg-inner grid"><img src="img-ikidukai/${images[i]}" alt=""></div>`;
+    $('.text-bg').append(content);
+    img_num++;
+  }
 }

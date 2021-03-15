@@ -14,9 +14,10 @@ body::before {
   height: 100vh;
   z-index: 0;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat; }
 body.index::before {
-  background-image: url("../img-ikidukai/moya.jpg"); }
+  background-image: url("../img-ikidukai/pc-top-bg.png"); }
 body.measure::before {
   background-image: url("../img-ikidukai/katsu_haikei_kari.png");
   background-size: 70%;
@@ -55,8 +56,6 @@ body.guide::before {
   height: 100vh; }
   .gimmick-inner #mushimegane {
     position: absolute;
-    bottom: 5vh;
-    left: 5vw;
     display: inline-block;
     height: 5rem;
     width: 5rem; }
@@ -204,8 +203,8 @@ body.guide::before {
       height: 60vh;
       justify-self: center; }
 .index .gimmick-inner #mushimegane {
-  top: 25vh;
-  left: 18vw; }
+  top: 24.5%;
+  left: 6%; }
 .index footer {
   position: fixed;
   bottom: 0;
@@ -245,11 +244,27 @@ footer {
 
 @media only screen and (max-width: 600px) {
   /* グローバル */
+  body.index::before {
+    background-image: url("../img-ikidukai/sp-top-bg.png"); }
   body.detail::before {
     background-image: url("../img-ikidukai/kyonkoko-sp.png");
     background-size: 100%;
     background-position: bottom 20% left 0; }
+  body.guide::before {
+    position: static;
+    background-image: url("../img-ikidukai/hoshi_moya_kari.png");
+    background-size: 100%;
+    background-position: top 0% right 0; }
 
+  #info-outer .text-bg .text-bg-inner {
+    height: 40vh; }
+    #info-outer .text-bg .text-bg-inner:nth-child(odd) {
+      justify-content: end; }
+    #info-outer .text-bg .text-bg-inner:nth-child(even) {
+      justify-content: start; }
+    #info-outer .text-bg .text-bg-inner img {
+      margin-top: 10vh;
+      height: 30vh; }
   #info-outer .sub-title-inner .sub-title {
     width: 50%; }
   #info-outer .info-inner {
@@ -325,11 +340,37 @@ footer {
       justify-content: center; }
       .index .gimmick-inner #ppl-inner .ppl img {
         height: 35vh; }
+  .index .gimmick-inner #mushimegane {
+    left: 94%;
+    top: 94%;
+    transform: translate(-100%, -100%);
+    height: 4rem;
+    width: 4rem; }
 
   .detail .info-text, .measure .info-text {
     margin-right: 1.5rem; }
+  .detail .gimmick-inner #mushimegane, .measure .gimmick-inner #mushimegane {
+    top: 80%;
+    left: 2%;
+    transform: translate(0, 0);
+    height: 3.5rem;
+    width: 3.5rem; }
 
   .gallery .info-text, .guide .info-text {
-    margin-left: 1.5rem; } }
+    margin-left: 1.5rem; }
+
+  .guide #info-outer {
+    margin-top: 0; }
+    .guide #info-outer .sub-title-inner {
+      position: relative;
+      top: -100vh; }
+      .guide #info-outer .sub-title-inner img {
+        margin-top: 20vh; }
+    .guide #info-outer .text-bg {
+      position: absolute;
+      top: 0;
+      width: 100vw; }
+    .guide #info-outer .info-inner {
+      z-index: 10; } }
 
 /*# sourceMappingURL=ikidukai.css.map */
