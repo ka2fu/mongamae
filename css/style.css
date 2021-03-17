@@ -78,19 +78,23 @@ h1 > span {
   #header-nav .pc-header-r {
     align-self: end;
     justify-self: end; }
-  #header-nav .fas {
+  #header-nav #open {
     color: #c20000;
     display: none; }
   #header-nav .tori-url {
-    margin-right: 3rem;
-    margin-bottom: -1.8rem; }
+    display: grid;
+    width: 60%;
+    grid-template-columns: repeat(4, 5vh);
+    justify-content: space-evenly;
+    align-content: end;
+    margin-right: 4vh; }
     #header-nav .tori-url .tori {
-      height: 0;
-      width: 0; }
+      height: 6vh;
+      width: 6vh;
+      margin-bottom: 1vh; }
       #header-nav .tori-url .tori img {
-        height: 2.5rem;
-        width: 2.5rem;
-        margin-left: 1.7rem; }
+        height: 6vh;
+        width: 6vh; }
 
 .header-img {
   height: 80vh;

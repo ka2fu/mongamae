@@ -114,23 +114,27 @@ h1 > span {
     justify-self: end;
   }
 
-  .fas {
+  #open {
     color: $mon-red;
     display: none;
   }
 
   .tori-url {
-    margin-right: 3rem;
-    margin-bottom: -1.8rem;
+    display: grid;
+    width: 60%;
+    grid-template-columns: repeat(4, 5vh);
+    justify-content: space-evenly;
+    align-content: end;
+    margin-right: 4vh;
 
     .tori {
-      height: 0;
-      width: 0;
+      height: 6vh;
+      width: 6vh;
+      margin-bottom: 1vh;
 
       img {
-        height: 2.5rem;
-        width: 2.5rem;
-        margin-left: 1.7rem;
+        height: 6vh;
+        width: 6vh;
       }
     }
   }

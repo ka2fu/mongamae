@@ -170,7 +170,11 @@ body.guide::before {
   height: 100vh;
   grid-template-rows: 1fr;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img-ikidukai/title-moya-pc-w.png"); }
   .index .title-inner .title {
     position: relative;
     width: 70vw;
@@ -323,12 +327,14 @@ footer {
           font-size: 1rem; }
 
   /* グルーバルp */
-  .index .title-inner .title {
-    width: 100vw;
-    height: 30vh; }
-    .index .title-inner .title img {
-      top: 2%;
-      left: 9%; }
+  .index .title-inner {
+    background-image: url("../img-ikidukai/title-moya-sp-w.png"); }
+    .index .title-inner .title {
+      width: 100vw;
+      height: 30vh; }
+      .index .title-inner .title img {
+        top: 2%;
+        left: 9%; }
   .index .gimmick-inner #ppl-inner {
     width: 85vw;
     height: 70vh;

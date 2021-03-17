@@ -14,6 +14,19 @@
   top: 0; }
   #header-nav #mon-icon {
     margin-top: -0.5vh; }
+  #header-nav .tori-url {
+    width: 60%;
+    grid-template-columns: repeat(4, 5vh);
+    justify-content: space-evenly;
+    align-content: end;
+    margin-right: 4vh; }
+    #header-nav .tori-url .tori {
+      height: 6vh;
+      width: 6vh;
+      margin-bottom: 1vh; }
+      #header-nav .tori-url .tori img {
+        height: 6vh;
+        width: 6vh; }
 
 .has-border {
   top: .5vh; }
@@ -30,8 +43,15 @@
     color: #f0e6ce !important; }
 
 #spy-nav-top {
+  position: relative;
   height: 70%;
-  margin-bottom: 2vh; }
+  background-color: transparent; }
+  #spy-nav-top ul {
+    position: absolute;
+    bottom: 1.2vh;
+    margin: 0; }
+    #spy-nav-top ul li {
+      width: calc(calc(100vw * 0.6) / 4); }
 
 .carousel-inner {
   position: relative; }
@@ -80,7 +100,7 @@
     .works-item .works-bg-inner #iwake {
       background-image: url("../img/haru-back.jpg"); }
     .works-item .works-bg-inner #ikidukai {
-      background-image: url("../img/iki.png"); }
+      background-image: url("../img/ikidukai-cast.jpg"); }
     .works-item .works-bg-inner #notyet {
       background-image: url("../img/notyet.jpg"); }
 
@@ -97,6 +117,13 @@ footer {
 
   #spy-nav-top, .tori-url {
     display: none; }
+
+  .carousel-inner #header-text-inner {
+    top: 25.5vh;
+    left: 50vw;
+    transform: translate(calc(-50% + calc(70vw / 24)), -50%);
+    height: 35vh;
+    width: 70vw; }
 
   #modal {
     background-color: #f0e6ce;

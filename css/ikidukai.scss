@@ -269,6 +269,10 @@ body { // background-imageをspでも正常になるように固定
     grid-template-rows: 1fr;
     align-items: center;
     justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include bg-png('title-moya-pc-w');
 
     .title {
       position: relative;
@@ -560,6 +564,8 @@ footer {
 
   .index {
     .title-inner {
+      @include bg-png("title-moya-sp-w");
+
       .title {
         width: 100vw;
         height: 30vh;

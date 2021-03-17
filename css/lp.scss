@@ -25,9 +25,25 @@ $max-wid: calc(100% - calc(100% - 100vw));
   #mon-icon {
     margin-top: -0.5vh;
   }
-}
 
-.tori-url {
+  .tori-url {
+    width: 60%;
+    grid-template-columns: repeat(4, 5vh);
+    justify-content: space-evenly;
+    align-content: end;
+    margin-right: 4vh;
+
+    .tori {
+      height: 6vh;
+      width: 6vh;
+      margin-bottom: 1vh;
+
+      img {
+        height: 6vh;
+        width: 6vh;
+      }
+    }
+  }
 }
 
 .has-border {
@@ -61,8 +77,19 @@ $max-wid: calc(100% - calc(100% - 100vw));
 }
 
 #spy-nav-top {
+  position: relative;
   height: 70%;
-  margin-bottom: 2vh;
+  background-color: transparent;
+
+  ul {
+    position: absolute;
+    bottom: 1.2vh;
+    margin: 0;
+
+    li {
+      width: calc(calc(100vw * 0.6) / 4);
+    }
+  }
 }
 
 .carousel-inner {
@@ -130,7 +157,7 @@ $max-wid: calc(100% - calc(100% - 100vw));
     }
 
     #ikidukai {
-      background-image: url("../img/iki.png");
+      background-image: url("../img/ikidukai-cast.jpg");
     }
 
     #notyet {
@@ -160,6 +187,16 @@ footer{
 
   #spy-nav-top, .tori-url {
     display: none;
+  }
+
+  .carousel-inner {
+    #header-text-inner {
+      top: 25.5vh;
+      left: 50vw;
+      transform: translate(calc(-50% + calc(70vw / 24)), -50%);
+      height: 35vh;
+      width: 70vw;
+    }
   }
 
   #modal {
