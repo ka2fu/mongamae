@@ -43,9 +43,9 @@ body { // background-imageをspでも正常になるように固定
   }
 
   &.measure::before {
-    @include bg-png('katsu_haikei_kari');
-    background-size: 70%;
-    background-position: top 0 left -10%;
+    @include bg-png('measure_bg_pc_kari');
+    // background-size: cover;
+    // background-position: top 0 left -10%;
   }
 
   &.detail::before {
@@ -96,10 +96,31 @@ body { // background-imageをspでも正常になるように固定
     height: 5rem;
     width: 5rem;
 
+    // 仮
+    top: 24.5%;
+    left: 6%;
+    // 仮
+
     img {
       height: 100%;
       width: 100%;
+    }
+  }
 
+  #budge {
+    position: absolute;
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+
+    // 仮
+    top: 38%;
+    left: 2.5%;
+    // 仮
+
+    img {
+      height: 100%;
+      width: 100%;
     }
   }
 }
@@ -318,23 +339,6 @@ body { // background-imageをspでも正常になるように固定
           height: 60vh;
           justify-self: center;
         }
-
-        // &#katsu1 {
-        //   @include bg-png('katsu1_mozaiku');
-        // }
-        //
-        // &#hira1 {
-        //   @include bg-png('hira1_mozaiku');
-        // }
-        //
-        // &#yuka1 {
-        //   @include bg-png('yuka1_mozaiku');
-        //   // transform: rotateX(180deg);
-        // }
-        //
-        // &#hoshi1 {
-        //   @include bg-png('hoshi1_mozaiku');
-        // }
       }
     }
 

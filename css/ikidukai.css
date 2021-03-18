@@ -19,9 +19,7 @@ body::before {
 body.index::before {
   background-image: url("../img-ikidukai/pc-top-bg.png"); }
 body.measure::before {
-  background-image: url("../img-ikidukai/katsu_haikei_kari.png");
-  background-size: 70%;
-  background-position: top 0 left -10%; }
+  background-image: url("../img-ikidukai/measure_bg_pc_kari.png"); }
 body.detail::before {
   background-image: url("../img-ikidukai/yuka_haikei_kari.png");
   background-size: 70%;
@@ -58,8 +56,20 @@ body.guide::before {
     position: absolute;
     display: inline-block;
     height: 5rem;
-    width: 5rem; }
+    width: 5rem;
+    top: 24.5%;
+    left: 6%; }
     .gimmick-inner #mushimegane img {
+      height: 100%;
+      width: 100%; }
+  .gimmick-inner #budge {
+    position: absolute;
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    top: 38%;
+    left: 2.5%; }
+    .gimmick-inner #budge img {
       height: 100%;
       width: 100%; }
 
