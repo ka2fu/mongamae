@@ -21,17 +21,11 @@ body.index::before {
 body.measure::before {
   background-image: url("../img-ikidukai/measure_bg_pc_kari.png"); }
 body.detail::before {
-  background-image: url("../img-ikidukai/yuka_haikei_kari.png");
-  background-size: 70%;
-  background-position: top 0 left -10%; }
+  background-image: url("../img-ikidukai/detail_bg_pc_kari.png"); }
 body.gallery::before {
-  background-image: url("../img-ikidukai/hira_haikei_kari.png");
-  background-size: 70%;
-  background-position: top 0 right -10%; }
+  background-image: url("../img-ikidukai/gallery_bg_pc_kari.png"); }
 body.guide::before {
-  background-image: url("../img-ikidukai/hoshi_haikei_kari.png");
-  background-size: 70%;
-  background-position: top 0 right -10%; }
+  background-image: url("../img-ikidukai/guide_bg_pc_kari.png"); }
 
 #header-wrapper {
   background-color: transparent;
@@ -48,6 +42,13 @@ body.guide::before {
   height: 100vh;
   width: calc(100vw - calc(100vw - 100%)); }
 
+.detail #wrapper, .guide #wrapper, .gallery #wrapper, .measure #wrapper {
+  width: 0;
+  height: 0; }
+  .detail #wrapper .gimmick-inner, .guide #wrapper .gimmick-inner, .gallery #wrapper .gimmick-inner, .measure #wrapper .gimmick-inner {
+    width: 0;
+    height: 0; }
+
 .gimmick-inner {
   position: relative;
   width: calc(100vw - calc(100vw - 100%));
@@ -57,8 +58,8 @@ body.guide::before {
     display: inline-block;
     height: 5rem;
     width: 5rem;
-    top: 24.5%;
-    left: 6%; }
+    top: 24.5vh;
+    left: 6vw; }
     .gimmick-inner #mushimegane img {
       height: 100%;
       width: 100%; }
@@ -67,8 +68,8 @@ body.guide::before {
     display: inline-block;
     height: 5rem;
     width: 5rem;
-    top: 38%;
-    left: 2.5%; }
+    top: 38vh;
+    left: 2.5vw; }
     .gimmick-inner #budge img {
       height: 100%;
       width: 100%; }
@@ -95,11 +96,13 @@ body.guide::before {
     overflow-x: visible;
     margin-top: 15vh; }
     #info-outer .info-inner .info-text {
-      width: 70%;
+      width: 50vw;
       color: #444;
       font-size: 1.1rem;
       font-weight: bold;
       text-shadow: 1px 1px 5px #fff, -1px 1px 5px #fff, 1px -1px 5px #fff, -1px -1px 5px #fff; }
+      #info-outer .info-inner .info-text .link:hover {
+        text-decoration: underline !important; }
       #info-outer .info-inner .info-text:last-child {
         margin-bottom: 10vh; }
       #info-outer .info-inner .info-text .topic {
@@ -225,9 +228,9 @@ body.guide::before {
   left: 0; }
 
 .detail .sub-title-inner {
-  right: 0; }
+  left: 0; }
 .detail .info-inner {
-  right: calc(0% + calc(100vw - 100%)); }
+  left: 0; }
 
 .measure .sub-title-inner {
   right: 0; }
@@ -240,9 +243,25 @@ body.guide::before {
   left: 0; }
 
 .gallery .sub-title-inner {
-  left: 0; }
+  right: 0; }
 .gallery .info-inner {
-  left: 0; }
+  right: calc(0% + calc(100vw - 100%)); }
+.gallery .img-in-text-inner {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, max-content);
+  overflow-x: visible; }
+  .gallery .img-in-text-inner .img-in-text {
+    grid-template-columns: 20vw 50vw;
+    overflow-x: visible;
+    position: relative; }
+    .gallery .img-in-text-inner .img-in-text p {
+      position: absolute;
+      right: 0; }
+    .gallery .img-in-text-inner .img-in-text img {
+      position: absolute;
+      right: 50vw;
+      width: 25vw;
+      height: 25vw; }
 
 #info-outer footer {
   position: absolute;
@@ -357,8 +376,8 @@ footer {
       .index .gimmick-inner #ppl-inner .ppl img {
         height: 35vh; }
   .index .gimmick-inner #mushimegane {
-    left: 94%;
-    top: 94%;
+    left: 94vw;
+    top: 94vh;
     transform: translate(-100%, -100%);
     height: 4rem;
     width: 4rem; }
@@ -366,8 +385,8 @@ footer {
   .detail .info-text, .measure .info-text {
     margin-right: 1.5rem; }
   .detail .gimmick-inner #mushimegane, .measure .gimmick-inner #mushimegane {
-    top: 80%;
-    left: 2%;
+    top: 80vh;
+    left: 2vw;
     transform: translate(0, 0);
     height: 3.5rem;
     width: 3.5rem; }

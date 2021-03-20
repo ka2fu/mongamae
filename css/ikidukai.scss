@@ -49,21 +49,21 @@ body { // background-imageをspでも正常になるように固定
   }
 
   &.detail::before {
-    @include bg-png('yuka_haikei_kari');
-    background-size: 70%;
-    background-position: top 0 left -10%;
+    @include bg-png('detail_bg_pc_kari');
+    // background-size: 70%;
+    // background-position: top 0 left -10%;
   }
 
   &.gallery::before {
-    @include bg-png('hira_haikei_kari');
-    background-size: 70%;
-    background-position: top 0 right -10%;
+    @include bg-png('gallery_bg_pc_kari');
+    // background-size: 70%;
+    // background-position: top 0 right -10%;
   }
 
   &.guide::before {
-    @include bg-png('hoshi_haikei_kari');
-    background-size: 70%;
-    background-position: top 0 right -10%;
+    @include bg-png('guide_bg_pc_kari');
+    // background-size: 70%;
+    // background-position: top 0 right -10%;
   }
 }
 
@@ -85,6 +85,19 @@ body { // background-imageをspでも正常になるように固定
   height: 100vh;
   width: $max-wid;
 }
+
+.detail, .guide, .gallery, .measure {
+  #wrapper {
+    width: 0;
+    height: 0;
+
+    .gimmick-inner {
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
 .gimmick-inner { // z-indexのずれ対策
   position: relative;
   width: $max-wid;
@@ -97,8 +110,8 @@ body { // background-imageをspでも正常になるように固定
     width: 5rem;
 
     // 仮
-    top: 24.5%;
-    left: 6%;
+    top: 24.5vh; // wrapperを０にするから%じゃだめ
+    left: 6vw;
     // 仮
 
     img {
@@ -114,8 +127,8 @@ body { // background-imageをspでも正常になるように固定
     width: 5rem;
 
     // 仮
-    top: 38%;
-    left: 2.5%;
+    top: 38vh;
+    left: 2.5vw;
     // 仮
 
     img {
@@ -153,7 +166,7 @@ body { // background-imageをspでも正常になるように固定
     margin-top: 15vh;
 
     .info-text {
-      width: 70%;
+      width: 50vw;
       color: $text-colour;
       font-size: 1.1rem;
       font-weight: bold;
@@ -162,6 +175,10 @@ body { // background-imageをspでも正常になるように固定
       -1px 1px 5px #fff,
       1px -1px 5px #fff,
       -1px -1px 5px #fff;
+
+      .link:hover {
+        text-decoration: underline!important;
+      }
 
       &:last-child {
         margin-bottom: 10vh;
@@ -374,7 +391,7 @@ body { // background-imageをspでも正常になるように固定
 }
 
 .detail {
-  @include info-right();
+  @include info-left();
 }
 
 .measure {
@@ -386,7 +403,31 @@ body { // background-imageをspでも正常になるように固定
 }
 
 .gallery {
-  @include info-left();
+  @include info-right();
+
+  .img-in-text-inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    overflow-x: visible;
+
+    .img-in-text {
+      grid-template-columns: 20vw 50vw;
+      overflow-x: visible;
+      position: relative;
+
+      p {
+        position: absolute;
+        right: 0;
+      }
+
+      img {
+        position: absolute;
+        right: 50vw;
+        width: 25vw;
+        height: 25vw;
+      }
+    }
+  }
 }
 
 #info-outer {
@@ -600,8 +641,8 @@ footer {
       }
 
       #mushimegane {
-        left: 94%;
-        top: 94%;
+        left: 94vw;
+        top: 94vh;
         transform: translate(-100%, -100%);
         height: 4rem;
         width: 4rem;
@@ -617,8 +658,8 @@ footer {
     .gimmick-inner {
 
       #mushimegane {
-        top: 80%;
-        left: 2%;
+        top: 80vh;
+        left: 2vw;
         transform: translate(0, 0);
         height: 3.5rem;
         width: 3.5rem;
