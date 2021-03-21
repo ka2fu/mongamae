@@ -556,7 +556,7 @@ footer {
       }
 
       .info-text {
-        width: 95%;
+        width: 75vw;
         color: $text-colour;
         font-size: 1.1rem;
         font-weight: bold;
@@ -691,9 +691,8 @@ footer {
     }
   }
 
-  .detail, .measure {
+  .gallery, .measure {
     .info-text {
-      margin-right: 1.5rem;
     }
 
     .gimmick-inner {
@@ -708,9 +707,28 @@ footer {
     }
   }
 
-  .gallery, .guide {
+  .detail, .guide {
     .info-text {
-      margin-left: 1.5rem;
+      // margin-left: 1.5vw;
+    }
+  }
+
+  .gallery {
+    #info-outer {
+      .info-inner {
+        #sucket {
+          .sucket-item-inner {
+            grid-template-columns: 35vw 60vw;
+            align-items: start;
+            margin-left: -20vw;
+
+            .sucket-img {
+              width: 30vw;
+              height: 30vw;
+            }
+          }
+        }
+      }
     }
   }
 

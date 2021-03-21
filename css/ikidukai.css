@@ -317,7 +317,7 @@ footer {
       width: 50%;
       filter: drop-shadow(0 0 1rem #fff); }
     #info-outer .info-inner .info-text {
-      width: 95%;
+      width: 75vw;
       color: #444;
       font-size: 1.1rem;
       font-weight: bold;
@@ -392,17 +392,20 @@ footer {
     height: 4rem;
     width: 4rem; }
 
-  .detail .info-text, .measure .info-text {
-    margin-right: 1.5rem; }
-  .detail .gimmick-inner #mushimegane, .measure .gimmick-inner #mushimegane {
+  .gallery .gimmick-inner #mushimegane, .measure .gimmick-inner #mushimegane {
     top: 80vh;
     left: 2vw;
     transform: translate(0, 0);
     height: 3.5rem;
     width: 3.5rem; }
 
-  .gallery .info-text, .guide .info-text {
-    margin-left: 1.5rem; }
+  .gallery #info-outer .info-inner #sucket .sucket-item-inner {
+    grid-template-columns: 35vw 60vw;
+    align-items: start;
+    margin-left: -20vw; }
+    .gallery #info-outer .info-inner #sucket .sucket-item-inner .sucket-img {
+      width: 30vw;
+      height: 30vw; }
 
   .guide #info-outer {
     margin-top: 0; }

@@ -197,7 +197,7 @@ function getPseudo(selector, type, property){
 }
 
 if(isSmartPhone()){
-  let text_height = $('.info-text').height();
+  let text_height = $('.info-inner').height();
   let before_height = getPseudo('body', '::before', 'height');
   before_height = Number(before_height.slice(-1 * before_height.length, -2));
   let diff_height = $('body').height() - before_height;
