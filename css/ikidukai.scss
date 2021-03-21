@@ -186,7 +186,8 @@ body { // background-imageをspでも正常になるように固定
       }
 
       .topic {
-        margin: 10vh 0;
+        margin-top: 15vh;
+        margin-bottom: 10vh;
         text-align: center;
         font-weight: bolder;
         font-size: 3rem;
@@ -197,11 +198,11 @@ body { // background-imageをspでも正常になるように固定
         // width: 70vw;
       }
 
-      &:first-child {
-        .topic {
-          margin-top: 15vh;
-        }
-      }
+      // &:first-child {
+      //   .topic {
+      //     margin-top: 15vh;
+      //   }
+      // }
     }
   }
 }
@@ -412,32 +413,59 @@ body { // background-imageをspでも正常になるように固定
   @include info-right();
 
   #sucket {
+    >div:first-of-type {
+      margin-top: 10vh;
+    }
+
+    >div:nth-of-type(1){
+      .sucket-img {
+        @include bg-jpg('yuka-syokai');
+      }
+    }
+
+    >div:nth-of-type(2){
+      .sucket-img {
+        @include bg-jpg('hoshino-syokai');
+      }
+    }
+
+    >div:nth-of-type(3){
+      .sucket-img {
+        @include bg-jpg('akane-syokai');
+      }
+    }
+
     .sucket-item-inner {
       grid-template-columns: 30vw 50vw;
       align-items: end;
       justify-self: end;
       margin-left: -30vw;
-      margin-top: 10vh;
+      // margin-left: -30vw;
       overflow-x: visible;
 
       &:not(:last-child) {
-        margin-bottom: 10vh;
+        margin-bottom: 13vh;
       }
 
-      img {
+      .sucket-img {
         width: 25vw;
         height: 25vw;
-        // justify-self: center;
+        justify-self: center;
         border-radius: 10px;
-        border: rgba(#fff, 0.65) solid 5px;
+        // box-shadow: 0 0 10px 8px #fff;
+        // border: rgba(#fff, 0.65) solid 5px;
         // border: rgba(#364c7a, 0.65) solid 5px;
         // border: rgba(#141d30, 0.37) solid 5px;
-        // border: #141d30 solid 5px;
+        border: #141d30 double 5px;
         // border: #364c7b solid 5px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
 
-      p {
-        // width: 50vw;
+      .sucket-text {
+        // width: 95%;
+        // justify-self: start;
       }
     }
   }

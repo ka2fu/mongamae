@@ -107,13 +107,12 @@ body.guide::before {
       #info-outer .info-inner .info-text:last-child {
         margin-bottom: 10vh; }
       #info-outer .info-inner .info-text .topic {
-        margin: 10vh 0;
+        margin-top: 15vh;
+        margin-bottom: 10vh;
         text-align: center;
         font-weight: bolder;
         font-size: 3rem;
         width: 100%; }
-      #info-outer .info-inner .info-text:first-child .topic {
-        margin-top: 15vh; }
 
 #mushi-modal {
   position: fixed;
@@ -248,20 +247,31 @@ body.guide::before {
   right: 0; }
 .gallery .info-inner {
   right: 0; }
+.gallery #sucket > div:first-of-type {
+  margin-top: 10vh; }
+.gallery #sucket > div:nth-of-type(1) .sucket-img {
+  background-image: url("../img-ikidukai/yuka-syokai.jpg"); }
+.gallery #sucket > div:nth-of-type(2) .sucket-img {
+  background-image: url("../img-ikidukai/hoshino-syokai.jpg"); }
+.gallery #sucket > div:nth-of-type(3) .sucket-img {
+  background-image: url("../img-ikidukai/akane-syokai.jpg"); }
 .gallery #sucket .sucket-item-inner {
   grid-template-columns: 30vw 50vw;
   align-items: end;
   justify-self: end;
   margin-left: -30vw;
-  margin-top: 10vh;
   overflow-x: visible; }
   .gallery #sucket .sucket-item-inner:not(:last-child) {
-    margin-bottom: 10vh; }
-  .gallery #sucket .sucket-item-inner img {
+    margin-bottom: 13vh; }
+  .gallery #sucket .sucket-item-inner .sucket-img {
     width: 25vw;
     height: 25vw;
+    justify-self: center;
     border-radius: 10px;
-    border: rgba(255, 255, 255, 0.65) solid 5px; }
+    border: #141d30 double 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
 
 #info-outer footer {
   position: absolute;
