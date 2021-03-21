@@ -249,10 +249,9 @@ body.guide::before {
 .gallery .info-inner {
   right: 0; }
 .gallery #sucket .sucket-item-inner {
-  grid-template-columns: 30vw 50vw;
-  align-items: end;
+  grid-template-columns: 50vw;
   justify-self: end;
-  margin-left: -30vw;
+  justify-items: center;
   margin-top: 10vh;
   overflow-x: visible; }
   .gallery #sucket .sucket-item-inner:not(:last-child) {
@@ -261,7 +260,7 @@ body.guide::before {
     width: 25vw;
     height: 25vw;
     border-radius: 10px;
-    border: rgba(255, 255, 255, 0.65) solid 5px; }
+    border: #141d30 double 5px; }
 
 #info-outer footer {
   position: absolute;

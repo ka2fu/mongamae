@@ -413,10 +413,11 @@ body { // background-imageをspでも正常になるように固定
 
   #sucket {
     .sucket-item-inner {
-      grid-template-columns: 30vw 50vw;
-      align-items: end;
+      grid-template-columns: 50vw;
+      // align-items: end;
       justify-self: end;
-      margin-left: -30vw;
+      justify-items: center;
+      // margin-left: -30vw;
       margin-top: 10vh;
       overflow-x: visible;
 
@@ -429,15 +430,16 @@ body { // background-imageをspでも正常になるように固定
         height: 25vw;
         // justify-self: center;
         border-radius: 10px;
-        border: rgba(#fff, 0.65) solid 5px;
+        // border: rgba(#fff, 0.65) solid 5px;
         // border: rgba(#364c7a, 0.65) solid 5px;
         // border: rgba(#141d30, 0.37) solid 5px;
-        // border: #141d30 solid 5px;
+        border: #141d30 double 5px;
         // border: #364c7b solid 5px;
       }
 
       p {
         // width: 50vw;
+        // text-align: right;
       }
     }
   }
