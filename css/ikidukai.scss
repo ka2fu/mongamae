@@ -175,6 +175,7 @@ body { // background-imageをspでも正常になるように固定
       -1px 1px 5px #fff,
       1px -1px 5px #fff,
       -1px -1px 5px #fff;
+      overflow-x: visible;
 
       .link:hover {
         text-decoration: underline!important;
@@ -189,6 +190,11 @@ body { // background-imageをspでも正常になるように固定
         text-align: center;
         font-weight: bolder;
         font-size: 3rem;
+        width: 100%;
+      }
+
+      p {
+        // width: 70vw;
       }
 
       &:first-child {
@@ -377,7 +383,7 @@ body { // background-imageをspでも正常になるように固定
     right: 0;
   }
   .info-inner {
-    right: $text-right;
+    right: 0;
   }
 }
 
@@ -405,26 +411,33 @@ body { // background-imageをspでも正常になるように固定
 .gallery {
   @include info-right();
 
-  .img-in-text-inner {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, max-content);
-    overflow-x: visible;
-
-    .img-in-text {
-      grid-template-columns: 20vw 50vw;
+  #sucket {
+    .sucket-item-inner {
+      grid-template-columns: 30vw 50vw;
+      align-items: end;
+      justify-self: end;
+      margin-left: -30vw;
+      margin-top: 10vh;
       overflow-x: visible;
-      position: relative;
 
-      p {
-        position: absolute;
-        right: 0;
+      &:not(:last-child) {
+        margin-bottom: 10vh;
       }
 
       img {
-        position: absolute;
-        right: 50vw;
         width: 25vw;
         height: 25vw;
+        // justify-self: center;
+        border-radius: 10px;
+        border: rgba(#fff, 0.65) solid 5px;
+        // border: rgba(#364c7a, 0.65) solid 5px;
+        // border: rgba(#141d30, 0.37) solid 5px;
+        // border: #141d30 solid 5px;
+        // border: #364c7b solid 5px;
+      }
+
+      p {
+        // width: 50vw;
       }
     }
   }

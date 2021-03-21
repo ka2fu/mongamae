@@ -100,7 +100,8 @@ body.guide::before {
       color: #444;
       font-size: 1.1rem;
       font-weight: bold;
-      text-shadow: 1px 1px 5px #fff, -1px 1px 5px #fff, 1px -1px 5px #fff, -1px -1px 5px #fff; }
+      text-shadow: 1px 1px 5px #fff, -1px 1px 5px #fff, 1px -1px 5px #fff, -1px -1px 5px #fff;
+      overflow-x: visible; }
       #info-outer .info-inner .info-text .link:hover {
         text-decoration: underline !important; }
       #info-outer .info-inner .info-text:last-child {
@@ -109,7 +110,8 @@ body.guide::before {
         margin: 10vh 0;
         text-align: center;
         font-weight: bolder;
-        font-size: 3rem; }
+        font-size: 3rem;
+        width: 100%; }
       #info-outer .info-inner .info-text:first-child .topic {
         margin-top: 15vh; }
 
@@ -235,7 +237,7 @@ body.guide::before {
 .measure .sub-title-inner {
   right: 0; }
 .measure .info-inner {
-  right: calc(0% + calc(100vw - 100%)); }
+  right: 0; }
 
 .guide .sub-title-inner {
   left: 0; }
@@ -245,23 +247,21 @@ body.guide::before {
 .gallery .sub-title-inner {
   right: 0; }
 .gallery .info-inner {
-  right: calc(0% + calc(100vw - 100%)); }
-.gallery .img-in-text-inner {
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, max-content);
+  right: 0; }
+.gallery #sucket .sucket-item-inner {
+  grid-template-columns: 30vw 50vw;
+  align-items: end;
+  justify-self: end;
+  margin-left: -30vw;
+  margin-top: 10vh;
   overflow-x: visible; }
-  .gallery .img-in-text-inner .img-in-text {
-    grid-template-columns: 20vw 50vw;
-    overflow-x: visible;
-    position: relative; }
-    .gallery .img-in-text-inner .img-in-text p {
-      position: absolute;
-      right: 0; }
-    .gallery .img-in-text-inner .img-in-text img {
-      position: absolute;
-      right: 50vw;
-      width: 25vw;
-      height: 25vw; }
+  .gallery #sucket .sucket-item-inner:not(:last-child) {
+    margin-bottom: 10vh; }
+  .gallery #sucket .sucket-item-inner img {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 10px;
+    border: rgba(255, 255, 255, 0.65) solid 5px; }
 
 #info-outer footer {
   position: absolute;
