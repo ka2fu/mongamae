@@ -201,7 +201,8 @@ if(isSmartPhone()){
   let before_height = getPseudo('body', '::before', 'height');
   before_height = Number(before_height.slice(-1 * before_height.length, -2));
   let diff_height = $('body').height() - before_height;
-  text_height += diff_height + $('footer').height();
+  text_height += $('footer').height();
+  // text_height += diff_height + $('footer').height();
   $('.text-bg').css("height", text_height);
 
   // 画像を挿入していく！！！

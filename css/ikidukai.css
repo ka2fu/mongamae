@@ -81,7 +81,7 @@ body.guide::before {
   overflow-x: visible; }
   #info-outer .sub-title-inner {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     justify-items: center; }
     #info-outer .sub-title-inner .sub-title {
       width: 30%;
@@ -242,6 +242,19 @@ body.guide::before {
   left: 0; }
 .guide .info-inner {
   left: 0; }
+.guide #access .map-img-inner {
+  margin: 5vh auto;
+  width: 40vw;
+  height: 28vw;
+  border-radius: 10px;
+  border: #000 double 5px;
+  overflow: hidden; }
+  .guide #access .map-img-inner .map-img {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img-ikidukai/chizu-kari.png");
+    background-position: center;
+    background-size: cover; }
 
 .gallery .sub-title-inner {
   right: 0; }
@@ -299,15 +312,19 @@ footer {
     background-size: 100%;
     background-position: top 0% right 0; }
 
-  #info-outer .text-bg .text-bg-inner {
-    height: 40vh; }
-    #info-outer .text-bg .text-bg-inner:nth-child(odd) {
-      justify-content: end; }
-    #info-outer .text-bg .text-bg-inner:nth-child(even) {
-      justify-content: start; }
-    #info-outer .text-bg .text-bg-inner img {
-      margin-top: 10vh;
-      height: 30vh; }
+  #info-outer .text-bg {
+    position: absolute;
+    top: 0;
+    width: 100vw; }
+    #info-outer .text-bg .text-bg-inner {
+      height: 40vh; }
+      #info-outer .text-bg .text-bg-inner:nth-child(odd) {
+        justify-content: end; }
+      #info-outer .text-bg .text-bg-inner:nth-child(even) {
+        justify-content: start; }
+      #info-outer .text-bg .text-bg-inner img {
+        margin-top: 10vh;
+        height: 30vh; }
   #info-outer .sub-title-inner .sub-title {
     width: 50%; }
   #info-outer .info-inner {
@@ -414,11 +431,12 @@ footer {
       top: -100vh; }
       .guide #info-outer .sub-title-inner img {
         margin-top: 20vh; }
-    .guide #info-outer .text-bg {
-      position: absolute;
-      top: 0;
-      width: 100vw; }
     .guide #info-outer .info-inner {
-      z-index: 10; } }
+      left: 50%;
+      transform: translateX(-50%); }
+      .guide #info-outer .info-inner #access .map-img-inner {
+        margin: 5vh auto;
+        width: 75vw;
+        height: 50vw; } }
 
 /*# sourceMappingURL=ikidukai.css.map */
