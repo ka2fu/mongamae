@@ -141,18 +141,19 @@ body { // background-imageをspでも正常になるように固定
 #info-outer {
   position: relative;
   width: $max-wid;
-  margin-top: 20vh;
+  margin-top: 50vh;
   overflow-x: visible;
 
   .sub-title-inner {
+    width: 70vw;
+    height: 15vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+    display: inline-block;
     position: absolute;
-    width: 100%;
-    justify-items: center;
-
-    .sub-title {
-      width: 30%;
-      filter: drop-shadow(0 0 0.3rem #fff);
-    }
+    filter: drop-shadow(0 0 10px #fff);
   }
 
   .info-inner {
@@ -163,7 +164,7 @@ body { // background-imageをspでも正常になるように固定
     justify-items: center;
     top: 0;
     overflow-x: visible;
-    margin-top: 15vh;
+    margin-top: 35vh;
 
     .info-text {
       width: 50vw;
@@ -399,32 +400,50 @@ body { // background-imageをspでも正常になるように固定
 
 .detail {
   @include info-left();
+
+  #info-outer {
+    .sub-title-inner {
+      @include bg-png('syosai_yoko');
+    }
+  }
 }
 
 .measure {
   @include info-right();
+
+  #info-outer {
+    .sub-title-inner {
+      @include bg-png('taisaku_yoko');
+    }
+  }
 }
 
 .guide {
   @include info-left();
 
-  #access {
-    .map-img-inner {
-      margin: 5vh auto;
-      width: 40vw;
-      height: 28vw;
-      border-radius: 10px;
-      border: #000 double 5px;
-      overflow: hidden;
+  #info-outer{
+    .sub-title-inner {
+      @include bg-png('annai_yoko');
+    }
 
-      .map-img {
-        width: 100%;
-        height: 100%;
-        // width: 45vw;
-        // height: 30vw;
-        @include bg-png('chizu-kari');
-        background-position: center;
-        background-size: cover;
+    #access {
+      .map-img-inner {
+        margin: 5vh auto;
+        width: 40vw;
+        height: 28vw;
+        border-radius: 10px;
+        border: #000 double 5px;
+        overflow: hidden;
+
+        .map-img {
+          width: 100%;
+          height: 100%;
+          // width: 45vw;
+          // height: 30vw;
+          @include bg-png('chizu-kari');
+          background-position: center;
+          background-size: cover;
+        }
       }
     }
   }
@@ -433,59 +452,72 @@ body { // background-imageをspでも正常になるように固定
 .gallery {
   @include info-right();
 
-  #sucket {
-    >div:first-of-type {
-      margin-top: 10vh;
+  #info-outer {
+    .sub-title-inner {
+      @include bg-png('gallery_yoko');
+      // margin-right: -30vw;
     }
 
-    >div:nth-of-type(1){
-      .sucket-img {
-        @include bg-jpg('yuka-syokai');
-      }
-    }
-
-    >div:nth-of-type(2){
-      .sucket-img {
-        @include bg-jpg('hoshino-syokai');
-      }
-    }
-
-    >div:nth-of-type(3){
-      .sucket-img {
-        @include bg-jpg('akane-syokai');
-      }
-    }
-
-    .sucket-item-inner {
-      grid-template-columns: 30vw 50vw;
-      align-items: end;
-      justify-self: end;
-      margin-left: -30vw;
-      // margin-left: -30vw;
-      overflow-x: visible;
-
-      &:not(:last-child) {
-        margin-bottom: 13vh;
+    #sucket {
+      >div:first-of-type {
+        margin-top: 10vh;
       }
 
-      .sucket-img {
-        width: 25vw;
-        height: 25vw;
-        justify-self: center;
-        border-radius: 10px;
-        // box-shadow: 0 0 10px 8px #fff;
-        // border: rgba(#fff, 0.65) solid 5px;
-        // border: rgba(#364c7a, 0.65) solid 5px;
-        border: #141d30 double 5px;
-        // border: #364c7b solid 5px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+      >div:nth-of-type(1){
+        .sucket-img {
+          @include bg-jpg('yuka-syokai');
+        }
       }
 
-      .sucket-text {
-        // width: 95%;
-        // justify-self: start;
+      >div:nth-of-type(2){
+        .sucket-img {
+          @include bg-jpg('hoshino-syokai');
+        }
+      }
+
+      >div:nth-of-type(3){
+        .sucket-img {
+          @include bg-jpg('akane-syokai');
+        }
+      }
+
+      .sucket-item-inner {
+        grid-template-rows: repeat(2, max-content);
+        justify-items: center;
+        // align-items: end;
+        // justify-self: center;
+        // margin-left: -30vw;
+        // margin-left: -30vw;
+        // overflow-x: visible;
+
+        &:not(:last-child) {
+          margin-bottom: 13vh;
+        }
+
+        .sucket-img-inner {
+          width: 30vw;
+          height: 30vw;
+          border: #000 double 5px;
+          border-radius: 10px;
+          overflow: hidden;
+          margin-bottom: 5vh;
+
+          .sucket-img {
+            width: 100%;
+            height: 100%;
+            // justify-self: center;
+            // border-radius: 10px;
+            // border: #141d30 double 5px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+
+        .sucket-text {
+          // width: 95%;
+          // justify-self: start;
+        }
       }
     }
   }
@@ -518,6 +550,10 @@ footer {
       @include bg-png('sp-top-bg');
     }
 
+    &.measure::before {
+      @include bg-png('measure_bg_sp_kari');
+    }
+
     &.detail::before {
       @include bg-png('kyonkoko-sp');
       background-size: 100%;
@@ -525,7 +561,7 @@ footer {
     }
 
     &.guide::before {
-      position: static;
+      // position: static;
       @include bg-png('hoshi_moya_kari');
       background-size: 100%;
       background-position: top 0% right 0;
@@ -536,40 +572,18 @@ footer {
   }
 
   #info-outer {
-
-    .text-bg {
-      position: absolute;
-      top: 0;
-      width: 100vw;
-
-      .text-bg-inner {
-        height: 40vh;
-
-        &:nth-child(odd){
-          justify-content: end;
-        }
-
-        &:nth-child(even){
-          justify-content: start;
-        }
-
-        img {
-          margin-top: 10vh;
-          height: 30vh;
-        }
-      }
-    }
+    // margin-top: 50vh;
+    margin-top: 30vh;
 
     .sub-title-inner{
-
-      .sub-title {
-        width: 50%;
-      }
+      width: 90vw;
+      height: 10vh;
     }
 
     .info-inner {
-      width: 80vw;
-      margin-top: 10vh;
+      width: 90vw;
+      margin-top: 15vh;
+      // margin-top: 65vh;
 
       .sub-title-inner {
         .sub-title {
@@ -583,15 +597,27 @@ footer {
         color: $text-colour;
         font-size: 1.1rem;
         font-weight: bold;
-        text-shadow:
-        1px 1px 5px #fff,
-        -1px 1px 5px #fff,
-        1px -1px 5px #fff,
-        -1px -1px 5px #fff;
 
           .topic {
             font-size: 2.5rem;
             margin: 7vh 0;
+            text-shadow:
+            2px 2px 8px #fff,
+            -2px 2px 8px #fff,
+            2px -2px 8px #fff,
+            -2px -2px 8px #ffff;
+          }
+
+          p {
+            text-shadow:
+            2px 2px 8px #fff,
+            -2px 2px 8px #fff,
+            2px -2px 8px #fff,
+            -2px -2px 8px #fff,
+            4px 4px 8px #fff,
+            -4px 4px 8px #fff,
+            4px -4px 8px #fff,
+            -4px -4px 8px #fff;
           }
 
           &:first-child {
@@ -741,13 +767,18 @@ footer {
       .info-inner {
         #sucket {
           .sucket-item-inner {
-            grid-template-columns: 35vw 60vw;
-            align-items: start;
-            margin-left: -20vw;
+            // grid-template-columns: 35vw 60vw;
+            // align-items: start;
+            // margin-left: -20vw;
 
-            .sucket-img {
-              width: 30vw;
-              height: 30vw;
+            .sucket-img-inner {
+              width: 60vw;
+              height: 60vw;
+
+              .sucket-img {
+                width: 100%;
+                height: 100%;
+              }
             }
           }
         }
@@ -757,21 +788,21 @@ footer {
 
   .guide {
     #info-outer {
-      margin-top: 0;
-
-      .sub-title-inner {
-        position: relative;
-        top: -100vh;
-
-        img {
-          margin-top: 20vh;
-        }
-      }
+      // margin-top: 0;
+      //
+      // .sub-title-inner {
+      //   position: relative;
+      //   top: -100vh;
+      //
+      //   img {
+      //     margin-top: 20vh;
+      //   }
+      // }
 
       .info-inner {
         // z-index: 10;
-        left: 50%;
-        transform: translateX(-50%);
+        // left: 50%;
+        // transform: translateX(-50%);
 
         #access {
           .map-img-inner {
