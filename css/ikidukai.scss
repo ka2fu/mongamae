@@ -683,13 +683,13 @@ footer {
 
   .gimmick-inner{
     #mushimegane {
-      width: 12vw;
-      height: 12vw;
+      width: 15vw;
+      height: 15vw;
     }
 
     #budge {
-      width: 12vw;
-      height: 12vw;
+      width: 15vw;
+      height: 15vw;
     }
   }
 
@@ -773,13 +773,15 @@ footer {
         // right: 1rem;
         left: 1rem;
         transform: translate(0, 0);
+        // width: auto;
         width: max-content;
         // width: calc(max-content + .5rem);
         height: max-content;
         font-size: 1rem;
         padding: 2px 4px;
         // padding: 2px auto;
-        border: none;
+        // border: none;
+        overflow-x: visible;
       }
 
       .mushimo-inner {

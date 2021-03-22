@@ -354,11 +354,11 @@ footer {
     background-image: url("../img-ikidukai/gallery_bg_sp.png"); }
 
   .gimmick-inner #mushimegane {
-    width: 12vw;
-    height: 12vw; }
+    width: 15vw;
+    height: 15vw; }
   .gimmick-inner #budge {
-    width: 12vw;
-    height: 12vw; }
+    width: 15vw;
+    height: 15vw; }
 
   #info-outer {
     margin-top: 30vh; }
@@ -401,7 +401,7 @@ footer {
       height: max-content;
       font-size: 1rem;
       padding: 2px 4px;
-      border: none; }
+      overflow-x: visible; }
     #mushi-modal #mushimo-outer .mushimo-inner {
       grid-template-columns: 100%;
       grid-template-rows: repeat(5, max-content);
