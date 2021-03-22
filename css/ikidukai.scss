@@ -43,25 +43,25 @@ body { // background-imageをspでも正常になるように固定
   }
 
   &.measure::before {
-    @include bg-png('measure_bg_pc_kari');
+    @include bg-png('measure_bg_pc');
     // background-size: cover;
     // background-position: top 0 left -10%;
   }
 
   &.detail::before {
-    @include bg-png('detail_bg_pc_kari');
+    @include bg-png('detail_bg_pc');
     // background-size: 70%;
     // background-position: top 0 left -10%;
   }
 
   &.gallery::before {
-    @include bg-png('gallery_bg_pc_kari');
+    @include bg-png('gallery_bg_pc');
     // background-size: 70%;
     // background-position: top 0 right -10%;
   }
 
   &.guide::before {
-    @include bg-png('guide_bg_pc_kari');
+    @include bg-png('guide_bg_pc');
     // background-size: 70%;
     // background-position: top 0 right -10%;
   }
@@ -106,8 +106,8 @@ body { // background-imageをspでも正常になるように固定
   #mushimegane {
     position: absolute;
     display: inline-block;
-    height: 5rem;
-    width: 5rem;
+    height: 6vw;
+    width: 6vw;
 
     // 仮
     top: 24.5vh; // wrapperを０にするから%じゃだめ
@@ -123,8 +123,8 @@ body { // background-imageをspでも正常になるように固定
   #budge {
     position: absolute;
     display: inline-block;
-    height: 5rem;
-    width: 5rem;
+    height: 6vw;
+    width: 6vw;
 
     // 仮
     top: 38vh;
@@ -318,7 +318,7 @@ body { // background-imageをspでも正常になるように固定
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    @include bg-png('title-moya-pc-w');
+    @include bg-png('title-moya-pc-tp2');
 
     .title {
       position: relative;
@@ -328,7 +328,26 @@ body { // background-imageをspでも正常になるように固定
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+      margin-top: 7vh;
+      margin-left: 5vw;
       z-index: 900;
+
+      @keyframes titleVanish {
+        0% {
+          // display: grid;
+          opacity: 1;
+        }
+
+        100% {
+          display: none;
+          opacity: 0;
+          // transform: scale(1.1, 1.1);
+        }
+      }
+
+      .vanish {
+        animation: titleVanish 1s ease-out 0s;
+      }
 
       img {
         position:absolute;
@@ -367,6 +386,60 @@ body { // background-imageをspでも正常になるように固定
       }
     }
 
+    // hoverで消えるもや
+    // .vanimoya-inner {
+    //   .vanimoya {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     opacity: 1;
+    //     .vani-henka {
+    //       animation: vanish 5s ease forwards;
+    //       // animation: vanish 5s cubic-bezier(0.5, 1, 0.89, 1);
+    //     }
+    //
+    //     @keyframes vanish {
+    //       0% {
+    //         // display: inline-block;
+    //         // transform: scale(1, 1);
+    //         // top: 0vh;
+    //         // left: 0vw;
+    //         opacity: 1;
+    //       }
+    //       100% {
+    //         // display: none;
+    //         // transform: scale(2, 2);
+    //         // top: 50vh;
+    //         // left: 50vw;
+    //         opacity: 0;
+    //       }
+    //     }
+    //   }
+    //
+    //   .test {
+    //     position: absolute;
+    //     top: 50vw;
+    //     left: 50vh;
+    //     height: 100px;
+    //     width: 100px;
+    //     animation: anime 20s ease alternate infinite;
+    //     @keyframes anime {
+    //       0%{background-color: crimson}
+    //       100%{background-color: lightblue};
+    //     }
+    //   }
+    // }
+    //
+    // #vanimoya-inner-pc {
+    //   display: block!important;
+    //   height: 0;
+    //   width: 0;
+    //   position: relative;
+    //   top: 0;
+    //   left: 0;
+    //
+    // }
+
     #mushimegane {
       top: 24.5%;
       left: 6%;
@@ -404,6 +477,18 @@ body { // background-imageをspでも正常になるように固定
   #info-outer {
     .sub-title-inner {
       @include bg-png('syosai_yoko');
+    }
+  }
+
+  .gimmick-inner {
+    #mushimegane {
+      left: 65vw;
+      top: 20vh;
+    }
+
+    #budge {
+      left: 88vw;
+      top: 83vh;
     }
   }
 }
@@ -445,6 +530,18 @@ body { // background-imageをspでも正常になるように固定
           background-size: cover;
         }
       }
+    }
+  }
+
+  .gimmick-inner {
+    #mushimegane {
+      left: 65vw;
+      top: 88vh;
+    }
+
+    #budge {
+      left: 90vw;
+      top: 18vh;
     }
   }
 }
@@ -521,6 +618,18 @@ body { // background-imageをspでも正常になるように固定
       }
     }
   }
+
+  .gimmick-inner {
+    #mushimegane {
+      left: 2.5vw;
+      top: 80vh;
+    }
+
+    #budge {
+      left: 22.5vw;
+      top: 75vh;
+    }
+  }
 }
 
 #info-outer {
@@ -551,24 +660,32 @@ footer {
     }
 
     &.measure::before {
-      @include bg-png('measure_bg_sp_kari');
+      @include bg-png('measure_bg_sp');
     }
 
     &.detail::before {
-      @include bg-png('kyonkoko-sp');
-      background-size: 100%;
-      background-position: bottom 20% left 0;
+      @include bg-png('detail_bg_sp');
     }
 
     &.guide::before {
-      // position: static;
-      @include bg-png('hoshi_moya_kari');
-      background-size: 100%;
-      background-position: top 0% right 0;
+      @include bg-png('guide_bg_sp');
+    }
+
+    &.gallery::before {
+      @include bg-png('gallery_bg_sp');
     }
   }
 
   .gimmick-inner{
+    #mushimegane {
+      width: 12vw;
+      height: 12vw;
+    }
+
+    #budge {
+      width: 12vw;
+      height: 12vw;
+    }
   }
 
   #info-outer {
@@ -635,7 +752,8 @@ footer {
     #mushimo-outer {
       border-radius: 1rem;
       padding: 1.5rem 1rem;
-      width: 80%;
+      width: max-content;
+      // width: 80%;
       height: max-content;
       // height: 60%;
 
@@ -660,11 +778,12 @@ footer {
         grid-template-rows: repeat(5, max-content);
         // width: 50%;
         width: max-content;
-        margin: 1.5rem auto 0;
+        // margin: 1.5rem auto 0;
+        margin: 5vh 3vw 2vh 3vw;
 
         .mushimo-items {
           // margin-left: 0;
-          margin-left: 1.8rem;
+          margin-left: 11vw;
 
           li {
             // text-align: center;
@@ -699,7 +818,7 @@ footer {
 
   .index {
     .title-inner {
-      @include bg-png("title-moya-sp-w");
+      @include bg-png("title-moya-sp-w2");
 
       .title {
         width: 100vw;
@@ -742,23 +861,35 @@ footer {
 
   .gallery, .measure {
     .info-text {
+      margin-right: -3vw;
     }
-
     .gimmick-inner {
-
       #mushimegane {
-        top: 80vh;
-        left: 2vw;
-        transform: translate(0, 0);
-        height: 3.5rem;
-        width: 3.5rem;
+        left: 3.5vw;
+        top: 75vh;
+      }
+      #budge {
+        left: 8vw;
+        top: 85vh;
       }
     }
   }
 
   .detail, .guide {
     .info-text {
-      // margin-left: 1.5vw;
+    }
+    .gimmick-inner {
+      .hovamoya-inner {
+        transform: translateX(-100%);
+      }
+      #mushimegane {
+        left: 96.5vw;
+        top: 75vh;
+      }
+      #budge {
+        left: 92vw;
+        top: 85vh;
+      }
     }
   }
 

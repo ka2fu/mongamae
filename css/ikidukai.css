@@ -19,13 +19,13 @@ body::before {
 body.index::before {
   background-image: url("../img-ikidukai/pc-top-bg.png"); }
 body.measure::before {
-  background-image: url("../img-ikidukai/measure_bg_pc_kari.png"); }
+  background-image: url("../img-ikidukai/measure_bg_pc.png"); }
 body.detail::before {
-  background-image: url("../img-ikidukai/detail_bg_pc_kari.png"); }
+  background-image: url("../img-ikidukai/detail_bg_pc.png"); }
 body.gallery::before {
-  background-image: url("../img-ikidukai/gallery_bg_pc_kari.png"); }
+  background-image: url("../img-ikidukai/gallery_bg_pc.png"); }
 body.guide::before {
-  background-image: url("../img-ikidukai/guide_bg_pc_kari.png"); }
+  background-image: url("../img-ikidukai/guide_bg_pc.png"); }
 
 #header-wrapper {
   background-color: transparent;
@@ -56,8 +56,8 @@ body.guide::before {
   .gimmick-inner #mushimegane {
     position: absolute;
     display: inline-block;
-    height: 5rem;
-    width: 5rem;
+    height: 6vw;
+    width: 6vw;
     top: 24.5vh;
     left: 6vw; }
     .gimmick-inner #mushimegane img {
@@ -66,8 +66,8 @@ body.guide::before {
   .gimmick-inner #budge {
     position: absolute;
     display: inline-block;
-    height: 5rem;
-    width: 5rem;
+    height: 6vw;
+    width: 6vw;
     top: 38vh;
     left: 2.5vw; }
     .gimmick-inner #budge img {
@@ -191,7 +191,7 @@ body.guide::before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../img-ikidukai/title-moya-pc-w.png"); }
+  background-image: url("../img-ikidukai/title-moya-pc-tp2.png"); }
   .index .title-inner .title {
     position: relative;
     width: 70vw;
@@ -200,7 +200,17 @@ body.guide::before {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    margin-top: 7vh;
+    margin-left: 5vw;
     z-index: 900; }
+@keyframes titleVanish {
+  0% {
+    opacity: 1; }
+  100% {
+    display: none;
+    opacity: 0; } }
+    .index .title-inner .title .vanish {
+      animation: titleVanish 1s ease-out 0s; }
     .index .title-inner .title img {
       position: absolute;
       top: 2%;
@@ -237,6 +247,12 @@ body.guide::before {
   left: 0; }
 .detail #info-outer .sub-title-inner {
   background-image: url("../img-ikidukai/syosai_yoko.png"); }
+.detail .gimmick-inner #mushimegane {
+  left: 65vw;
+  top: 20vh; }
+.detail .gimmick-inner #budge {
+  left: 88vw;
+  top: 83vh; }
 
 .measure .sub-title-inner {
   right: 0; }
@@ -264,6 +280,12 @@ body.guide::before {
     background-image: url("../img-ikidukai/chizu-kari.png");
     background-position: center;
     background-size: cover; }
+.guide .gimmick-inner #mushimegane {
+  left: 65vw;
+  top: 88vh; }
+.guide .gimmick-inner #budge {
+  left: 90vw;
+  top: 18vh; }
 
 .gallery .sub-title-inner {
   right: 0; }
@@ -297,6 +319,12 @@ body.guide::before {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; }
+.gallery .gimmick-inner #mushimegane {
+  left: 2.5vw;
+  top: 80vh; }
+.gallery .gimmick-inner #budge {
+  left: 22.5vw;
+  top: 75vh; }
 
 #info-outer footer {
   position: absolute;
@@ -315,15 +343,20 @@ footer {
   body.index::before {
     background-image: url("../img-ikidukai/sp-top-bg.png"); }
   body.measure::before {
-    background-image: url("../img-ikidukai/measure_bg_sp_kari.png"); }
+    background-image: url("../img-ikidukai/measure_bg_sp.png"); }
   body.detail::before {
-    background-image: url("../img-ikidukai/kyonkoko-sp.png");
-    background-size: 100%;
-    background-position: bottom 20% left 0; }
+    background-image: url("../img-ikidukai/detail_bg_sp.png"); }
   body.guide::before {
-    background-image: url("../img-ikidukai/hoshi_moya_kari.png");
-    background-size: 100%;
-    background-position: top 0% right 0; }
+    background-image: url("../img-ikidukai/guide_bg_sp.png"); }
+  body.gallery::before {
+    background-image: url("../img-ikidukai/gallery_bg_sp.png"); }
+
+  .gimmick-inner #mushimegane {
+    width: 12vw;
+    height: 12vw; }
+  .gimmick-inner #budge {
+    width: 12vw;
+    height: 12vw; }
 
   #info-outer {
     margin-top: 30vh; }
@@ -353,7 +386,7 @@ footer {
   #mushi-modal #mushimo-outer {
     border-radius: 1rem;
     padding: 1.5rem 1rem;
-    width: 80%;
+    width: max-content;
     height: max-content; }
     #mushi-modal #mushimo-outer > i {
       top: 1rem;
@@ -369,9 +402,9 @@ footer {
       grid-template-columns: 100%;
       grid-template-rows: repeat(5, max-content);
       width: max-content;
-      margin: 1.5rem auto 0; }
+      margin: 5vh 3vw 2vh 3vw; }
       #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items {
-        margin-left: 1.8rem; }
+        margin-left: 11vw; }
         #mushi-modal #mushimo-outer .mushimo-inner .mushimo-items li {
           text-align: left;
           width: max-content; }
@@ -389,7 +422,7 @@ footer {
 
   /* グルーバルp */
   .index .title-inner {
-    background-image: url("../img-ikidukai/title-moya-sp-w.png"); }
+    background-image: url("../img-ikidukai/title-moya-sp-w2.png"); }
     .index .title-inner .title {
       width: 100vw;
       height: 30vh; }
@@ -414,12 +447,23 @@ footer {
     height: 4rem;
     width: 4rem; }
 
+  .gallery .info-text, .measure .info-text {
+    margin-right: -3vw; }
   .gallery .gimmick-inner #mushimegane, .measure .gimmick-inner #mushimegane {
-    top: 80vh;
-    left: 2vw;
-    transform: translate(0, 0);
-    height: 3.5rem;
-    width: 3.5rem; }
+    left: 3.5vw;
+    top: 75vh; }
+  .gallery .gimmick-inner #budge, .measure .gimmick-inner #budge {
+    left: 8vw;
+    top: 85vh; }
+
+  .detail .gimmick-inner .hovamoya-inner, .guide .gimmick-inner .hovamoya-inner {
+    transform: translateX(-100%); }
+  .detail .gimmick-inner #mushimegane, .guide .gimmick-inner #mushimegane {
+    left: 96.5vw;
+    top: 75vh; }
+  .detail .gimmick-inner #budge, .guide .gimmick-inner #budge {
+    left: 92vw;
+    top: 85vh; }
 
   .gallery #info-outer .info-inner #sucket .sucket-item-inner .sucket-img-inner {
     width: 60vw;

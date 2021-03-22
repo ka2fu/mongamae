@@ -1,6 +1,7 @@
 
 $('#wrapper').on('click', '.title', function(){
   $.when(
+    $('.title').addClass('vanish'),
     $('.title-inner').fadeOut()
   ).done(function(){
     $('.fadein').removeClass('hidden');
@@ -188,3 +189,14 @@ if(isSmartPhone()){ //スマホはずっと文字
     }
   );
 }
+
+// vanimoyaの動き
+// $('.vanimoya').on({
+//   'touchstart' : function(){
+//     $(this).off('mouseover mouseout');
+//   },
+//   'touchstart mouseover' : function(){
+//     console.log("on");
+//     $(this).addClass('vani-henka');
+//   }
+// });
