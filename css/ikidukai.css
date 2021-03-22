@@ -216,6 +216,8 @@ body.guide::before {
       top: 2%;
       left: 8%;
       height: 20%; }
+.index .gimmick-inner .fadein {
+  opacity: 0; }
 .index .gimmick-inner #ppl-inner {
   position: fixed;
   top: 50%;
@@ -432,7 +434,7 @@ footer {
         top: 2%;
         left: 9%; }
   .index .gimmick-inner #ppl-inner {
-    width: 85vw;
+    width: 80vw;
     height: 70vh;
     grid-template-columns: repeat(2, 1fr); }
     .index .gimmick-inner #ppl-inner .ppl {

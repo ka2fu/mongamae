@@ -10,9 +10,25 @@
 // });
 
 $('#wrapper').on('click', '.title', function(){
-  $('.title-inner').fadeOut();
+  $('.title-inner').fadeOut({
+    duration: 1000,
+    queue: false
+  });
   $('.fadein').removeClass('hidden');
-  $('.fadein').fadeIn();
+  $('.fadein').animate({
+    opacity: 1
+  },{
+    duration: 1000,
+    queue: false
+  }
+);
+  // $('.fadein').fadeIn({
+  //   duration: 1000,
+  //   queue: false,
+  //   function(){
+  //     $('.fadein').removeClass('hidden');
+  //   }
+  // });
 });
 
 // いろいろなスマホタッチ処理

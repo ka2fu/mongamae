@@ -359,6 +359,11 @@ body { // background-imageをspでも正常になるように固定
   }
 
   .gimmick-inner {
+
+    .fadein {
+      opacity: 0;
+    }
+
     #ppl-inner {
       position: fixed;
       top: 50%;
@@ -837,7 +842,7 @@ footer {
 
     .gimmick-inner {
       #ppl-inner{
-        width: 85vw;
+        width: 80vw;
         height: 70vh;
         grid-template-columns: repeat(2, 1fr);
 
