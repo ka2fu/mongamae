@@ -397,7 +397,9 @@ footer {
       transform: translate(0, 0);
       width: max-content;
       height: max-content;
-      font-size: 1rem; }
+      font-size: 1rem;
+      padding: 2px 4px;
+      border: none; }
     #mushi-modal #mushimo-outer .mushimo-inner {
       grid-template-columns: 100%;
       grid-template-rows: repeat(5, max-content);
@@ -422,7 +424,7 @@ footer {
 
   /* グルーバルp */
   .index .title-inner {
-    background-image: url("../img-ikidukai/title-moya-sp-w2.png"); }
+    background-image: url("../img-ikidukai/title-moya-sp-tp2.png"); }
     .index .title-inner .title {
       width: 100vw;
       height: 30vh; }
@@ -441,11 +443,10 @@ footer {
       .index .gimmick-inner #ppl-inner .ppl img {
         height: 35vh; }
   .index .gimmick-inner #mushimegane {
-    left: 94vw;
-    top: 94vh;
-    transform: translate(-100%, -100%);
-    height: 4rem;
-    width: 4rem; }
+    left: 83vw;
+    top: 27.5vh;
+    transform: translateX(-100%);
+    transform: scale(-1, 1); }
 
   .gallery .info-text, .measure .info-text {
     margin-right: -3vw; }

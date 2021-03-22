@@ -1,12 +1,18 @@
 
+// $('#wrapper').on('click', '.title', function(){
+//   $.when(
+//     // $('.title').addClass('vanish'),
+//     $('.title-inner').fadeOut()
+//   ).done(function(){
+//     $('.fadein').removeClass('hidden');
+//     $('.fadein').fadeIn();
+//   });
+// });
+
 $('#wrapper').on('click', '.title', function(){
-  $.when(
-    $('.title').addClass('vanish'),
-    $('.title-inner').fadeOut()
-  ).done(function(){
-    $('.fadein').removeClass('hidden');
-    $('.fadein').fadeIn();
-  });
+  $('.title-inner').fadeOut();
+  $('.fadein').removeClass('hidden');
+  $('.fadein').fadeIn();
 });
 
 // いろいろなスマホタッチ処理

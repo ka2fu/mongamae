@@ -769,8 +769,12 @@ footer {
         left: 1rem;
         transform: translate(0, 0);
         width: max-content;
+        // width: calc(max-content + .5rem);
         height: max-content;
         font-size: 1rem;
+        padding: 2px 4px;
+        // padding: 2px auto;
+        border: none;
       }
 
       .mushimo-inner {
@@ -818,7 +822,7 @@ footer {
 
   .index {
     .title-inner {
-      @include bg-png("title-moya-sp-w2");
+      @include bg-png("title-moya-sp-tp2");
 
       .title {
         width: 100vw;
@@ -850,11 +854,10 @@ footer {
       }
 
       #mushimegane {
-        left: 94vw;
-        top: 94vh;
-        transform: translate(-100%, -100%);
-        height: 4rem;
-        width: 4rem;
+        left: 83vw;
+        top: 27.5vh;
+        transform: translateX(-100%);
+        transform: scale(-1, 1);
       }
     }
   }
