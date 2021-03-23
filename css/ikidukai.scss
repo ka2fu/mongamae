@@ -247,7 +247,6 @@ body { // background-imageをspでも正常になるように固定
       color: $mon-red;
       border: 1px $mon-red solid;
       padding: 2px 4px;
-      z-index: 5;
 
       &:hover {
         filter: brightness(200%);
@@ -769,15 +768,39 @@ footer {
         right: 1rem;
       }
 
+      // .mob {
+      //   width: 100px;
+      //   height: 30px;
+      //   display: inline-block;
+      //   z-index: 10;
+      //   background-color: tomato;
+      //   position: absolute;
+      //   top: 1rem;
+      //   left: 1rem;
+      // }
 
-      .caution-btn {
+      .caution-inner {
+        position: absolute;
         top: 1rem;
         left: 1rem;
+        display: inline-block;
         transform: translate(0, 0);
+        width: max-content;
+        height: max-content;
+        border: $mon-red 1px solid;
+      }
+
+      .caution-btn {
+        // top: 1rem;
+        // left: 1rem;
+        // transform: translate(0, 0);
         width: max-content;
         height: max-content;
         font-size: 1rem;
         padding: 2px 4px;
+
+        border: none;
+        position: static;
       }
 
       .mushimo-inner {
