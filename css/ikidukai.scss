@@ -247,10 +247,7 @@ body { // background-imageをspでも正常になるように固定
       color: $mon-red;
       border: 1px $mon-red solid;
       padding: 2px 4px;
-
-      span {
-        display: inline-block;
-      }
+      z-index: 5;
 
       &:hover {
         filter: brightness(200%);
