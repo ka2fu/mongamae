@@ -236,7 +236,7 @@ body { // background-imageをspでも正常になるように固定
       z-index: 10;
     }
 
-    .caution {
+    .caution-btn {
       position: absolute;
       bottom: 2.5rem;
       right: 3rem;
@@ -247,6 +247,10 @@ body { // background-imageをspでも正常になるように固定
       color: $mon-red;
       border: 1px $mon-red solid;
       padding: 2px 4px;
+
+      span {
+        display: inline-block;
+      }
 
       &:hover {
         filter: brightness(200%);
@@ -768,20 +772,15 @@ footer {
         right: 1rem;
       }
 
-      .caution {
+
+      .caution-btn {
         top: 1rem;
-        // right: 1rem;
         left: 1rem;
         transform: translate(0, 0);
-        // width: auto;
         width: max-content;
-        // width: calc(max-content + .5rem);
         height: max-content;
         font-size: 1rem;
         padding: 2px 4px;
-        // padding: 2px auto;
-        // border: none;
-        overflow-x: visible;
       }
 
       .mushimo-inner {

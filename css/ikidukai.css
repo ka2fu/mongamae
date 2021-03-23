@@ -141,7 +141,7 @@ body.guide::before {
       right: 1.5rem;
       font-size: 1.5rem;
       z-index: 10; }
-    #mushi-modal #mushimo-outer .caution {
+    #mushi-modal #mushimo-outer .caution-btn {
       position: absolute;
       bottom: 2.5rem;
       right: 3rem;
@@ -149,7 +149,9 @@ body.guide::before {
       color: #c20000;
       border: 1px #c20000 solid;
       padding: 2px 4px; }
-      #mushi-modal #mushimo-outer .caution:hover {
+      #mushi-modal #mushimo-outer .caution-btn span {
+        display: inline-block; }
+      #mushi-modal #mushimo-outer .caution-btn:hover {
         filter: brightness(200%); }
     #mushi-modal #mushimo-outer .mushimo-inner {
       grid-template-columns: 1fr 1fr;
@@ -393,15 +395,14 @@ footer {
     #mushi-modal #mushimo-outer > i {
       top: 1rem;
       right: 1rem; }
-    #mushi-modal #mushimo-outer .caution {
+    #mushi-modal #mushimo-outer .caution-btn {
       top: 1rem;
       left: 1rem;
       transform: translate(0, 0);
       width: max-content;
       height: max-content;
       font-size: 1rem;
-      padding: 2px 4px;
-      overflow-x: visible; }
+      padding: 2px 4px; }
     #mushi-modal #mushimo-outer .mushimo-inner {
       grid-template-columns: 100%;
       grid-template-rows: repeat(5, max-content);
