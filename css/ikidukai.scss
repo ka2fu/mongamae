@@ -792,16 +792,17 @@ footer {
       }
 
       .caution-btn {
-        // top: 1rem;
-        // left: 1rem;
-        // transform: translate(0, 0);
+        top: 1rem;
+        left: 1rem;
+        transform: translate(0, 0);
         width: max-content;
         height: max-content;
         font-size: 1rem;
         padding: 2px 4px;
 
-        border: none;
-        position: static;
+        // border: none;
+        // position: static;
+        box-sizing: content-box;
       }
 
       .mushimo-inner {

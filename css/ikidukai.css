@@ -404,12 +404,14 @@ footer {
       border: #c20000 1px solid;
       box-sizing: content-box; }
     #mushi-modal #mushimo-outer .caution-btn {
+      top: 1rem;
+      left: 1rem;
+      transform: translate(0, 0);
       width: max-content;
       height: max-content;
       font-size: 1rem;
       padding: 2px 4px;
-      border: none;
-      position: static; }
+      box-sizing: content-box; }
     #mushi-modal #mushimo-outer .mushimo-inner {
       grid-template-columns: 100%;
       grid-template-rows: repeat(5, max-content);
