@@ -236,7 +236,7 @@ body { // background-imageをspでも正常になるように固定
       z-index: 10;
     }
 
-    .caution-btn {
+    .caution {
       position: absolute;
       bottom: 2.5rem;
       right: 3rem;
@@ -791,7 +791,7 @@ footer {
         box-sizing: content-box;
       }
 
-      .caution-btn {
+      .caution {
         top: 1rem;
         left: 1rem;
         transform: translate(0, 0);
