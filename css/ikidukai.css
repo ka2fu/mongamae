@@ -401,7 +401,8 @@ footer {
       transform: translate(0, 0);
       width: max-content;
       height: max-content;
-      border: #c20000 1px solid; }
+      border: #c20000 1px solid;
+      box-sizing: content-box; }
     #mushi-modal #mushimo-outer .caution-btn {
       width: max-content;
       height: max-content;

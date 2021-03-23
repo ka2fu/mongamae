@@ -788,6 +788,7 @@ footer {
         width: max-content;
         height: max-content;
         border: $mon-red 1px solid;
+        box-sizing: content-box;
       }
 
       .caution-btn {
