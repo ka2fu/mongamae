@@ -148,7 +148,8 @@ body.guide::before {
       font-size: 1.3rem;
       color: #c20000;
       border: 1px #c20000 solid;
-      padding: 2px 4px; }
+      padding: 2px 4px;
+      box-sizing: content-box; }
       #mushi-modal #mushimo-outer .caution:hover {
         filter: brightness(200%); }
     #mushi-modal #mushimo-outer .mushimo-inner {

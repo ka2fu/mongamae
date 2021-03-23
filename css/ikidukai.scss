@@ -240,13 +240,11 @@ body { // background-imageをspでも正常になるように固定
       position: absolute;
       bottom: 2.5rem;
       right: 3rem;
-      // transform: translateX(100%);
-      // right: 50%;
-      // transform: translateX(calc(100% + 3rem));
       font-size: 1.3rem;
       color: $mon-red;
       border: 1px $mon-red solid;
       padding: 2px 4px;
+      box-sizing: content-box;
 
       &:hover {
         filter: brightness(200%);
@@ -799,9 +797,6 @@ footer {
         height: max-content;
         font-size: 1rem;
         padding: 2px 4px;
-
-        // border: none;
-        // position: static;
         box-sizing: content-box;
       }
 
