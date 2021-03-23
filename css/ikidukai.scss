@@ -304,6 +304,18 @@ body { // background-imageをspでも正常になるように固定
     height: 100vh;
   }
 
+  @keyframes titlevanish {
+    form {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(1.1, 1.1);
+    }
+  }
+
   .title-inner {
     position: fixed;
     top: 0;
@@ -318,6 +330,10 @@ body { // background-imageをspでも正常になるように固定
     background-size: cover;
     @include bg-png('title-moya-pc-tp2');
 
+    &.title-vanish {
+      animation: titlevanish 1s ease-out forwards;
+    }
+
     .title {
       position: relative;
       width: 70vw;
@@ -329,23 +345,6 @@ body { // background-imageをspでも正常になるように固定
       margin-top: 7vh;
       margin-left: 5vw;
       z-index: 900;
-
-      @keyframes titleVanish {
-        0% {
-          // display: grid;
-          opacity: 1;
-        }
-
-        100% {
-          display: none;
-          opacity: 0;
-          // transform: scale(1.1, 1.1);
-        }
-      }
-
-      .vanish {
-        animation: titleVanish 1s ease-out 0s;
-      }
 
       img {
         position:absolute;

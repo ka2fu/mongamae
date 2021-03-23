@@ -180,6 +180,13 @@ body.guide::before {
   background-color: transparent; }
 .index #wrapper {
   height: 100vh; }
+@keyframes titlevanish {
+  form {
+    opacity: 1;
+    transform: scale(1, 1); }
+  to {
+    opacity: 0;
+    transform: scale(1.1, 1.1); } }
 .index .title-inner {
   position: fixed;
   top: 0;
@@ -193,6 +200,8 @@ body.guide::before {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../img-ikidukai/title-moya-pc-tp2.png"); }
+  .index .title-inner.title-vanish {
+    animation: titlevanish 1s ease-out forwards; }
   .index .title-inner .title {
     position: relative;
     width: 70vw;
@@ -204,14 +213,6 @@ body.guide::before {
     margin-top: 7vh;
     margin-left: 5vw;
     z-index: 900; }
-@keyframes titleVanish {
-  0% {
-    opacity: 1; }
-  100% {
-    display: none;
-    opacity: 0; } }
-    .index .title-inner .title .vanish {
-      animation: titleVanish 1s ease-out 0s; }
     .index .title-inner .title img {
       position: absolute;
       top: 2%;

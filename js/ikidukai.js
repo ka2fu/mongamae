@@ -1,34 +1,16 @@
-
-// $('#wrapper').on('click', '.title', function(){
-//   $.when(
-//     // $('.title').addClass('vanish'),
-//     $('.title-inner').fadeOut()
-//   ).done(function(){
-//     $('.fadein').removeClass('hidden');
-//     $('.fadein').fadeIn();
-//   });
-// });
-
-$('#wrapper').on('click', '.title', function(){
-  $('.title-inner').fadeOut({
-    duration: 1000,
-    queue: false
-  });
+// タイトルの処理
+$('.title').click(function(){
+  $('.title-inner').addClass('title-vanish');
+  $('.title-inner').delay(1000).queue(function(){
+    $(this).css("display", "none");
+  })
   $('.fadein').removeClass('hidden');
   $('.fadein').animate({
     opacity: 1
   },{
     duration: 1000,
-    queue: false
-  }
-);
-  // $('.fadein').fadeIn({
-  //   duration: 1000,
-  //   queue: false,
-  //   function(){
-  //     $('.fadein').removeClass('hidden');
-  //   }
-  // });
+    easing: "easeInQuad"
+  });
 });
 
 // いろいろなスマホタッチ処理
