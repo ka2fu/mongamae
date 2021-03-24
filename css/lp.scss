@@ -115,15 +115,16 @@ $max-wid: calc(100% - calc(100% - 100vw));
     width: 70vw;
     justify-content: center;
     align-content: center;
+    box-sizing: content-box;
 
-    &* {
+    #header-text {
       box-sizing: content-box;
-    }
 
-    h1 {
-      color: rgba(233, 233, 233, 0.8);
-      font-size: calc(70vw / 6);
-      margin-bottom: 0;
+      h1 {
+        color: rgba(233, 233, 233, 0.8);
+        font-size: calc(70vw / 6);
+        margin-bottom: 0;
+      }
     }
   }
 }
