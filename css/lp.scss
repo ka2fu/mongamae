@@ -116,6 +116,10 @@ $max-wid: calc(100% - calc(100% - 100vw));
     justify-content: center;
     align-content: center;
 
+    &* {
+      box-sizing: content-box;
+    }
+
     h1 {
       color: rgba(233, 233, 233, 0.8);
       font-size: calc(70vw / 6);
