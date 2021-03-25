@@ -73,7 +73,8 @@
     align-content: center;
     box-sizing: content-box; }
     .carousel-inner #header-text-inner #header-text {
-      box-sizing: content-box; }
+      box-sizing: content-box;
+      overflow-x: visible; }
       .carousel-inner #header-text-inner #header-text h1 {
         color: rgba(233, 233, 233, 0.8);
         font-size: calc(70vw / 6);
