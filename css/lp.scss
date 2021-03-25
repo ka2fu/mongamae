@@ -211,6 +211,10 @@ footer{
       transform: translate(calc(-50% + calc(70vw / 24)), -50%);
       height: 35vh;
       width: 70vw;
+
+      h1 {
+        font-size: calc(70vw / 6.1);
+      }
     }
   }
 

@@ -133,6 +133,8 @@ footer {
     transform: translate(calc(-50% + calc(70vw / 24)), -50%);
     height: 35vh;
     width: 70vw; }
+    .carousel-inner #header-text-inner h1 {
+      font-size: calc(70vw / 6.1); }
 
   #modal {
     background-color: #f0e6ce;
