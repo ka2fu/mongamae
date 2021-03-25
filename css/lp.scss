@@ -212,8 +212,10 @@ footer{
       height: 35vh;
       width: 70vw;
 
-      h1 {
-        font-size: calc(70vw / 6.5);
+      #header-text {
+        h1 {
+          font-size: calc(70vw / 6.5);
+        }
       }
     }
   }
