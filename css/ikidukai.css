@@ -281,9 +281,7 @@ body.guide::before {
   .guide #info-outer #access .map-img-inner .map-img {
     width: 100%;
     height: 100%;
-    background-image: url("../img-ikidukai/chizu-kari.png");
-    background-position: center;
-    background-size: cover; }
+    border: 0; }
 .guide .gimmick-inner #mushimegane {
   left: 65vw;
   top: 88vh; }
