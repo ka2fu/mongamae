@@ -116,6 +116,8 @@ body.guide::before {
         font-weight: bolder;
         font-size: 3rem;
         width: 100%; }
+    #info-outer .info-inner .impt-txt {
+      font-size: 1.8rem; }
 
 #mushi-modal {
   position: fixed;
