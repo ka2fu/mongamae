@@ -4,6 +4,9 @@
   background-color: transparent;
   z-index: 1; }
 
+.sp-br {
+  display: none; }
+
 body::before {
   content: "";
   display: block;
@@ -284,6 +287,34 @@ body.guide::before {
     width: 100%;
     height: 100%;
     border: 0; }
+.guide #info-outer #ticket .book {
+  margin: 0 auto;
+  width: 75%;
+  height: 5rem;
+  background-color: #307ba4;
+  overflow: hidden;
+  border-radius: 10px;
+  border: #000 double 5px;
+  filter: brightness(1.18);
+  transition: all .5s ease-out; }
+  .guide #info-outer #ticket .book:hover {
+    filter: brightness(1); }
+  .guide #info-outer #ticket .book a {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: none; }
+.guide #info-outer #schedule table {
+  margin-bottom: 3rem; }
+  .guide #info-outer #schedule table tr td {
+    vertical-align: bottom; }
+    .guide #info-outer #schedule table tr td:last-child {
+      padding-bottom: 5px;
+      padding-left: 0.5rem; }
 .guide .gimmick-inner #mushimegane {
   left: 65vw;
   top: 88vh; }
@@ -344,6 +375,9 @@ footer {
 
 @media only screen and (max-width: 600px) {
   /* グローバル */
+  .sp-br {
+    display: block; }
+
   body.index::before {
     background-image: url("../img-ikidukai/sp-top-bg.png"); }
   body.measure::before {
@@ -386,6 +420,9 @@ footer {
           text-shadow: 2px 2px 8px #fff, -2px 2px 8px #fff, 2px -2px 8px #fff, -2px -2px 8px #fff, 4px 4px 8px #fff, -4px 4px 8px #fff, 4px -4px 8px #fff, -4px -4px 8px #fff; }
         #info-outer .info-inner .info-text:first-child .topic {
           margin-top: 10vh; }
+      #info-outer .info-inner .impt-txt {
+        font-size: 1.3rem;
+        font-weight: 1200; }
 
   #mushi-modal #mushimo-outer {
     border-radius: 1rem;
@@ -490,6 +527,15 @@ footer {
   .guide #info-outer .info-inner #access .map-img-inner {
     margin: 5vh auto;
     width: 75vw;
-    height: 50vw; } }
+    height: 50vw; }
+  .guide #info-outer .info-inner #schedule table {
+    margin-bottom: 3rem; }
+    .guide #info-outer .info-inner #schedule table tr td {
+      width: max-content; }
+      .guide #info-outer .info-inner #schedule table tr td:last-child {
+        padding-bottom: 1px;
+        padding-left: 0; }
+    .guide #info-outer .info-inner #schedule table tr:first-child td {
+      vertical-align: top; } }
 
 /*# sourceMappingURL=ikidukai.css.map */

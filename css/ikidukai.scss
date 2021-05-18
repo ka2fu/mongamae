@@ -22,6 +22,10 @@ $text-right: calc(0% + calc(100vw - 100%));
   z-index: 1;
 }
 
+.sp-br {
+  display: none;
+}
+
 body { // background-imageをspでも正常になるように固定
 
   &::before {
@@ -449,6 +453,53 @@ body { // background-imageをspでも正常になるように固定
         }
       }
     }
+
+    #ticket {
+      .book {
+        margin: 0 auto;
+        // margin-bottom: 5rem;
+        width: 75%;
+        height: 5rem;
+        background-color: #307ba4;
+        overflow: hidden;
+        border-radius: 10px;
+        border: #000 double 5px;
+        filter: brightness(1.18);
+        transition: all .5s ease-out;
+
+        &:hover {
+          filter: brightness(1);
+        }
+
+        a {
+          display: grid;
+          align-content: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          font-size: 1.8rem;
+          color: #fff;
+          text-shadow: none;
+        }
+      }
+    }
+
+    #schedule{
+      table {
+        margin-bottom: 3rem;
+
+        tr {
+          td {
+            vertical-align: bottom;
+
+            &:last-child {
+              padding-bottom: 5px;
+              padding-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
   }
 
   .gimmick-inner {
@@ -557,6 +608,10 @@ footer {
 @media only screen and (max-width: 600px) {
 
   /* グローバル */
+  .sp-br {
+    display: block;
+  }
+
   body {
 
     &.index::before {
@@ -644,6 +699,11 @@ footer {
               margin-top: 10vh;
             }
           }
+        }
+
+        .impt-txt {
+          font-size: 1.3rem;
+          font-weight: 1200;
         }
       }
     }
@@ -828,6 +888,31 @@ footer {
             margin: 5vh auto;
             width: 75vw;
             height: 50vw;
+          }
+        }
+
+        #schedule{
+          table {
+            margin-bottom: 3rem;
+
+            tr {
+              td {
+                width: max-content;
+
+                &:last-child {
+                  padding-bottom: 1px;
+                  padding-left: 0;
+                  // padding-bottom: 5px;
+                  // padding-left: 0.5rem;
+                }
+              }
+
+              &:first-child {
+                td {
+                  vertical-align: top;
+                }
+              }
+            }
           }
         }
       }
