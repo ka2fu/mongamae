@@ -533,6 +533,8 @@ footer {
     margin: 5vh auto;
     width: 75vw;
     height: 50vw; }
+  .guide #info-outer .info-inner #access .route-inner {
+    width: 82.5vw; }
   .guide #info-outer .info-inner #schedule table {
     margin-bottom: 3rem; }
     .guide #info-outer .info-inner #schedule table tr td {
