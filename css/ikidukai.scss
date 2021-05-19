@@ -452,6 +452,15 @@ body { // background-imageをspでも正常になるように固定
           border: 0;
         }
       }
+
+      .route-inner {
+        margin: 5vh auto;
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
     }
 
     #ticket {
